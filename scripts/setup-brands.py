@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Generate brand folders from megawatt template."""
+import hashlib
 import os
 import re
 import shutil
@@ -229,13 +230,40 @@ def patch_sellers_js(js, brand_id, name):
     return js
 
 
+def strip_megawatt_media(brand_dir):
+    """Remove MegaWatt product/gallery assets copied from the template."""
+    images = os.path.join(brand_dir, 'assets', 'images')
+    if not os.path.isdir(images):
+        return
+
+    mega_hashes = set()
+    mega_root = os.path.join(MEGAWATT, 'assets', 'images')
+    for root, _, files in os.walk(mega_root):
+        for fname in files:
+            path = os.path.join(root, fname)
+            with open(path, 'rb') as f:
+                mega_hashes.add(hashlib.md5(f.read()).hexdigest())
+
+    for root, _, files in os.walk(images, topdown=False):
+        for fname in files:
+            if fname == 'logo.jpeg':
+                continue
+            path = os.path.join(root, fname)
+            with open(path, 'rb') as f:
+                digest = hashlib.md5(f.read()).hexdigest()
+            if digest in mega_hashes:
+                os.remove(path)
+        if root != images and not os.listdir(root):
+            os.rmdir(root)
+
+
 def create_brand(brand_id, config):
     dest = os.path.join(ROOT, brand_id)
     if os.path.exists(dest):
         shutil.rmtree(dest)
     shutil.copytree(MEGAWATT, dest)
+    strip_megawatt_media(dest)
 
-  # Remove megawatt-specific images? Keep structure, owner adds logos
     for fname in ('index.html', 'productos.html'):
         path = os.path.join(dest, fname)
         with open(path, 'r', encoding='utf-8') as f:
