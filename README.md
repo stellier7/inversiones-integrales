@@ -67,7 +67,7 @@ Sube la imagen en `assets/logos/{marca}.jpeg` (por ejemplo `assets/logos/megawat
 
 ### Página de cada marca
 
-Sube el logo de la marca en `/{marca}/assets/images/logo.jpeg` (o actualiza la ruta en `index.html` y `productos.html`).
+Sube el logo de la marca en `/{marca}/assets/images/logo.jpeg` (o actualiza la ruta en `index.html` y `productos.html`). Los archivos del landing en `assets/logos/{marca}.jpeg` se pueden copiar a cada carpeta de marca para mantenerlos sincronizados.
 
 ## Cómo actualizar colores de marca
 
