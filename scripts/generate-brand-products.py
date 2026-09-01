@@ -314,7 +314,10 @@ def build_file(brand_name, brand_id, catalog_sections, products_js):
     for p in products_js:
         lines.append('  {')
         for k, v in p.items():
-            lines.append(f"    {k}: {js_str(v)},")
+            if k == 'image' and v:
+                lines.append(f"    image: img({js_str(v)}),")
+            else:
+                lines.append(f"    {k}: {js_str(v)},")
         lines.append('  },')
     lines.append('];')
     lines.append('')
