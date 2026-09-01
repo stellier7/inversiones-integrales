@@ -4,6 +4,8 @@
   --muted: rgba(246, 241, 234, 0.55);
   --border: rgba(255, 255, 255, 0.08);
   --placeholder: #242220;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-hover: rgba(255, 255, 255, 0.07);
 }
 
 * {
@@ -32,10 +34,10 @@ body {
 }
 
 .brand-grid {
-  width: min(960px, 100%);
+  width: min(1040px, 100%);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px 24px;
+  gap: 20px;
 }
 
 .brand-card {
@@ -45,46 +47,35 @@ body {
   text-align: center;
   text-decoration: none;
   color: inherit;
-  padding: 24px 16px;
-  border-radius: 16px;
-  transition: background 0.2s ease, transform 0.2s ease;
+  padding: 28px 20px 24px;
+  border-radius: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
 
 .brand-card:hover {
-  background: rgba(255, 255, 255, 0.03);
-  transform: translateY(-2px);
-}
-
-.brand-card:hover .brand-logo img {
-  box-shadow:
-    0 28px 56px -14px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(255, 255, 255, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  background: var(--card-hover);
+  border-color: rgba(255, 255, 255, 0.14);
+  transform: translateY(-3px);
 }
 
 .brand-logo {
   width: 100%;
-  max-width: 148px;
+  max-width: 132px;
   aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .brand-logo img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 28%;
-  padding: 12px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow:
-    0 20px 44px -14px rgba(0, 0, 0, 0.55),
-    0 0 0 1px rgba(255, 255, 255, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  border-radius: 22%;
+  display: block;
 }
 
 .brand-logo-placeholder {
@@ -94,8 +85,7 @@ body {
   align-items: center;
   justify-content: center;
   background: var(--placeholder);
-  border: 1px solid var(--border);
-  border-radius: 28%;
+  border-radius: 22%;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -105,7 +95,7 @@ body {
 
 .brand-tagline {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 500;
   color: var(--muted);
   line-height: 1.4;
@@ -123,18 +113,22 @@ body {
 @media (max-width: 720px) {
   .brand-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px 16px;
+    gap: 14px;
   }
 
   .brand-logo {
-    max-width: 128px;
+    max-width: 112px;
+  }
+
+  .brand-card {
+    padding: 22px 16px 18px;
   }
 }
 
 @media (max-width: 420px) {
   .brand-grid {
     grid-template-columns: 1fr;
-    max-width: 280px;
+    max-width: 300px;
     margin: 0 auto;
   }
 }
