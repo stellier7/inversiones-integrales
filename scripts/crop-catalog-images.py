@@ -31,7 +31,7 @@ BRANDS = {
         'pdf': ROOT / 'lumiart/assets/images/catalog/El Jordan Catalogo sin Logos_compressed.pdf',
         'json': EXTRACTED / 'lumiart-products.json',
         'out_dir': ROOT / 'lumiart/assets/images/catalog/products',
-        'code_pattern': re.compile(r'([A-Z]{2,3}-\d{2,4}[A-Z0-9-]*)'),
+        'code_pattern': re.compile(r'((?:DI|FAN|BFC\d*|BG9|BGU10|TPF|LIN|LDP|PRO|OTD)-[A-Z0-9-]+)'),
         'filename': lambda code: re.sub(r'[^\w.-]+', '-', code) + '.jpeg',
         'min_img_area': 5000,
         'scale': 5.0,

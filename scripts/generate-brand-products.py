@@ -241,6 +241,17 @@ def generate_lumiart():
         ('lamparas-smart', 'Lámparas Smart', 'Control por app y voz — lámparas inteligentes CCT.'),
         ('lamparas-colgantes-led', 'Lámparas colgantes LED', 'Colgantes con LED integrado.'),
         ('lamparas-colgantes', 'Lámparas colgantes', 'Colgantes para foco — base E27, G9 o E12.'),
+        ('lamparas-techo-led', 'Lámparas de techo LED', 'Plafones y lámparas de techo con LED integrado.'),
+        ('lamparas-techo', 'Lámparas de techo', 'Lámparas de techo para foco.'),
+        ('lamparas-plafon', 'Lámparas plafón', 'Plafones LED de superficie.'),
+        ('lamparas-pared', 'Lámparas de pared', 'Apliques y lámparas de pared.'),
+        ('lamparas-mesa-pie', 'Lámparas mesa y pie', 'Lámparas de mesa y de pie.'),
+        ('ventiladores', 'Ventiadores', 'Ventiladores de techo con luz LED.'),
+        ('bombillos', 'Bombillos', 'Bombillos LED — E12, G9, GU10 y más.'),
+        ('lamparas-comerciales', 'Lámparas comerciales', 'Tubos, paneles y lineales para comercio e industria.'),
+        ('perfiles', 'Perfiles', 'Perfiles de aluminio para tira LED — 2 metros.'),
+        ('lamparas-exterior', 'Lámparas de exterior', 'Iluminación exterior IP65.'),
+        ('lamparas-farol', 'Lámparas tipo Farol', 'Faroles colgantes y de pared para exterior.'),
     ]
 
     catalog_sections = []
@@ -278,7 +289,7 @@ def generate_lumiart():
                 'linea': 'Lumiart',
                 'chip1': f"{p.get('watts', '')}W" if p.get('watts') else '',
                 'chip2': f"{p.get('lumens', '')} lm" if p.get('lumens') else '',
-                'chip3': p.get('color', ''),
+                'chip3': p.get('color', '') or p.get('base', ''),
                 'image': p.get('image', ''),
                 'modelo': p['code'],
                 'temp': p.get('color', ''),
