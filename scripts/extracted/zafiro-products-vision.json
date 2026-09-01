@@ -1,0 +1,788 @@
+[
+  {
+    "file": "00c76b31-0840-4534-b4e3-b7f1d21fd1f4.jpeg",
+    "nombre": "126E6009L",
+    "code": "126E6009L",
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "gris azulado",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "0c1cccde-1df4-47e8-8202-05410a2b7885.jpeg",
+    "nombre": "00479",
+    "code": "00479",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "blanco verde beige",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "0e09d12c-0473-4ff5-a942-aefd342989a2.jpeg",
+    "nombre": "Blanco Veteado",
+    "code": null,
+    "medida": "60×60 cm",
+    "acabado": "Brillante",
+    "color": "blanco crema",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "0ea43112-163a-4937-87f0-c4855de58f0b.jpeg",
+    "nombre": "Oviedo",
+    "code": "126E6009L",
+    "medida": "60×60 cm",
+    "acabado": "Brillante",
+    "color": "blanco marrón",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "1217c0db-3184-4847-ac06-c2dafb95e0c4.jpeg",
+    "nombre": "Granada",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco gris",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "143ae530-e733-4894-b0ca-0626928d477a.jpeg",
+    "nombre": "River Snow",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco gris",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "149caf87-1724-49b2-9438-8ba321edbd73.jpeg",
+    "nombre": "RUSTICA 005",
+    "code": "005",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris oscuro",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "15f34e4b-c314-40db-9c07-85f3fa08778e.jpeg",
+    "nombre": "11397",
+    "code": "11397",
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco gris",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "1e14a89f-0150-4f90-a3a2-02b93f186d53.jpeg",
+    "nombre": "Avorio Grey",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "gris claro",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "233a0c1d-3556-4919-a8f1-37d027fd6bbe.jpeg",
+    "nombre": "Statuario carrara",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco gris",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "2bff71dc-85fc-49c9-a1d5-3965dce3b8ee.jpeg",
+    "nombre": "00488",
+    "code": "00488",
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "beige crema",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "36e4221f-63dd-4fe5-876d-b2c7a3c87365.jpeg",
+    "nombre": "Carrara polaris",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco gris",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "3a800622-e2fa-4664-ab97-909dd2f15563.jpeg",
+    "nombre": "Cascade grey",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "gris oscuro",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "3b917088-1dac-4dca-97f6-230c3740d2e7.jpeg",
+    "nombre": "Norway grey",
+    "code": null,
+    "medida": null,
+    "acabado": "Mate",
+    "color": "gris claro",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "3d833473-5804-4dd0-a873-bea5da6912d8.jpeg",
+    "nombre": "Rodes Gold",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco dorado gris",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "3ef1e753-6e68-432a-aabd-cb43216a86f7.jpeg",
+    "nombre": "Muse ash",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "gris ceniza",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "4008b338-577e-4d83-b25b-52ddc9244723.jpeg",
+    "nombre": "Piedra apilada marrón",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "marrón beige",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "40fe157e-eb38-43d1-9ad9-6a19db6de107.jpeg",
+    "nombre": "Relieve lineal crema",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "crema beige",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "4524c3ab-221c-4a0e-a6c6-83029bb03d20.jpeg",
+    "nombre": "CARVINA 001",
+    "code": "001",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris blanco",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "4c1ce21f-0e36-41cb-baf2-67ac3787dd56.jpeg",
+    "nombre": "Levender Rose",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "crema melocotón",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "500b7a6d-39a0-4568-9ff8-cd2666421181.jpeg",
+    "nombre": "DESERTA 002",
+    "code": "002",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "beige marrón",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "5049e12a-1a0a-47a9-8fac-afe980799b48.jpeg",
+    "nombre": "Cascade Grey",
+    "code": "00479",
+    "medida": "60×60 cm",
+    "acabado": "Brillante",
+    "color": "gris oscuro",
+    "duplicate_of": "3a800622-e2fa-4664-ab97-909dd2f15563.jpeg",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "54a1d836-c474-43a9-9ca7-86de6ebb4997.jpeg",
+    "nombre": "11441",
+    "code": "11441",
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "crema beige",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "5738d079-e69c-4aeb-a993-bc19bd87b055.jpeg",
+    "nombre": "River snow",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco gris",
+    "duplicate_of": "143ae530-e733-4894-b0ca-0626928d477a.jpeg",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "5f0fe6c2-ece3-4091-bb29-ceed1ee31a69.jpeg",
+    "nombre": "Prima Grey",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "gris",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "5f5b6cc8-b37b-4828-8eb3-584f718d8e9a.jpeg",
+    "nombre": "Piedra apilada gris",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "61a0873b-63b9-4d3f-993b-6cf8f1f929ad.jpeg",
+    "nombre": "00492",
+    "code": "00492",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris claro",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "63c7311e-e6e8-45e2-a7f9-0c162df34b89.jpeg",
+    "nombre": "Panda White",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco negro",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "6584100b-91d8-42d8-82b9-6006bd166aee.jpeg",
+    "nombre": "00500",
+    "code": "00500",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "crema",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "658b36ef-b135-4781-9d5c-3515ee949dcf.jpeg",
+    "nombre": "THG-01",
+    "code": "THG-01",
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "verde menta azul",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "6759a834-2438-4879-83cd-cf2c4d209648.jpeg",
+    "nombre": "Piedra vertical multicolor",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "marrón gris crema",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "6b6eda2e-70e7-4cb7-873c-5e06cb0486f5.jpeg",
+    "nombre": "Royal statuario",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco gris",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "6d0850bb-80aa-400f-89a9-26ce2d20335d.jpeg",
+    "nombre": "Granada",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco gris",
+    "duplicate_of": "1217c0db-3184-4847-ac06-c2dafb95e0c4.jpeg",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "6d786a8c-2e16-4357-ab40-62b84932a1ac.jpeg",
+    "nombre": "Ladrillo apilado multicolor",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "beige terracota marrón",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "6dade54d-bf0e-4688-a42d-aea75a6ccd51.jpeg",
+    "nombre": "Patchwork hidráulico",
+    "code": null,
+    "medida": null,
+    "acabado": "Mate",
+    "color": "marrón gris beige",
+    "duplicate_of": "74a0b7c7-0d62-45bb-a3fe-909b5793fba7.jpeg",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "73b9d6ad-ff1a-4bef-adcc-a02ec16248c8.jpeg",
+    "nombre": "11428",
+    "code": "11428",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris blanco negro",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "74a0b7c7-0d62-45bb-a3fe-909b5793fba7.jpeg",
+    "nombre": "Patchwork hidráulico",
+    "code": null,
+    "medida": "60×60 cm",
+    "acabado": "Brillante",
+    "color": "marrón gris beige",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "750bcdf8-6cb9-44ef-b13b-7b0d03c53122.jpeg",
+    "nombre": "Phoenix",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "crema dorado",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "757802d0-9300-4de4-823b-229f83e57dd1.jpeg",
+    "nombre": "Cartagena",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco gris",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "7637ac4f-b239-476d-84a2-31157a9e17ce.jpeg",
+    "nombre": "00510",
+    "code": "00510",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "beige crema",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "77063dea-4dc4-43cd-95ea-4b7e7f78f231.jpeg",
+    "nombre": "SIERRA 004",
+    "code": "004",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "7ce67d80-6eca-4f89-a556-20eb2c3a365e.jpeg",
+    "nombre": "LUNARA 005",
+    "code": "005",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "7def5649-cd83-41b1-bd4e-8971e8e38b92.jpeg",
+    "nombre": "Ladrillo apilado marrón",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "marrón beige",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "7f29cb2c-a467-47c9-a407-b35f50ed31b8.jpeg",
+    "nombre": "ATIQA 010",
+    "code": "010",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris crema",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "839611ae-5732-4d03-85ab-7197baf905b9.jpeg",
+    "nombre": "11412",
+    "code": "11412",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "blanco",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "872d56fa-6b43-45ca-992f-57aa00b5ff3e.jpeg",
+    "nombre": "Floral decorativo",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "beige verde azul",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "88d86fd1-3d5b-4acf-9177-eaebf9e21ea3.jpeg",
+    "nombre": "Floral decorativo",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "beige verde azul",
+    "duplicate_of": "872d56fa-6b43-45ca-992f-57aa00b5ff3e.jpeg",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "8defda95-64e0-423e-9a3e-9c9553f51587.jpeg",
+    "nombre": "Dyna Beige",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "beige crema",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "8e9daa21-57a5-4a6c-852c-6bf6ebc96449.jpeg",
+    "nombre": "11419",
+    "code": "11419",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "blanco",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "90cb7ab7-c338-40d5-9a4d-6622bd383a8c.jpeg",
+    "nombre": "11421",
+    "code": "11421",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris claro",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "91c825f7-9dac-412f-859c-c0ebe76bb073.jpeg",
+    "nombre": "Plain Ivory Marfil",
+    "code": null,
+    "medida": "60×60 cm",
+    "acabado": "Brillante",
+    "color": "marfil crema",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "9209210f-cb80-4345-b2ce-40b815a95f70.jpeg",
+    "nombre": "LUNARA 003",
+    "code": "003",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "marrón beige",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "952b349b-44e6-41ed-9ab7-bc2b71d088aa.jpeg",
+    "nombre": "CARVINA",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris crema",
+    "duplicate_of": "4524c3ab-221c-4a0e-a6c6-83029bb03d20.jpeg",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "9864bffe-bb5a-41a0-bbc4-1944772646d1.jpeg",
+    "nombre": "Patchwork hidráulico",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "marrón gris beige",
+    "duplicate_of": "74a0b7c7-0d62-45bb-a3fe-909b5793fba7.jpeg",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "9a7b6910-6f46-47b9-b862-a0ab45747ad0.jpeg",
+    "nombre": "CARVINA 007",
+    "code": "007",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris blanco",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "9bbc59b7-ee55-4486-9124-02d64364ff10.jpeg",
+    "nombre": "Mármol blanco veteado",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco gris",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "9c512b97-ea6b-41f8-a44b-8aa8672bb320.jpeg",
+    "nombre": "Ivory Jazz Marfil Veteado",
+    "code": null,
+    "medida": "60×60 cm",
+    "acabado": "Brillante",
+    "color": "marfil crema",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "a5fdfe99-048a-4c57-8317-dc1439d29d1f.jpeg",
+    "nombre": "White flower",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "crema",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "a879246e-47b8-4374-b8d7-3c927352e312.jpeg",
+    "nombre": "Piedra apilada gris",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris",
+    "duplicate_of": "5f5b6cc8-b37b-4828-8eb3-584f718d8e9a.jpeg",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "a89662fe-2df1-4e43-af43-1a10b65255ba.jpeg",
+    "nombre": "NATURA 005",
+    "code": "005",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris claro",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "ac729ee8-41d3-47fd-91e8-2310563811cf.jpeg",
+    "nombre": "Rosa relieve crema",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "crema",
+    "duplicate_of": "b651b717-95ce-4bdf-b351-f64d2c3bac2a.jpeg",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "aeb48cec-6e8d-4311-8985-47c596c2da8a.jpeg",
+    "nombre": "Cuvica 006",
+    "code": "006",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "b4defef0-5a3a-4cd3-8a9b-15ed73822301.jpeg",
+    "nombre": "11389",
+    "code": "11389",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "crema dorado",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "b651b717-95ce-4bdf-b351-f64d2c3bac2a.jpeg",
+    "nombre": "Rosa relieve crema",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "crema",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "ba3c0ab8-bb0a-497c-a31b-b8e64500c69b.jpeg",
+    "nombre": "Piedra vertical gris",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "c1726c30-f4da-4727-b9d6-fa3ec7d75c4a.jpeg",
+    "nombre": "00482",
+    "code": "00482",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris claro",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "c3f8417d-a761-49c3-afc5-5bfb85a8617a.jpeg",
+    "nombre": "00512",
+    "code": "00512",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "marrón",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "c924967c-0bdb-4c56-be56-04c00ecdfc9f.jpeg",
+    "nombre": "Dyna Natural",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "beige marrón",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "c9a9e03e-30df-44cb-9325-8d698d66490f.jpeg",
+    "nombre": "Statuario golden",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco dorado",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "d3c93f01-fa06-4911-aa93-0d6986044fc8.jpeg",
+    "nombre": "Oracle Blue",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "azul",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "d4f46411-2918-45e6-8108-29c18d2eead5.jpeg",
+    "nombre": "00498",
+    "code": "00498",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "blanco",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "d6a37246-be2f-4707-b35e-5da756ad7ef7.jpeg",
+    "nombre": "11426",
+    "code": "11426",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris claro",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "d8f615de-5807-4c43-b6e7-f16f7d219ebe.jpeg",
+    "nombre": "Gisborne",
+    "code": "00437",
+    "medida": "60×60 cm",
+    "acabado": "Brillante",
+    "color": "blanco gris dorado",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "dda567f9-f9f3-4d96-944b-ad9ed31ae3ad.jpeg",
+    "nombre": "Royal Statuario",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco gris",
+    "duplicate_of": "6b6eda2e-70e7-4cb7-873c-5e06cb0486f5.jpeg",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "de4d2596-2f5a-42f6-9009-386d0fb89bd5.jpeg",
+    "nombre": "00519",
+    "code": "00519",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "blanco dorado",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "dec421b7-1225-4fa8-bbf3-59d8b67cbcdf.jpeg",
+    "nombre": "Jordan Grey",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "gris oscuro",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "e81a04d2-832c-4751-9af1-b19a3657a84e.jpeg",
+    "nombre": "Phoenix",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco dorado",
+    "duplicate_of": "750bcdf8-6cb9-44ef-b13b-7b0d03c53122.jpeg",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "e8efdddd-2f9b-47d9-a8e2-a7c81b420ac0.jpeg",
+    "nombre": "Mural flower",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "crema",
+    "duplicate_of": "b651b717-95ce-4bdf-b351-f64d2c3bac2a.jpeg",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "f5495f39-bfda-4d63-87f2-3db9325b5ed3.jpeg",
+    "nombre": "Piedra apilada gris blanco",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris blanco",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "f6363965-d1ec-44a1-9819-af4e36457015.jpeg",
+    "nombre": "Piedra apilada beige",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "beige marrón",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "f654fa0d-6699-4395-9d40-8d4f51922029.jpeg",
+    "nombre": "Norway crema",
+    "code": null,
+    "medida": null,
+    "acabado": "Mate",
+    "color": "crema beige",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "fb0efb3d-bae6-48a4-90d8-2034f3ec3650.jpeg",
+    "nombre": "CARVINA beige",
+    "code": null,
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "beige marrón",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "fd742113-6db7-47a5-b071-9f3b60b5f626.jpeg",
+    "nombre": "AMASONA 003",
+    "code": "003",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "gris beige",
+    "aplicacion": "muro"
+  },
+  {
+    "file": "fd843705-8576-4777-87ab-c26861cceec5.jpeg",
+    "nombre": "White Traonyx",
+    "code": null,
+    "medida": null,
+    "acabado": "Brillante",
+    "color": "blanco gris beige",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "fd9767cf-7e7e-416c-bbc7-11745b84c63d.jpeg",
+    "nombre": "11410",
+    "code": "11410",
+    "medida": null,
+    "acabado": "Decorativo",
+    "color": "blanco gris",
+    "aplicacion": "piso"
+  },
+  {
+    "file": "fe912353-389d-4162-9cb8-3ab307272138.jpeg",
+    "nombre": "Emotion Grey",
+    "code": null,
+    "medida": null,
+    "acabado": "Mate",
+    "color": "gris",
+    "aplicacion": "piso"
+  }
+]

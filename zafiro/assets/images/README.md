@@ -1,7 +1,15 @@
 # Zafiro product media
 
-Add brand assets here:
-
 - `logo.jpeg` — site logo
-- `catalog/` — catalog PDF and per-product crops
-- `gallery/` — homepage gallery photos and videos
+- `catalog/products/piso/` — pisos organizados por acabado (`brillante`, `mate`, `decorativo`)
+- `catalog/products/muro/` — muros organizados por acabado
+- `gallery/` — fotos para la galería del inicio
+
+Regenerar catálogo:
+
+```bash
+python3 scripts/build-zafiro-catalog.py
+python3 scripts/generate-brand-products.py
+```
+
+Fuentes de datos en `scripts/extracted/zafiro-products-vision.json` (86 fotos, 12 duplicados omitidos).
