@@ -1,7 +1,18 @@
 # Buffalo product media
 
-Add brand assets here:
-
 - `logo.jpeg` — site logo
-- `catalog/` — drop the catalog PDF here, plus `catalog/products/` for per-SKU crops
-- `gallery/` — homepage gallery photos and videos
+- `catalog/products/pvc/` — páginas del catálogo PVC (IMG_0477–0483)
+- `catalog/products/forjas/` — páginas de forjas y herrajes (IMG_0501–0507)
+- `catalog/products/tornillos/` — fotos de tornillos para techo
+- `catalog/products/accesorios/` — esponjas multi-uso
+- `gallery/` — fotos de productos en tienda (tornillos, esponjas)
+
+Regenerar catálogo después de editar páginas o datos:
+
+```bash
+python3 scripts/extract-buffalo-catalog.py
+python3 scripts/crop-buffalo-catalog.py
+python3 scripts/generate-brand-products.py
+```
+
+Las páginas PVC se recortan en 3 fotos de producto por hoja; las forjas se recortan fila por fila en `catalog/products/crops/`.
