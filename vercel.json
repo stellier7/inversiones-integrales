@@ -49,6 +49,16 @@
       "source": "/trebol/v/:slug/",
       "destination": "/trebol?vendedor=:slug",
       "permanent": false
+    },
+    {
+      "source": "/lumiart/v/:slug",
+      "destination": "/lumiart?vendedor=:slug",
+      "permanent": false
+    },
+    {
+      "source": "/lumiart/v/:slug/",
+      "destination": "/lumiart?vendedor=:slug",
+      "permanent": false
     }
   ]
 }

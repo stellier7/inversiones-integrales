@@ -204,7 +204,7 @@ function ensureCartShell() {
       <div class="cart-drawer-body">
         <ul class="cart-lines" id="cartLines"></ul>
         <div class="cart-empty" id="cartEmpty" hidden>
-          <p>Aún no hay productos. Agrega artículos desde el catálogo.</p>
+          <p>Aún no hay productos. Agrega bombillos, empotrables o luminarias desde el catálogo.</p>
         </div>
       </div>
       <div class="cart-drawer-foot" id="cartDrawerFoot">

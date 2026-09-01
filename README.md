@@ -16,12 +16,14 @@ Portal estático B2B para **Inversiones Integrales** (empresa holding). Cada mar
 │       ├── buffalo.png
 │       ├── zafiro.png
 │       ├── celima.png
-│       └── trebol.png
+│       ├── trebol.png
+│       └── lumiart.png
 ├── megawatt/                  → Sitio completo MegaWatt (copia del repo original)
 ├── buffalo/
 ├── zafiro/
 ├── celima/
 ├── trebol/
+├── lumiart/
 └── vercel.json                → Redirects NFC /{marca}/v/{slug}
 ```
 
@@ -55,6 +57,7 @@ Cada carpeta de marca es **autocontenida**:
 | Zafiro   | `/zafiro/`   | Todo en cerámicas y inodoros    |
 | Celima   | `/celima/`   | Soluciones para tu hogar        |
 | Trébol   | `/trebol/`   | Variedad para cada proyecto     |
+| Lumiart  | `/lumiart/`  | Arte en iluminación             |
 
 ## Cómo agregar un logo
 
@@ -131,6 +134,7 @@ https://tu-dominio.vercel.app/zafiro/v/maria
 | Zafiro   | `zafiro-seller`   | `zafiro-cart`   |
 | Celima   | `celima-seller`   | `celima-cart`   |
 | Trébol   | `trebol-seller`   | `trebol-cart`   |
+| Lumiart  | `lumiart-seller`  | `lumiart-cart`  |
 
 ## Despliegue en Vercel
 

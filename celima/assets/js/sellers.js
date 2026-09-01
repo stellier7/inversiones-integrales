@@ -2,8 +2,8 @@
 const BRAND_WHATSAPP = '50495002199';
 
 /**
- * Vendedores Celima (tarjetas NFC).
- * URL canónica: /celima/v/{slug} → redirige a /celima?vendedor={slug}
+ * Vendedores MegaWatt (tarjetas NFC).
+ * URL canónica: /megawatt/v/{slug} → redirige a /megawatt?vendedor={slug}
  */
 const SELLERS = {
   ejemplo: {

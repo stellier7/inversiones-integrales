@@ -2,8 +2,8 @@
 const BRAND_WHATSAPP = '50495002199';
 
 /**
- * Vendedores Trébol (tarjetas NFC).
- * URL canónica: /trebol/v/{slug} → redirige a /trebol?vendedor={slug}
+ * Vendedores MegaWatt (tarjetas NFC).
+ * URL canónica: /megawatt/v/{slug} → redirige a /megawatt?vendedor={slug}
  */
 const SELLERS = {
   ejemplo: {

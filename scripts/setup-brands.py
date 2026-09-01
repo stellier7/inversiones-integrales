@@ -68,6 +68,21 @@ BRANDS = {
         },
         'emoji': '☘️',
     },
+    'lumiart': {
+        'display': 'LUMIART',
+        'display_title': 'LUMIART',
+        'name': 'Lumiart',
+        'tagline': 'Arte en iluminación',
+        'hero_tag': 'Arte en iluminación — catálogo, contacto y cotización en un solo lugar.',
+        'colors': {
+            '--orange': '#9B59B6',
+            '--orange-deep': '#7D3C98',
+            '--charcoal': '#161418',
+            '--charcoal-soft': '#221F28',
+            '--amber': '#C39BD3',
+        },
+        'emoji': '✨',
+    },
 }
 
 PLACEHOLDER_PRODUCTS_JS = '''// Placeholder catalog — owner will replace with real product data.
@@ -265,7 +280,14 @@ def create_brand(brand_id, config):
 
 
 def main():
-    for brand_id, config in BRANDS.items():
+    import sys
+    brands = BRANDS
+    if len(sys.argv) > 1:
+        brand_id = sys.argv[1]
+        if brand_id not in BRANDS:
+            raise SystemExit(f'Unknown brand: {brand_id}')
+        brands = {brand_id: BRANDS[brand_id]}
+    for brand_id, config in brands.items():
         create_brand(brand_id, config)
 
 

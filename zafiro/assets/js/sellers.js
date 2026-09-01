@@ -2,8 +2,8 @@
 const BRAND_WHATSAPP = '50495002199';
 
 /**
- * Vendedores Zafiro (tarjetas NFC).
- * URL canónica: /zafiro/v/{slug} → redirige a /zafiro?vendedor={slug}
+ * Vendedores MegaWatt (tarjetas NFC).
+ * URL canónica: /megawatt/v/{slug} → redirige a /megawatt?vendedor={slug}
  */
 const SELLERS = {
   ejemplo: {

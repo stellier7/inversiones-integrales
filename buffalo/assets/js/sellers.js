@@ -2,8 +2,8 @@
 const BRAND_WHATSAPP = '50495002199';
 
 /**
- * Vendedores Buffalo (tarjetas NFC).
- * URL canónica: /buffalo/v/{slug} → redirige a /buffalo?vendedor={slug}
+ * Vendedores MegaWatt (tarjetas NFC).
+ * URL canónica: /megawatt/v/{slug} → redirige a /megawatt?vendedor={slug}
  */
 const SELLERS = {
   ejemplo: {
