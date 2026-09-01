@@ -2124,6 +2124,41 @@ body.cart-open {
   background: #121110;
 }
 
+.page-catalog .p-photo--zoomable {
+  cursor: zoom-in;
+}
+
+.page-catalog .product-photo-zoom {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.page-catalog .product-photo-zoom:hover,
+.page-catalog .product-photo-zoom:focus-visible {
+  background: rgba(232, 97, 31, 0.75);
+  border-color: rgba(232, 97, 31, 0.85);
+  outline: none;
+}
+
+.page-catalog .p-photo--zoomable img {
+  pointer-events: none;
+}
+
 .grid-group-tab {
   min-height: 72px;
 }

@@ -44,9 +44,13 @@ function categoryMeta(id) {
 }
 
 function productCardHtml(p) {
+  const hasZoomableImage = p.image && !isVideoPath(p.image);
+  const zoomBtn = hasZoomableImage
+    ? `<button type="button" class="product-photo-zoom" data-product-id="${p.id}" aria-label="Ampliar ${p.nombre}"><span aria-hidden="true">Ampliar</span></button>`
+    : '';
   return `
     <article class="product-card grid-product-card" data-product-id="${p.id}">
-      <div class="p-photo is-studio">${productPhotoHtml(p)}</div>
+      <div class="p-photo is-studio p-photo--zoomable">${productPhotoHtml(p)}${zoomBtn}</div>
       <div class="p-body">
         <div class="p-cat">${p.subcategoria || ''}</div>
         <h4>${p.nombre}</h4>
