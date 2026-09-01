@@ -1,60 +1,1211 @@
-// Placeholder catalog — owner will replace with real product data.
+// Catálogo Zafiro — generado desde fotos de producto
 const img = (file) => (file ? `assets/images/${file}` : '');
 
-const LINEA = {
-  general: 'Línea general',
-};
+const catalogState = { category: '', group: '' };
+
+function isVideoPath(path) {
+  return /\.(mp4|webm|mov)$/i.test(path || '');
+}
+
+function cartQtyForProduct(id) {
+  if (typeof getCartQty !== 'function') return 0;
+  return getCartQty(id);
+}
+
+function addToCartButtonHtml(p) {
+  const qty = cartQtyForProduct(p.id);
+  const inCart = qty > 0;
+  return `<button type="button" class="add-to-cart-btn${inCart ? ' is-in-cart' : ''}" data-product-id="${p.id}" aria-label="${inCart ? `Agregar otra unidad de ${p.nombre}` : `Agregar ${p.nombre} al carrito`}">${inCart ? `En el carrito · ${qty}` : 'Agregar'}</button>`;
+}
+
+function productPhotoHtml(product) {
+  if (!product.image) return '<span>Foto pendiente</span>';
+  if (isVideoPath(product.image)) {
+    return `<video src="${product.image}" muted playsinline preload="metadata" aria-label="${product.nombre}"></video>`;
+  }
+  return `<img src="${product.image}" alt="${product.nombre}" loading="lazy">`;
+}
+
+function specChipsHtml(p) {
+  const chips = [];
+  if (p.chip1) chips.push(p.chip1);
+  if (p.chip2) chips.push(p.chip2);
+  if (p.chip3) chips.push(p.chip3);
+  if (p.linea) chips.push(p.linea);
+  return chips.map((c) => `<span>${c}</span>`).join('');
+}
+
+function groupProducts(groupId) {
+  return products.filter((p) => p.group === groupId);
+}
+
+function categoryMeta(id) {
+  return catalogSections.find((s) => s.id === id) || null;
+}
+
+function productCardHtml(p) {
+  return `
+    <article class="product-card grid-product-card" data-product-id="${p.id}">
+      <div class="p-photo is-studio">${productPhotoHtml(p)}</div>
+      <div class="p-body">
+        <div class="p-cat">${p.subcategoria || ''}</div>
+        <h4>${p.nombre}</h4>
+        <div class="p-specs">${specChipsHtml(p)}</div>
+        ${addToCartButtonHtml(p)}
+      </div>
+    </article>`;
+}
+
+function productGridHtml(groupId) {
+  const items = groupProducts(groupId);
+  return `<div class="product-grid">${items.map(productCardHtml).join('')}</div>`;
+}
+
+function groupTabHtml(group, sectionId) {
+  const selected = catalogState.group === group.id && catalogState.category === sectionId;
+  return `<button type="button" class="series-card grid-group-tab${selected ? ' is-selected' : ''}" data-group="${group.id}" data-category="${sectionId}"><span class="series-card-copy"><span class="p-cat">${group.kicker}</span><span class="series-card-title">${group.menuLabel}</span></span></button>`;
+}
+
+function categoryCardHtml(section) {
+  const open = catalogState.category === section.id;
+  const activeGroup = section.groups.find((g) => g.id === catalogState.group);
+  return `
+    <article class="cat-card${open ? ' is-open' : ''}" data-category="${section.id}">
+      <button type="button" class="cat-card-toggle" data-category="${section.id}" aria-expanded="${open}">
+        <span class="cat-card-thumb"><img src="${section.image}" alt=""></span>
+        <span class="cat-card-copy">
+          <span class="eyebrow">${section.eyebrow}</span>
+          <span class="cat-card-title">${section.title}</span>
+          <span class="cat-card-intro">${section.intro}</span>
+        </span>
+        <span class="cat-card-chevron" aria-hidden="true">${open ? '−' : '+'}</span>
+      </button>
+      ${open ? `<div class="cat-card-body">
+        <div class="series-grid series-grid--${Math.min(section.groups.length, 4)}">${section.groups.map((g) => groupTabHtml(g, section.id)).join('')}</div>
+        ${activeGroup ? productGridHtml(activeGroup.id) : '<p class="finder-hint">Elige un acabado o línea para ver los diseños.</p>'}
+      </div>` : ''}
+    </article>`;
+}
+
+function renderCatalog() {
+  const root = document.getElementById('catalogTree');
+  if (!root) return;
+  root.innerHTML = catalogSections.map(categoryCardHtml).join('');
+  if (typeof refreshProductCardButtons === 'function') refreshProductCardButtons();
+}
+
+function toggleCategory(categoryId) {
+  if (catalogState.category === categoryId) {
+    catalogState.category = '';
+    catalogState.group = '';
+  } else {
+    catalogState.category = categoryId;
+    const section = categoryMeta(categoryId);
+    catalogState.group = section?.groups[0]?.id || '';
+  }
+  renderCatalog();
+}
+
+function toggleGroup(groupId, categoryId) {
+  catalogState.category = categoryId;
+  catalogState.group = catalogState.group === groupId ? '' : groupId;
+  renderCatalog();
+}
+
+function refreshProductCardButtons() {
+  document.querySelectorAll('.add-to-cart-btn[data-product-id]').forEach((btn) => {
+    const product = products.find((p) => p.id === btn.dataset.productId);
+    if (!product) return;
+    const qty = cartQtyForProduct(product.id);
+    const inCart = qty > 0;
+    btn.classList.toggle('is-in-cart', inCart);
+    btn.textContent = inCart ? `En el carrito · ${qty}` : 'Agregar';
+  });
+}
+
+function initCatalog() {
+  const root = document.getElementById('catalogTree');
+  if (!root) return;
+  root.addEventListener('click', (e) => {
+    const group = e.target.closest('.grid-group-tab');
+    if (group) {
+      toggleGroup(group.dataset.group, group.dataset.category);
+      return;
+    }
+    const category = e.target.closest('.cat-card-toggle');
+    if (category) toggleCategory(category.dataset.category);
+  });
+  renderCatalog();
+}
+
+function featuredCardHtml(p) {
+  return `<div class="product-card featured-card" data-product-id="${p.id}"><div class="p-photo featured-photo is-studio">${productPhotoHtml(p)}</div><div class="p-body"><div class="p-cat">${p.subcategoria || ''}</div><h4>${p.nombre}</h4><div class="p-specs">${specChipsHtml(p)}</div>${addToCartButtonHtml(p)}</div></div>`;
+}
+
+function initFeatured() {
+  const track = document.getElementById('featuredTrack');
+  if (!track || !products.length) return;
+  const featured = products.slice(0, Math.min(8, products.length));
+  const cards = featured.map(featuredCardHtml).join('');
+  track.innerHTML = cards + cards;
+}
 
 const catalogSections = [
   {
-    id: 'general',
-    linea: LINEA.general,
-    eyebrow: 'Catálogo en preparación',
-    title: 'Productos Zafiro',
-    intro: 'Estamos preparando el catálogo completo de Zafiro. Mientras tanto, contáctanos por WhatsApp para cotizar.',
-    image: '',
+    id: "piso-brillante",
+    linea: "Piso",
+    eyebrow: "Zafiro",
+    title: "Piso — Brillante",
+    intro: "Porcelanatos y cerámicas para piso — acabados lisos y decorativos.",
+    image: img('catalog/products/piso/brillante/126e6009l-126e6009l.jpeg'),
     groups: [
       {
-        id: 'placeholder',
-        kicker: 'Próximamente',
-        menuLabel: 'Línea general',
-        finderLabel: 'Productos generales',
-        title: 'Catálogo en preparación',
-        blurb: 'El catálogo de Zafiro estará disponible pronto. Escríbenos por WhatsApp para más información.',
+        id: "piso-brillante-brillante",
+        kicker: "Brillante",
+        menuLabel: "Brillante",
+        finderLabel: "Brillante",
+        title: "Brillante",
+        blurb: "31 diseños en acabado brillante.",
+      },
+    ],
+  },
+  {
+    id: "muro-decorativo",
+    linea: "Muro",
+    eyebrow: "Zafiro",
+    title: "Muro — Decorativo",
+    intro: "Cerámicas para muro — lisas, mates y relieves decorativos.",
+    image: img('catalog/products/muro/decorativo/00479-00479.jpeg'),
+    groups: [
+      {
+        id: "muro-decorativo-decorativo",
+        kicker: "Decorativo",
+        menuLabel: "Decorativo",
+        finderLabel: "Decorativo",
+        title: "Decorativo",
+        blurb: "34 diseños en acabado decorativo.",
+      },
+    ],
+  },
+  {
+    id: "muro-brillante",
+    linea: "Muro",
+    eyebrow: "Zafiro",
+    title: "Muro — Brillante",
+    intro: "Cerámicas para muro — lisas, mates y relieves decorativos.",
+    image: img('catalog/products/muro/brillante/00488-00488.jpeg'),
+    groups: [
+      {
+        id: "muro-brillante-brillante",
+        kicker: "Brillante",
+        menuLabel: "Brillante",
+        finderLabel: "Brillante",
+        title: "Brillante",
+        blurb: "1 diseños en acabado brillante.",
+      },
+    ],
+  },
+  {
+    id: "piso-mate",
+    linea: "Piso",
+    eyebrow: "Zafiro",
+    title: "Piso — Mate",
+    intro: "Porcelanatos y cerámicas para piso — acabados lisos y decorativos.",
+    image: img('catalog/products/piso/mate/norway-grey.jpeg'),
+    groups: [
+      {
+        id: "piso-mate-mate",
+        kicker: "Mate",
+        menuLabel: "Mate",
+        finderLabel: "Mate",
+        title: "Mate",
+        blurb: "3 diseños en acabado mate.",
+      },
+    ],
+  },
+  {
+    id: "piso-decorativo",
+    linea: "Piso",
+    eyebrow: "Zafiro",
+    title: "Piso — Decorativo",
+    intro: "Porcelanatos y cerámicas para piso — acabados lisos y decorativos.",
+    image: img('catalog/products/piso/decorativo/levender-rose.jpeg'),
+    groups: [
+      {
+        id: "piso-decorativo-decorativo",
+        kicker: "Decorativo",
+        menuLabel: "Decorativo",
+        finderLabel: "Decorativo",
+        title: "Decorativo",
+        blurb: "5 diseños en acabado decorativo.",
       },
     ],
   },
 ];
 
-const products = [];
+const products = [
+  {
+    id: "zafiro-126e6009l",
+    nombre: "126E6009L Gris Azulado",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. 126E6009L",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "gris azulado",
+    image: img("catalog/products/piso/brillante/126e6009l-126e6009l.jpeg"),
+    modelo: "126E6009L",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-blanco-vetea",
+    nombre: "Blanco Veteado Blanco Crema",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. BLANCO-VETEA",
+    linea: "Zafiro",
+    chip1: "60×60 cm",
+    chip2: "Brillante",
+    chip3: "blanco crema",
+    image: img("catalog/products/piso/brillante/blanco-veteado.jpeg"),
+    modelo: "BLANCO-VETEA",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-126e6009l",
+    nombre: "Oviedo Blanco Marrón",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. 126E6009L",
+    linea: "Zafiro",
+    chip1: "60×60 cm",
+    chip2: "Brillante",
+    chip3: "blanco marrón",
+    image: img("catalog/products/piso/brillante/oviedo.jpeg"),
+    modelo: "126E6009L",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-granada",
+    nombre: "Granada Blanco Gris",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. GRANADA",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "blanco gris",
+    image: img("catalog/products/piso/brillante/granada.jpeg"),
+    modelo: "GRANADA",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-river-snow",
+    nombre: "River Snow Blanco Gris",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. RIVER-SNOW",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "blanco gris",
+    image: img("catalog/products/piso/brillante/river-snow.jpeg"),
+    modelo: "RIVER-SNOW",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-11397",
+    nombre: "11397 Blanco Gris",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. 11397",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "blanco gris",
+    image: img("catalog/products/piso/brillante/11397-11397.jpeg"),
+    modelo: "11397",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-avorio-grey",
+    nombre: "Avorio Grey Gris Claro",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. AVORIO-GREY",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "gris claro",
+    image: img("catalog/products/piso/brillante/avorio-grey.jpeg"),
+    modelo: "AVORIO-GREY",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-statuario-ca",
+    nombre: "Statuario carrara Blanco Gris",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. STATUARIO-CA",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "blanco gris",
+    image: img("catalog/products/piso/brillante/statuario-carrara.jpeg"),
+    modelo: "STATUARIO-CA",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-carrara-pola",
+    nombre: "Carrara polaris Blanco Gris",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. CARRARA-POLA",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "blanco gris",
+    image: img("catalog/products/piso/brillante/carrara-polaris.jpeg"),
+    modelo: "CARRARA-POLA",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-cascade-grey",
+    nombre: "Cascade grey Gris Oscuro",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. CASCADE-GREY",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "gris oscuro",
+    image: img("catalog/products/piso/brillante/cascade-grey.jpeg"),
+    modelo: "CASCADE-GREY",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-rodes-gold",
+    nombre: "Rodes Gold Blanco Dorado Gris",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. RODES-GOLD",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "blanco dorado gris",
+    image: img("catalog/products/piso/brillante/rodes-gold.jpeg"),
+    modelo: "RODES-GOLD",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-muse-ash",
+    nombre: "Muse ash Gris Ceniza",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. MUSE-ASH",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "gris ceniza",
+    image: img("catalog/products/piso/brillante/muse-ash.jpeg"),
+    modelo: "MUSE-ASH",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-11441",
+    nombre: "11441 Crema Beige",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. 11441",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "crema beige",
+    image: img("catalog/products/piso/brillante/11441-11441.jpeg"),
+    modelo: "11441",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-prima-grey",
+    nombre: "Prima Grey Gris",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. PRIMA-GREY",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "gris",
+    image: img("catalog/products/piso/brillante/prima-grey.jpeg"),
+    modelo: "PRIMA-GREY",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-panda-white",
+    nombre: "Panda White Blanco Negro",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. PANDA-WHITE",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "blanco negro",
+    image: img("catalog/products/piso/brillante/panda-white.jpeg"),
+    modelo: "PANDA-WHITE",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-thg-01",
+    nombre: "THG-01 Verde Menta Azul",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. THG-01",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "verde menta azul",
+    image: img("catalog/products/piso/brillante/thg-01.jpeg"),
+    modelo: "THG-01",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-royal-statua",
+    nombre: "Royal statuario Blanco Gris",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. ROYAL-STATUA",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "blanco gris",
+    image: img("catalog/products/piso/brillante/royal-statuario.jpeg"),
+    modelo: "ROYAL-STATUA",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-patchwork-hi",
+    nombre: "Patchwork hidráulico Marrón Gris Beige",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. PATCHWORK-HI",
+    linea: "Zafiro",
+    chip1: "60×60 cm",
+    chip2: "Brillante",
+    chip3: "marrón gris beige",
+    image: img("catalog/products/piso/brillante/patchwork-hidraulico.jpeg"),
+    modelo: "PATCHWORK-HI",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-phoenix",
+    nombre: "Phoenix Crema Dorado",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. PHOENIX",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "crema dorado",
+    image: img("catalog/products/piso/brillante/phoenix.jpeg"),
+    modelo: "PHOENIX",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-cartagena",
+    nombre: "Cartagena Blanco Gris",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. CARTAGENA",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "blanco gris",
+    image: img("catalog/products/piso/brillante/cartagena.jpeg"),
+    modelo: "CARTAGENA",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-floral-decor",
+    nombre: "Floral decorativo Beige Verde Azul",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. FLORAL-DECOR",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "beige verde azul",
+    image: img("catalog/products/piso/brillante/floral-decorativo.jpeg"),
+    modelo: "FLORAL-DECOR",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-dyna-beige",
+    nombre: "Dyna Beige Beige Crema",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. DYNA-BEIGE",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "beige crema",
+    image: img("catalog/products/piso/brillante/dyna-beige.jpeg"),
+    modelo: "DYNA-BEIGE",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-plain-ivory",
+    nombre: "Plain Ivory Marfil Marfil Crema",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. PLAIN-IVORY-",
+    linea: "Zafiro",
+    chip1: "60×60 cm",
+    chip2: "Brillante",
+    chip3: "marfil crema",
+    image: img("catalog/products/piso/brillante/plain-ivory-marfil.jpeg"),
+    modelo: "PLAIN-IVORY-",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-marmol-blanc",
+    nombre: "Mármol blanco veteado Blanco Gris",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. MARMOL-BLANC",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "blanco gris",
+    image: img("catalog/products/piso/brillante/marmol-blanco-veteado.jpeg"),
+    modelo: "MARMOL-BLANC",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-ivory-jazz-m",
+    nombre: "Ivory Jazz Marfil Veteado Marfil Crema",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. IVORY-JAZZ-M",
+    linea: "Zafiro",
+    chip1: "60×60 cm",
+    chip2: "Brillante",
+    chip3: "marfil crema",
+    image: img("catalog/products/piso/brillante/ivory-jazz-marfil-veteado.jpeg"),
+    modelo: "IVORY-JAZZ-M",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-dyna-natural",
+    nombre: "Dyna Natural Beige Marrón",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. DYNA-NATURAL",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "beige marrón",
+    image: img("catalog/products/piso/brillante/dyna-natural.jpeg"),
+    modelo: "DYNA-NATURAL",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-statuario-go",
+    nombre: "Statuario golden Blanco Dorado",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. STATUARIO-GO",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "blanco dorado",
+    image: img("catalog/products/piso/brillante/statuario-golden.jpeg"),
+    modelo: "STATUARIO-GO",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-oracle-blue",
+    nombre: "Oracle Blue Azul",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. ORACLE-BLUE",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "azul",
+    image: img("catalog/products/piso/brillante/oracle-blue.jpeg"),
+    modelo: "ORACLE-BLUE",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-00437",
+    nombre: "Gisborne Blanco Gris Dorado",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. 00437",
+    linea: "Zafiro",
+    chip1: "60×60 cm",
+    chip2: "Brillante",
+    chip3: "blanco gris dorado",
+    image: img("catalog/products/piso/brillante/gisborne.jpeg"),
+    modelo: "00437",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-jordan-grey",
+    nombre: "Jordan Grey Gris Oscuro",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. JORDAN-GREY",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "gris oscuro",
+    image: img("catalog/products/piso/brillante/jordan-grey.jpeg"),
+    modelo: "JORDAN-GREY",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-white-traony",
+    nombre: "White Traonyx Blanco Gris Beige",
+    group: "piso-brillante-brillante",
+    subcategoria: "Brillante · Ref. WHITE-TRAONY",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "blanco gris beige",
+    image: img("catalog/products/piso/brillante/white-traonyx.jpeg"),
+    modelo: "WHITE-TRAONY",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-00479",
+    nombre: "00479 Blanco Verde Beige",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 00479",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "blanco verde beige",
+    image: img("catalog/products/muro/decorativo/00479-00479.jpeg"),
+    modelo: "00479",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-005",
+    nombre: "RUSTICA 005 Gris Oscuro",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 005",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris oscuro",
+    image: img("catalog/products/muro/decorativo/rustica-005.jpeg"),
+    modelo: "005",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-piedra-apila",
+    nombre: "Piedra apilada marrón Marrón Beige",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. PIEDRA-APILA",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "marrón beige",
+    image: img("catalog/products/muro/decorativo/piedra-apilada-marron.jpeg"),
+    modelo: "PIEDRA-APILA",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-relieve-line",
+    nombre: "Relieve lineal crema Crema Beige",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. RELIEVE-LINE",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "crema beige",
+    image: img("catalog/products/muro/decorativo/relieve-lineal-crema.jpeg"),
+    modelo: "RELIEVE-LINE",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-001",
+    nombre: "CARVINA 001 Gris Blanco",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 001",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris blanco",
+    image: img("catalog/products/muro/decorativo/carvina-001.jpeg"),
+    modelo: "001",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-002",
+    nombre: "DESERTA 002 Beige Marrón",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 002",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "beige marrón",
+    image: img("catalog/products/muro/decorativo/deserta-002.jpeg"),
+    modelo: "002",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-piedra-apila",
+    nombre: "Piedra apilada gris",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. PIEDRA-APILA",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris",
+    image: img("catalog/products/muro/decorativo/piedra-apilada-gris.jpeg"),
+    modelo: "PIEDRA-APILA",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-00492",
+    nombre: "00492 Gris Claro",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 00492",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris claro",
+    image: img("catalog/products/muro/decorativo/00492-00492.jpeg"),
+    modelo: "00492",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-00500",
+    nombre: "00500 Crema",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 00500",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "crema",
+    image: img("catalog/products/muro/decorativo/00500-00500.jpeg"),
+    modelo: "00500",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-piedra-verti",
+    nombre: "Piedra vertical multicolor Marrón Gris Crema",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. PIEDRA-VERTI",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "marrón gris crema",
+    image: img("catalog/products/muro/decorativo/piedra-vertical-multicolor.jpeg"),
+    modelo: "PIEDRA-VERTI",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-ladrillo-api",
+    nombre: "Ladrillo apilado multicolor Beige Terracota Marrón",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. LADRILLO-API",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "beige terracota marrón",
+    image: img("catalog/products/muro/decorativo/ladrillo-apilado-multicolor.jpeg"),
+    modelo: "LADRILLO-API",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-11428",
+    nombre: "11428 Gris Blanco Negro",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 11428",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris blanco negro",
+    image: img("catalog/products/muro/decorativo/11428-11428.jpeg"),
+    modelo: "11428",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-00510",
+    nombre: "00510 Beige Crema",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 00510",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "beige crema",
+    image: img("catalog/products/muro/decorativo/00510-00510.jpeg"),
+    modelo: "00510",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-004",
+    nombre: "SIERRA 004 Gris",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 004",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris",
+    image: img("catalog/products/muro/decorativo/sierra-004.jpeg"),
+    modelo: "004",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-005",
+    nombre: "LUNARA 005 Gris",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 005",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris",
+    image: img("catalog/products/muro/decorativo/lunara-005.jpeg"),
+    modelo: "005",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-ladrillo-api",
+    nombre: "Ladrillo apilado marrón Marrón Beige",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. LADRILLO-API",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "marrón beige",
+    image: img("catalog/products/muro/decorativo/ladrillo-apilado-marron.jpeg"),
+    modelo: "LADRILLO-API",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-010",
+    nombre: "ATIQA 010 Gris Crema",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 010",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris crema",
+    image: img("catalog/products/muro/decorativo/atiqa-010.jpeg"),
+    modelo: "010",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-11412",
+    nombre: "11412 Blanco",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 11412",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "blanco",
+    image: img("catalog/products/muro/decorativo/11412-11412.jpeg"),
+    modelo: "11412",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-11419",
+    nombre: "11419 Blanco",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 11419",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "blanco",
+    image: img("catalog/products/muro/decorativo/11419-11419.jpeg"),
+    modelo: "11419",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-11421",
+    nombre: "11421 Gris Claro",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 11421",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris claro",
+    image: img("catalog/products/muro/decorativo/11421-11421.jpeg"),
+    modelo: "11421",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-003",
+    nombre: "LUNARA 003 Marrón Beige",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 003",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "marrón beige",
+    image: img("catalog/products/muro/decorativo/lunara-003.jpeg"),
+    modelo: "003",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-007",
+    nombre: "CARVINA 007 Gris Blanco",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 007",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris blanco",
+    image: img("catalog/products/muro/decorativo/carvina-007.jpeg"),
+    modelo: "007",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-005",
+    nombre: "NATURA 005 Gris Claro",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 005",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris claro",
+    image: img("catalog/products/muro/decorativo/natura-005.jpeg"),
+    modelo: "005",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-006",
+    nombre: "Cuvica 006 Gris",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 006",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris",
+    image: img("catalog/products/muro/decorativo/cuvica-006.jpeg"),
+    modelo: "006",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-11389",
+    nombre: "11389 Crema Dorado",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 11389",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "crema dorado",
+    image: img("catalog/products/muro/decorativo/11389-11389.jpeg"),
+    modelo: "11389",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-piedra-verti",
+    nombre: "Piedra vertical gris",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. PIEDRA-VERTI",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris",
+    image: img("catalog/products/muro/decorativo/piedra-vertical-gris.jpeg"),
+    modelo: "PIEDRA-VERTI",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-00482",
+    nombre: "00482 Gris Claro",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 00482",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris claro",
+    image: img("catalog/products/muro/decorativo/00482-00482.jpeg"),
+    modelo: "00482",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-00512",
+    nombre: "00512 Marrón",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 00512",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "marrón",
+    image: img("catalog/products/muro/decorativo/00512-00512.jpeg"),
+    modelo: "00512",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-00498",
+    nombre: "00498 Blanco",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 00498",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "blanco",
+    image: img("catalog/products/muro/decorativo/00498-00498.jpeg"),
+    modelo: "00498",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-00519",
+    nombre: "00519 Blanco Dorado",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 00519",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "blanco dorado",
+    image: img("catalog/products/muro/decorativo/00519-00519.jpeg"),
+    modelo: "00519",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-piedra-apila",
+    nombre: "Piedra apilada gris blanco",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. PIEDRA-APILA",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris blanco",
+    image: img("catalog/products/muro/decorativo/piedra-apilada-gris-blanco.jpeg"),
+    modelo: "PIEDRA-APILA",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-piedra-apila",
+    nombre: "Piedra apilada beige Beige Marrón",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. PIEDRA-APILA",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "beige marrón",
+    image: img("catalog/products/muro/decorativo/piedra-apilada-beige.jpeg"),
+    modelo: "PIEDRA-APILA",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-carvina-beig",
+    nombre: "CARVINA beige Beige Marrón",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. CARVINA-BEIG",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "beige marrón",
+    image: img("catalog/products/muro/decorativo/carvina-beige.jpeg"),
+    modelo: "CARVINA-BEIG",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-003",
+    nombre: "AMASONA 003 Gris Beige",
+    group: "muro-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 003",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris beige",
+    image: img("catalog/products/muro/decorativo/amasona-003.jpeg"),
+    modelo: "003",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-00488",
+    nombre: "00488 Beige Crema",
+    group: "muro-brillante-brillante",
+    subcategoria: "Brillante · Ref. 00488",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Brillante",
+    chip3: "beige crema",
+    image: img("catalog/products/muro/brillante/00488-00488.jpeg"),
+    modelo: "00488",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-norway-grey",
+    nombre: "Norway grey Gris Claro",
+    group: "piso-mate-mate",
+    subcategoria: "Mate · Ref. NORWAY-GREY",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Mate",
+    chip3: "gris claro",
+    image: img("catalog/products/piso/mate/norway-grey.jpeg"),
+    modelo: "NORWAY-GREY",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-norway-crema",
+    nombre: "Norway crema Crema Beige",
+    group: "piso-mate-mate",
+    subcategoria: "Mate · Ref. NORWAY-CREMA",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Mate",
+    chip3: "crema beige",
+    image: img("catalog/products/piso/mate/norway-crema.jpeg"),
+    modelo: "NORWAY-CREMA",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-emotion-grey",
+    nombre: "Emotion Grey Gris",
+    group: "piso-mate-mate",
+    subcategoria: "Mate · Ref. EMOTION-GREY",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Mate",
+    chip3: "gris",
+    image: img("catalog/products/piso/mate/emotion-grey.jpeg"),
+    modelo: "EMOTION-GREY",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-levender-ros",
+    nombre: "Levender Rose Crema Melocotón",
+    group: "piso-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. LEVENDER-ROS",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "crema melocotón",
+    image: img("catalog/products/piso/decorativo/levender-rose.jpeg"),
+    modelo: "LEVENDER-ROS",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-white-flower",
+    nombre: "White flower Crema",
+    group: "piso-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. WHITE-FLOWER",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "crema",
+    image: img("catalog/products/piso/decorativo/white-flower.jpeg"),
+    modelo: "WHITE-FLOWER",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-rosa-relieve",
+    nombre: "Rosa relieve crema",
+    group: "piso-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. ROSA-RELIEVE",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "crema",
+    image: img("catalog/products/piso/decorativo/rosa-relieve-crema.jpeg"),
+    modelo: "ROSA-RELIEVE",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-11426",
+    nombre: "11426 Gris Claro",
+    group: "piso-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 11426",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "gris claro",
+    image: img("catalog/products/piso/decorativo/11426-11426.jpeg"),
+    modelo: "11426",
+    linea_cat: "Zafiro",
+  },
+  {
+    id: "zafiro-11410",
+    nombre: "11410 Blanco Gris",
+    group: "piso-decorativo-decorativo",
+    subcategoria: "Decorativo · Ref. 11410",
+    linea: "Zafiro",
+    chip1: "Consultar",
+    chip2: "Decorativo",
+    chip3: "blanco gris",
+    image: img("catalog/products/piso/decorativo/11410-11410.jpeg"),
+    modelo: "11410",
+    linea_cat: "Zafiro",
+  },
+];
 
 function studioForSpot() { return ''; }
-
-function initCatalog() {
-  const tree = document.getElementById('catalogTree');
-  if (!tree) return;
-
-  tree.innerHTML = `
-    <div class="catalog-placeholder">
-      <h3>Catálogo en preparación</h3>
-      <p>Estamos armando el catálogo de Zafiro. Contáctanos por WhatsApp para cotizar productos.</p>
-    </div>
-  `;
-}
-
-function initFeatured() {
-  const track = document.getElementById('featuredTrack');
-  if (!track) return;
-  track.innerHTML = `
-    <div class="featured-card featured-card--placeholder">
-      <div class="featured-card-body">
-        <div class="featured-eyebrow">Zafiro</div>
-        <h3>Productos próximamente</h3>
-        <p>El catálogo de Zafiro estará disponible pronto.</p>
-      </div>
-    </div>
-  `;
-}
-
-function refreshProductCardButtons() {}
-function isVideoPath() { return false; }

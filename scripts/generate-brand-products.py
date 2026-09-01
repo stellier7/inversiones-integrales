@@ -300,8 +300,70 @@ def generate_lumiart():
     return build_file('Lumiart', 'lumiart', catalog_sections, products_js)
 
 
-def build_file(brand_name, brand_id, catalog_sections, products_js):
-    lines = [f'// Catálogo {brand_name} — generado desde PDF']
+def generate_zafiro():
+    items = json.loads((EXTRACTED / 'zafiro-products.json').read_text())
+    sections = OrderedDict()
+    for p in items:
+        sec = p['section']
+        if sec not in sections:
+            sections[sec] = OrderedDict()
+        fin = p['finish_group'] or 'General'
+        sections[sec].setdefault(fin, []).append(p)
+
+    catalog_sections = []
+    products_js = []
+    for sec_title, finishes in sections.items():
+        sec_id = slugify(sec_title)
+        groups = []
+        cover_image = ''
+        aplic = 'Piso' if sec_title.startswith('Piso') else 'Muro'
+        for fin, prods in finishes.items():
+            gid = slugify(f'{sec_id}-{fin}')
+            if prods and prods[0].get('image') and not cover_image:
+                cover_image = prods[0]['image']
+            groups.append({
+                'id': gid,
+                'kicker': fin,
+                'menuLabel': fin,
+                'finderLabel': fin,
+                'title': fin,
+                'blurb': f'{len(prods)} diseños en acabado {fin.lower()}.',
+            })
+            for p in prods:
+                pid = slugify(f"zafiro-{p['code']}")
+                chip3 = p.get('color', '')
+                products_js.append({
+                    'id': pid,
+                    'nombre': p['nombre'],
+                    'group': gid,
+                    'subcategoria': f"{p.get('acabado', '')} · Ref. {p['code']}",
+                    'linea': 'Zafiro',
+                    'chip1': p.get('medida', ''),
+                    'chip2': p.get('acabado', ''),
+                    'chip3': chip3,
+                    'image': p.get('image', ''),
+                    'modelo': p['code'],
+                    'linea_cat': 'Zafiro',
+                })
+        intro = {
+            'Piso': 'Porcelanatos y cerámicas para piso — acabados lisos y decorativos.',
+            'Muro': 'Cerámicas para muro — lisas, mates y relieves decorativos.',
+        }.get(aplic, 'Cerámica Zafiro.')
+        catalog_sections.append({
+            'id': sec_id,
+            'linea': aplic,
+            'eyebrow': 'Zafiro',
+            'title': sec_title.replace(' · ', ' — '),
+            'intro': intro,
+            'image': f"img('{cover_image}')" if cover_image else "''",
+            'groups': groups,
+        })
+
+    return build_file('Zafiro', 'zafiro', catalog_sections, products_js, source='fotos de producto')
+
+
+def build_file(brand_name, brand_id, catalog_sections, products_js, source='PDF'):
+    lines = [f'// Catálogo {brand_name} — generado desde {source}']
     lines.append(GRID_RUNTIME.strip())
     lines.append('')
     lines.append('const catalogSections = [')
@@ -342,11 +404,14 @@ def build_file(brand_name, brand_id, catalog_sections, products_js):
 def main():
     celima_js = generate_celima()
     lumiart_js = generate_lumiart()
+    zafiro_js = generate_zafiro()
     (ROOT / 'celima/assets/js/products.js').write_text(celima_js, encoding='utf-8')
     (ROOT / 'lumiart/assets/js/products.js').write_text(lumiart_js, encoding='utf-8')
-    print('Wrote celima and lumiart products.js')
-    print('Celima products:', celima_js.count('id: \'celima-'))
-    print('Lumiart products:', lumiart_js.count('id: \'lumiart-'))
+    (ROOT / 'zafiro/assets/js/products.js').write_text(zafiro_js, encoding='utf-8')
+    print('Wrote celima, lumiart and zafiro products.js')
+    print('Celima products:', celima_js.count("'id':"))
+    print('Lumiart products:', lumiart_js.count("'id':"))
+    print('Zafiro products:', zafiro_js.count("'id':"))
 
 
 if __name__ == '__main__':
