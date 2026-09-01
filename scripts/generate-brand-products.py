@@ -300,8 +300,94 @@ def generate_lumiart():
     return build_file('Lumiart', 'lumiart', catalog_sections, products_js)
 
 
-def build_file(brand_name, brand_id, catalog_sections, products_js):
-    lines = [f'// Catálogo {brand_name} — generado desde PDF']
+def generate_buffalo():
+    items = json.loads((EXTRACTED / 'buffalo-products.json').read_text())
+    category_defs = [
+        ('pvc-drenaje', 'PVC drenaje DWV', 'Codos, tees, yees y uniones para drenaje sanitario.'),
+        ('pvc-presion', 'PVC presión', 'Bujes, codos, tees, tapones y uniones para tubería a presión.'),
+        ('pvc-valvulas', 'Válvulas y trampas', 'Válvulas de bola compactas, trampas y sifones de drenaje.'),
+        ('cpvc', 'CPVC', 'Accesorios CPVC para agua caliente — codos, tees, uniones y válvulas.'),
+        ('forjas', 'Forjas decorativas', 'Paneles, flores, barras, hojas y lanzas de hierro forjado.'),
+        ('herrajes-porton', 'Herrajes de portón', 'Rodillos y rieles tipo U para portones corredizos.'),
+        ('tornillos', 'Tornillos', 'Tornillos para techo con punta broca — empaque Buffalo.'),
+        ('accesorios', 'Accesorios', 'Esponjas multi-uso Buffalo Plus 3W.'),
+    ]
+
+    groups_by_cat = OrderedDict()
+    for p in items:
+        cat = p['category_key']
+        gid = p['group_id']
+        if cat not in groups_by_cat:
+            groups_by_cat[cat] = OrderedDict()
+        if gid not in groups_by_cat[cat]:
+            groups_by_cat[cat][gid] = {
+                'label': p['group_label'],
+                'image': p.get('image', ''),
+                'count': 0,
+            }
+        groups_by_cat[cat][gid]['count'] += 1
+
+    catalog_sections = []
+    products_js = []
+
+    for cat_id, cat_title, cat_intro in category_defs:
+        group_map = groups_by_cat.get(cat_id)
+        if not group_map:
+            continue
+        groups = []
+        cover = ''
+        for gid, meta in group_map.items():
+            if meta['image'] and not cover:
+                cover = meta['image']
+            groups.append({
+                'id': gid,
+                'kicker': meta['label'],
+                'menuLabel': meta['label'],
+                'finderLabel': meta['label'],
+                'title': meta['label'],
+                'blurb': f'{meta["count"]} referencias en esta línea.',
+            })
+        linea = {
+            'pvc-drenaje': 'Plomería',
+            'pvc-presion': 'Plomería',
+            'pvc-valvulas': 'Plomería',
+            'cpvc': 'Plomería',
+            'forjas': 'Herrajes',
+            'herrajes-porton': 'Herrajes',
+            'tornillos': 'Fijación',
+            'accesorios': 'Accesorios',
+        }.get(cat_id, 'Buffalo')
+        catalog_sections.append({
+            'id': cat_id,
+            'linea': linea,
+            'eyebrow': 'Buffalo',
+            'title': cat_title,
+            'intro': cat_intro,
+            'image': f"img('{cover}')" if cover else "''",
+            'groups': groups,
+        })
+        for p in items:
+            if p['category_key'] != cat_id:
+                continue
+            pid = slugify(f"buffalo-{p['code']}")
+            products_js.append({
+                'id': pid,
+                'nombre': p['nombre'],
+                'group': p['group_id'],
+                'subcategoria': f"Ref. {p['code']}",
+                'linea': 'Buffalo',
+                'chip1': p.get('chip1', ''),
+                'chip2': p.get('chip2', ''),
+                'chip3': p.get('chip3', ''),
+                'image': p.get('image', ''),
+                'modelo': p['code'],
+            })
+
+    return build_file('Buffalo', 'buffalo', catalog_sections, products_js, source='catálogo fotografiado')
+
+
+def build_file(brand_name, brand_id, catalog_sections, products_js, source='PDF'):
+    lines = [f'// Catálogo {brand_name} — generado desde {source}']
     lines.append(GRID_RUNTIME.strip())
     lines.append('')
     lines.append('const catalogSections = [')
@@ -342,11 +428,14 @@ def build_file(brand_name, brand_id, catalog_sections, products_js):
 def main():
     celima_js = generate_celima()
     lumiart_js = generate_lumiart()
+    buffalo_js = generate_buffalo()
     (ROOT / 'celima/assets/js/products.js').write_text(celima_js, encoding='utf-8')
     (ROOT / 'lumiart/assets/js/products.js').write_text(lumiart_js, encoding='utf-8')
-    print('Wrote celima and lumiart products.js')
+    (ROOT / 'buffalo/assets/js/products.js').write_text(buffalo_js, encoding='utf-8')
+    print('Wrote celima, lumiart and buffalo products.js')
     print('Celima products:', celima_js.count('id: \'celima-'))
     print('Lumiart products:', lumiart_js.count('id: \'lumiart-'))
+    print('Buffalo products:', buffalo_js.count('id: \'buffalo-'))
 
 
 if __name__ == '__main__':
