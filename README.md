@@ -53,11 +53,11 @@ Cada carpeta de marca es **autocontenida**:
 | Marca    | Carpeta     | Tagline                          |
 |----------|-------------|----------------------------------|
 | Megawatt | `/megawatt/` | Todo en luces                   |
+| Lumiart  | `/lumiart/`  | Arte en iluminación             |
 | Buffalo  | `/buffalo/`  | Calidad para cada proyecto      |
 | Zafiro   | `/zafiro/`   | Todo en cerámicas y inodoros    |
 | Celima   | `/celima/`   | Soluciones para tu hogar        |
 | Trébol   | `/trebol/`   | Variedad para cada proyecto     |
-| Lumiart  | `/lumiart/`  | Arte en iluminación             |
 
 ## Cómo agregar un logo
 
