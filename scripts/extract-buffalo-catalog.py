@@ -24,14 +24,49 @@ def title_case_desc(text):
     return text
 
 
+def parse_medida(desc: str, code: str) -> str:
+    text = clean_desc(desc).upper()
+    m = re.search(r'(\d+(?:-\d+/\d+)?")\s*X\s*(\d+)', text)
+    if m:
+        return f'{m.group(1)}×{m.group(2)}°'
+    m = re.search(r'(\d+(?:-\d+/\d+)?")', text)
+    if m:
+        return m.group(1)
+    m = re.search(r'(\d+(?:\.\d+)?)\s*X\s*(\d+(?:\.\d+)?)\s*MM', text)
+    if m:
+        return f'{m.group(1)}×{m.group(2)} mm'
+    m = re.search(r'(\d+)\s*MM\b', text)
+    if m:
+        return f'{m.group(1)} mm'
+    m = re.search(r'(\d+)\s*PIES', text)
+    if m:
+        return f'{m.group(1)} pies'
+    if code.startswith('TBN'):
+        return code.replace('TBN-', '#').replace('X', '×')
+    if code.startswith('ESP'):
+        return code.replace('ESP-', '')
+    return code
+
+
+def family_name(desc: str) -> str:
+    text = title_case_desc(desc)
+    text = re.sub(r'\s*BUFFALO\s*$', '', text, flags=re.I)
+    text = re.sub(r'\s+\d+(?:-\d+/\d+)?".*$', '', text)
+    text = re.sub(r'\s+\d+(?:\.\d+)?\s*X\s*\d+.*$', '', text, flags=re.I)
+    return text.strip() or title_case_desc(desc)
+
+
 def page_products(page_image, group_id, group_label, items, category_key=None):
     rows = []
     for code, desc in items:
+        description = clean_desc(desc)
         rows.append({
             'code': code,
-            'nombre': title_case_desc(desc),
-            'description': clean_desc(desc),
+            'nombre': family_name(desc),
+            'description': description,
+            'medida': parse_medida(description, code),
             'image': f'{IMG}/{page_image}',
+            'page_image': page_image,
             'category_key': category_key,
             'group_id': group_id,
             'group_label': group_label,
@@ -50,7 +85,9 @@ def manual_products(category_key, group_id, group_label, items):
             'code': code,
             'nombre': nombre,
             'description': nombre,
+            'medida': chip1 or parse_medida(nombre, code),
             'image': f'{IMG}/{image}',
+            'page_image': '',
             'category_key': category_key,
             'group_id': group_id,
             'group_label': group_label,

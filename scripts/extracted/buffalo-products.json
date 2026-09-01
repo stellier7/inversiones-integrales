@@ -1,1980 +1,2639 @@
 [
   {
     "code": "5235B",
-    "nombre": "CODO DWV DRENAJE INYECTADO 2\"X45",
+    "nombre": "CODO DWV DRENAJE INYECTADO",
     "description": "CODO DWV DRENAJE INYECTADO 2\"X45",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "2\"×45°",
+    "image": "catalog/products/crops/dwv-codos.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-codos",
-    "group_label": "Codos DWV"
+    "group_label": "Codos DWV",
+    "studio_image": "catalog/products/crops/dwv-codos.jpeg"
   },
   {
     "code": "5239B",
-    "nombre": "CODO DWV DRENAJE INYECTADO 2\"X90",
+    "nombre": "CODO DWV DRENAJE INYECTADO",
     "description": "CODO DWV DRENAJE INYECTADO 2\"X90",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "2\"×90°",
+    "image": "catalog/products/crops/dwv-codos.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-codos",
-    "group_label": "Codos DWV"
+    "group_label": "Codos DWV",
+    "studio_image": "catalog/products/crops/dwv-codos.jpeg"
   },
   {
     "code": "5236B",
-    "nombre": "CODO DWV DRENAJE INYECTADO 3\"X45",
+    "nombre": "CODO DWV DRENAJE INYECTADO",
     "description": "CODO DWV DRENAJE INYECTADO 3\"X45",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "3\"×45°",
+    "image": "catalog/products/crops/dwv-codos.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-codos",
-    "group_label": "Codos DWV"
+    "group_label": "Codos DWV",
+    "studio_image": "catalog/products/crops/dwv-codos.jpeg"
   },
   {
     "code": "5240B",
-    "nombre": "CODO DWV DRENAJE INYECTADO 3\"X90",
+    "nombre": "CODO DWV DRENAJE INYECTADO",
     "description": "CODO DWV DRENAJE INYECTADO 3\"X90",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "3\"×90°",
+    "image": "catalog/products/crops/dwv-codos.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-codos",
-    "group_label": "Codos DWV"
+    "group_label": "Codos DWV",
+    "studio_image": "catalog/products/crops/dwv-codos.jpeg"
   },
   {
     "code": "5237B",
-    "nombre": "CODO DWV DRENAJE INYECTADO 4\"X45",
+    "nombre": "CODO DWV DRENAJE INYECTADO",
     "description": "CODO DWV DRENAJE INYECTADO 4\"X45",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "4\"×45°",
+    "image": "catalog/products/crops/dwv-codos.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-codos",
-    "group_label": "Codos DWV"
+    "group_label": "Codos DWV",
+    "studio_image": "catalog/products/crops/dwv-codos.jpeg"
   },
   {
     "code": "5241B",
-    "nombre": "CODO DWV DRENAJE INYECTADO 4\"X90",
+    "nombre": "CODO DWV DRENAJE INYECTADO",
     "description": "CODO DWV DRENAJE INYECTADO 4\"X90",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "4\"×90°",
+    "image": "catalog/products/crops/dwv-codos.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-codos",
-    "group_label": "Codos DWV"
+    "group_label": "Codos DWV",
+    "studio_image": "catalog/products/crops/dwv-codos.jpeg"
   },
   {
     "code": "5242B",
-    "nombre": "CODO DWV DRENAJE INYECTADO 6\"X90",
+    "nombre": "CODO DWV DRENAJE INYECTADO",
     "description": "CODO DWV DRENAJE INYECTADO 6\"X90",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "6\"×90°",
+    "image": "catalog/products/crops/dwv-codos.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-codos",
-    "group_label": "Codos DWV"
+    "group_label": "Codos DWV",
+    "studio_image": "catalog/products/crops/dwv-codos.jpeg"
   },
   {
     "code": "5238B",
-    "nombre": "CODO PVC INYECTADO 4\"X6\" BUFFALO",
+    "nombre": "CODO PVC INYECTADO",
     "description": "CODO PVC INYECTADO 4\"X6\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "4\"×6°",
+    "image": "catalog/products/crops/dwv-codos.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-codos",
-    "group_label": "Codos DWV"
+    "group_label": "Codos DWV",
+    "studio_image": "catalog/products/crops/dwv-codos.jpeg"
   },
   {
     "code": "1863B",
-    "nombre": "TEE DWV DRENAJE INYECTADA 1-1/2\"",
+    "nombre": "TEE DWV DRENAJE INYECTADA",
     "description": "TEE DWV DRENAJE INYECTADA 1-1/2\"",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "1-1/2\"",
+    "image": "catalog/products/crops/dwv-tees.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-tees",
-    "group_label": "Tees DWV"
+    "group_label": "Tees DWV",
+    "studio_image": "catalog/products/crops/dwv-tees.jpeg"
   },
   {
     "code": "5247B",
-    "nombre": "TEE DWV DRENAJE INYECTADA 2\"",
+    "nombre": "TEE DWV DRENAJE INYECTADA",
     "description": "TEE DWV DRENAJE INYECTADA 2\"",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/dwv-tees.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-tees",
-    "group_label": "Tees DWV"
+    "group_label": "Tees DWV",
+    "studio_image": "catalog/products/crops/dwv-tees.jpeg"
   },
   {
     "code": "5248B",
-    "nombre": "TEE DWV DRENAJE INYECTADA 3\"",
+    "nombre": "TEE DWV DRENAJE INYECTADA",
     "description": "TEE DWV DRENAJE INYECTADA 3\"",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "3\"",
+    "image": "catalog/products/crops/dwv-tees.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-tees",
-    "group_label": "Tees DWV"
+    "group_label": "Tees DWV",
+    "studio_image": "catalog/products/crops/dwv-tees.jpeg"
   },
   {
     "code": "5245B",
-    "nombre": "TEE DWV DRENAJE INYECTADA 4\"",
+    "nombre": "TEE DWV DRENAJE INYECTADA",
     "description": "TEE DWV DRENAJE INYECTADA 4\"",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/dwv-tees.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-tees",
-    "group_label": "Tees DWV"
+    "group_label": "Tees DWV",
+    "studio_image": "catalog/products/crops/dwv-tees.jpeg"
   },
   {
     "code": "5246B",
-    "nombre": "TEE DWV DRENAJE INYECTADA 6\"",
+    "nombre": "TEE DWV DRENAJE INYECTADA",
     "description": "TEE DWV DRENAJE INYECTADA 6\"",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "6\"",
+    "image": "catalog/products/crops/dwv-tees.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-tees",
-    "group_label": "Tees DWV"
+    "group_label": "Tees DWV",
+    "studio_image": "catalog/products/crops/dwv-tees.jpeg"
   },
   {
     "code": "5243B",
-    "nombre": "YEE DWV DRENAJE INYECTADA 2\"",
+    "nombre": "YEE DWV DRENAJE INYECTADA",
     "description": "YEE DWV DRENAJE INYECTADA 2\"",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/dwv-yees.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-yees",
-    "group_label": "Yees DWV"
+    "group_label": "Yees DWV",
+    "studio_image": "catalog/products/crops/dwv-yees.jpeg"
   },
   {
     "code": "5244B",
-    "nombre": "YEE DWV DRENAJE INYECTADA 3\"",
+    "nombre": "YEE DWV DRENAJE INYECTADA",
     "description": "YEE DWV DRENAJE INYECTADA 3\"",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "3\"",
+    "image": "catalog/products/crops/dwv-yees.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-yees",
-    "group_label": "Yees DWV"
+    "group_label": "Yees DWV",
+    "studio_image": "catalog/products/crops/dwv-yees.jpeg"
   },
   {
     "code": "5249B",
-    "nombre": "YEE DWV DRENAJE INYECTADA 4\"",
+    "nombre": "YEE DWV DRENAJE INYECTADA",
     "description": "YEE DWV DRENAJE INYECTADA 4\"",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/dwv-yees.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-yees",
-    "group_label": "Yees DWV"
+    "group_label": "Yees DWV",
+    "studio_image": "catalog/products/crops/dwv-yees.jpeg"
   },
   {
     "code": "4946B",
-    "nombre": "YEE PVC INYECTADA 1-1/2\" BUFFALO",
+    "nombre": "YEE PVC INYECTADA",
     "description": "YEE PVC INYECTADA 1-1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "1-1/2\"",
+    "image": "catalog/products/crops/dwv-yees.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-yees",
-    "group_label": "Yees DWV"
+    "group_label": "Yees DWV",
+    "studio_image": "catalog/products/crops/dwv-yees.jpeg"
   },
   {
     "code": "5250B",
-    "nombre": "YEE PVC INYECTADA 6\"X6\" BUFFALO",
+    "nombre": "YEE PVC INYECTADA",
     "description": "YEE PVC INYECTADA 6\"X6\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0477.jpeg",
+    "medida": "6\"×6°",
+    "image": "catalog/products/crops/dwv-yees.jpeg",
+    "page_image": "pvc/IMG_0477.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "dwv-yees",
-    "group_label": "Yees DWV"
+    "group_label": "Yees DWV",
+    "studio_image": "catalog/products/crops/dwv-yees.jpeg"
   },
   {
     "code": "5165B",
-    "nombre": "REDUCCION LISA 1\"X3/4\" BUJE BUFFALO",
+    "nombre": "REDUCCION LISA",
     "description": "REDUCCION LISA 1\"X3/4\" BUJE BUFFALO",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "1\"×3°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5170B",
-    "nombre": "REDUCCION LISA 1-1/2\"X3/4\" BUJE BUFFALO",
+    "nombre": "REDUCCION LISA",
     "description": "REDUCCION LISA 1-1/2\"X3/4\" BUJE BUFFALO",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "1-1/2\"×3°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5167B",
-    "nombre": "REDUCCION LISA 1-1/4\"X3/4\" BUJE BUFFALO",
+    "nombre": "REDUCCION LISA",
     "description": "REDUCCION LISA 1-1/4\"X3/4\" BUJE BUFFALO",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "1-1/4\"×3°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5168B",
-    "nombre": "REDUCCION LISA 1-1/4\"X1\" BUJE BUFFALO",
+    "nombre": "REDUCCION LISA",
     "description": "REDUCCION LISA 1-1/4\"X1\" BUJE BUFFALO",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "1-1/4\"×1°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5174B",
-    "nombre": "REDUCCION LISA 2\"X3/4\" BUJE BUFFALO",
+    "nombre": "REDUCCION LISA",
     "description": "REDUCCION LISA 2\"X3/4\" BUJE BUFFALO",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "2\"×3°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5172B",
-    "nombre": "REDUCCION LISA PVC 1-1/2\"X1-1/4\" BUJE BUFFALO",
+    "nombre": "REDUCCION LISA PVC",
     "description": "REDUCCION LISA PVC 1-1/2\"X1-1/4\" BUJE BUFFALO",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "1-1/2\"×1°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5163B",
-    "nombre": "REDUCCION LISA PVC PRESION 3/4\"X1/2\" BUJE BUFFALO",
+    "nombre": "REDUCCION LISA PVC PRESION 3/4\"X1/2\" BUJE",
     "description": "REDUCCION LISA PVC PRESION 3/4\"X1/2\" BUJE BUFFALO",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "4\"×1°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5164B",
-    "nombre": "BUJE REDUCTOR PVC 1\" X 1/2\"",
+    "nombre": "BUJE REDUCTOR PVC",
     "description": "BUJE REDUCTOR PVC 1\" X 1/2\"",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "1\"×1°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5171B",
-    "nombre": "BUJE REDUCTOR PVC 1-1/2\"X1\"",
+    "nombre": "BUJE REDUCTOR PVC",
     "description": "BUJE REDUCTOR PVC 1-1/2\"X1\"",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "1-1/2\"×1°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5169B",
-    "nombre": "BUJE REDUCTOR PVC 1-1/2\"X1/2\"",
+    "nombre": "BUJE REDUCTOR PVC",
     "description": "BUJE REDUCTOR PVC 1-1/2\"X1/2\"",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "1-1/2\"×1°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5166B",
-    "nombre": "BUJE REDUCTOR PVC 1-1/4\"X1\"",
+    "nombre": "BUJE REDUCTOR PVC",
     "description": "BUJE REDUCTOR PVC 1-1/4\"X1\"",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "1-1/4\"×1°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5175B",
-    "nombre": "BUJE REDUCTOR PVC 2\"X1\"",
+    "nombre": "BUJE REDUCTOR PVC",
     "description": "BUJE REDUCTOR PVC 2\"X1\"",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "2\"×1°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5173B",
-    "nombre": "BUJE REDUCTOR PVC 2\"X1/2\"",
+    "nombre": "BUJE REDUCTOR PVC",
     "description": "BUJE REDUCTOR PVC 2\"X1/2\"",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "2\"×1°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5177B",
-    "nombre": "BUJE REDUCTOR PVC 2\"X1-1/2\"",
+    "nombre": "BUJE REDUCTOR PVC",
     "description": "BUJE REDUCTOR PVC 2\"X1-1/2\"",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "2\"×1°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5176B",
-    "nombre": "BUJE REDUCTOR PVC 2\"X1-1/4\"",
+    "nombre": "BUJE REDUCTOR PVC",
     "description": "BUJE REDUCTOR PVC 2\"X1-1/4\"",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "2\"×1°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5178B",
-    "nombre": "BUJE REDUCTOR PVC 3\"X2\"",
+    "nombre": "BUJE REDUCTOR PVC",
     "description": "BUJE REDUCTOR PVC 3\"X2\"",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "3\"×2°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5179B",
-    "nombre": "BUJE REDUCTOR PVC 4\"X2\"",
+    "nombre": "BUJE REDUCTOR PVC",
     "description": "BUJE REDUCTOR PVC 4\"X2\"",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "4\"×2°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5180B",
-    "nombre": "BUJE REDUCTOR PVC 4\"X3\"",
+    "nombre": "BUJE REDUCTOR PVC",
     "description": "BUJE REDUCTOR PVC 4\"X3\"",
-    "image": "catalog/products/pvc/IMG_0478.jpeg",
+    "medida": "4\"×3°",
+    "image": "catalog/products/crops/bujes-presion.jpeg",
+    "page_image": "pvc/IMG_0478.jpeg",
     "category_key": "pvc-presion",
     "group_id": "bujes-presion",
-    "group_label": "Bujes reductores"
+    "group_label": "Bujes reductores",
+    "studio_image": "catalog/products/crops/bujes-presion.jpeg"
   },
   {
     "code": "5219B",
     "nombre": "ABRAZADERA PVC SENCILLA 1/2\"",
     "description": "ABRAZADERA PVC SENCILLA 1/2\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/abrazaderas.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "abrazaderas",
-    "group_label": "Abrazaderas"
+    "group_label": "Abrazaderas",
+    "studio_image": "catalog/products/crops/abrazaderas.jpeg"
   },
   {
     "code": "5189B",
     "nombre": "ABRAZADERA PVC SENCILLA 3/4\"",
     "description": "ABRAZADERA PVC SENCILLA 3/4\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/abrazaderas.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "abrazaderas",
-    "group_label": "Abrazaderas"
+    "group_label": "Abrazaderas",
+    "studio_image": "catalog/products/crops/abrazaderas.jpeg"
   },
   {
     "code": "5127B",
-    "nombre": "ABRAZADERA PVC SENCILLA 1\"",
+    "nombre": "ABRAZADERA PVC SENCILLA",
     "description": "ABRAZADERA PVC SENCILLA 1\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "1\"",
+    "image": "catalog/products/crops/abrazaderas.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "abrazaderas",
-    "group_label": "Abrazaderas"
+    "group_label": "Abrazaderas",
+    "studio_image": "catalog/products/crops/abrazaderas.jpeg"
   },
   {
     "code": "5128B",
-    "nombre": "ABRAZADERA PVC SENCILLA 1-1/4\"",
+    "nombre": "ABRAZADERA PVC SENCILLA",
     "description": "ABRAZADERA PVC SENCILLA 1-1/4\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "1-1/4\"",
+    "image": "catalog/products/crops/abrazaderas.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "abrazaderas",
-    "group_label": "Abrazaderas"
+    "group_label": "Abrazaderas",
+    "studio_image": "catalog/products/crops/abrazaderas.jpeg"
   },
   {
     "code": "5144B",
-    "nombre": "ABRAZADERA PVC SENCILLA 1-1/2\" BUFFALO",
+    "nombre": "ABRAZADERA PVC SENCILLA",
     "description": "ABRAZADERA PVC SENCILLA 1-1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "1-1/2\"",
+    "image": "catalog/products/crops/abrazaderas.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "abrazaderas",
-    "group_label": "Abrazaderas"
+    "group_label": "Abrazaderas",
+    "studio_image": "catalog/products/crops/abrazaderas.jpeg"
   },
   {
     "code": "5145B",
-    "nombre": "ABRAZADERA PVC SENCILLA 2\"",
+    "nombre": "ABRAZADERA PVC SENCILLA",
     "description": "ABRAZADERA PVC SENCILLA 2\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/abrazaderas.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "abrazaderas",
-    "group_label": "Abrazaderas"
+    "group_label": "Abrazaderas",
+    "studio_image": "catalog/products/crops/abrazaderas.jpeg"
   },
   {
     "code": "5146B",
-    "nombre": "ABRAZADERA PVC SENCILLA 3\"",
+    "nombre": "ABRAZADERA PVC SENCILLA",
     "description": "ABRAZADERA PVC SENCILLA 3\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "3\"",
+    "image": "catalog/products/crops/abrazaderas.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "abrazaderas",
-    "group_label": "Abrazaderas"
+    "group_label": "Abrazaderas",
+    "studio_image": "catalog/products/crops/abrazaderas.jpeg"
   },
   {
     "code": "5147B",
-    "nombre": "ABRAZADERA PVC SENCILLA 4\"",
+    "nombre": "ABRAZADERA PVC SENCILLA",
     "description": "ABRAZADERA PVC SENCILLA 4\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/abrazaderas.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "abrazaderas",
-    "group_label": "Abrazaderas"
+    "group_label": "Abrazaderas",
+    "studio_image": "catalog/products/crops/abrazaderas.jpeg"
   },
   {
     "code": "5155B",
     "nombre": "ADAPTADOR MACHO PVC 1/2\"",
     "description": "ADAPTADOR MACHO PVC 1/2\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/adaptadores-macho.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-macho",
-    "group_label": "Adaptadores macho"
+    "group_label": "Adaptadores macho",
+    "studio_image": "catalog/products/crops/adaptadores-macho.jpeg"
   },
   {
     "code": "5156B",
-    "nombre": "ADAPTADOR MACHO PVC 3/4\" BUFFALO",
+    "nombre": "ADAPTADOR MACHO PVC 3/4\"",
     "description": "ADAPTADOR MACHO PVC 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/adaptadores-macho.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-macho",
-    "group_label": "Adaptadores macho"
+    "group_label": "Adaptadores macho",
+    "studio_image": "catalog/products/crops/adaptadores-macho.jpeg"
   },
   {
     "code": "5157B",
-    "nombre": "ADAPTADOR MACHO PVC 1\"",
+    "nombre": "ADAPTADOR MACHO PVC",
     "description": "ADAPTADOR MACHO PVC 1\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "1\"",
+    "image": "catalog/products/crops/adaptadores-macho.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-macho",
-    "group_label": "Adaptadores macho"
+    "group_label": "Adaptadores macho",
+    "studio_image": "catalog/products/crops/adaptadores-macho.jpeg"
   },
   {
     "code": "5158B",
-    "nombre": "ADAPTADOR MACHO PVC 1-1/4\" BUFFALO",
+    "nombre": "ADAPTADOR MACHO PVC",
     "description": "ADAPTADOR MACHO PVC 1-1/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "1-1/4\"",
+    "image": "catalog/products/crops/adaptadores-macho.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-macho",
-    "group_label": "Adaptadores macho"
+    "group_label": "Adaptadores macho",
+    "studio_image": "catalog/products/crops/adaptadores-macho.jpeg"
   },
   {
     "code": "5159B",
-    "nombre": "ADAPTADOR MACHO PVC 1-1/2\"",
+    "nombre": "ADAPTADOR MACHO PVC",
     "description": "ADAPTADOR MACHO PVC 1-1/2\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "1-1/2\"",
+    "image": "catalog/products/crops/adaptadores-macho.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-macho",
-    "group_label": "Adaptadores macho"
+    "group_label": "Adaptadores macho",
+    "studio_image": "catalog/products/crops/adaptadores-macho.jpeg"
   },
   {
     "code": "5160B",
-    "nombre": "ADAPTADOR MACHO PVC 2\"",
+    "nombre": "ADAPTADOR MACHO PVC",
     "description": "ADAPTADOR MACHO PVC 2\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/adaptadores-macho.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-macho",
-    "group_label": "Adaptadores macho"
+    "group_label": "Adaptadores macho",
+    "studio_image": "catalog/products/crops/adaptadores-macho.jpeg"
   },
   {
     "code": "5161B",
-    "nombre": "ADAPTADOR MACHO PVC 3\"",
+    "nombre": "ADAPTADOR MACHO PVC",
     "description": "ADAPTADOR MACHO PVC 3\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "3\"",
+    "image": "catalog/products/crops/adaptadores-macho.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-macho",
-    "group_label": "Adaptadores macho"
+    "group_label": "Adaptadores macho",
+    "studio_image": "catalog/products/crops/adaptadores-macho.jpeg"
   },
   {
     "code": "5162B",
-    "nombre": "ADAPTADOR MACHO PVC 4\"",
+    "nombre": "ADAPTADOR MACHO PVC",
     "description": "ADAPTADOR MACHO PVC 4\"",
-    "image": "catalog/products/pvc/IMG_0479.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/adaptadores-macho.jpeg",
+    "page_image": "pvc/IMG_0479.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-macho",
-    "group_label": "Adaptadores macho"
+    "group_label": "Adaptadores macho",
+    "studio_image": "catalog/products/crops/adaptadores-macho.jpeg"
   },
   {
     "code": "5148B",
-    "nombre": "ADAPTADOR HEMBRA PVC PRESION 1/2\" BUFFALO",
+    "nombre": "ADAPTADOR HEMBRA PVC PRESION 1/2\"",
     "description": "ADAPTADOR HEMBRA PVC PRESION 1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/adaptadores-hembra.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-hembra",
-    "group_label": "Adaptadores hembra"
+    "group_label": "Adaptadores hembra",
+    "studio_image": "catalog/products/crops/adaptadores-hembra.jpeg"
   },
   {
     "code": "5149B",
-    "nombre": "ADAPTADOR HEMBRA PVC PRESION 3/4\" BUFFALO",
+    "nombre": "ADAPTADOR HEMBRA PVC PRESION 3/4\"",
     "description": "ADAPTADOR HEMBRA PVC PRESION 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/adaptadores-hembra.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-hembra",
-    "group_label": "Adaptadores hembra"
+    "group_label": "Adaptadores hembra",
+    "studio_image": "catalog/products/crops/adaptadores-hembra.jpeg"
   },
   {
     "code": "5150B",
-    "nombre": "ADAPTADOR HEMBRA PVC 1\"",
+    "nombre": "ADAPTADOR HEMBRA PVC",
     "description": "ADAPTADOR HEMBRA PVC 1\"",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "1\"",
+    "image": "catalog/products/crops/adaptadores-hembra.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-hembra",
-    "group_label": "Adaptadores hembra"
+    "group_label": "Adaptadores hembra",
+    "studio_image": "catalog/products/crops/adaptadores-hembra.jpeg"
   },
   {
     "code": "1758B",
-    "nombre": "ADAPTADOR HEMBRA PVC 1-1/4\"",
+    "nombre": "ADAPTADOR HEMBRA PVC",
     "description": "ADAPTADOR HEMBRA PVC 1-1/4\"",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "1-1/4\"",
+    "image": "catalog/products/crops/adaptadores-hembra.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-hembra",
-    "group_label": "Adaptadores hembra"
+    "group_label": "Adaptadores hembra",
+    "studio_image": "catalog/products/crops/adaptadores-hembra.jpeg"
   },
   {
     "code": "5151B",
-    "nombre": "ADAPTADOR HEMBRA PVC 1-1/2\"",
+    "nombre": "ADAPTADOR HEMBRA PVC",
     "description": "ADAPTADOR HEMBRA PVC 1-1/2\"",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "1-1/2\"",
+    "image": "catalog/products/crops/adaptadores-hembra.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-hembra",
-    "group_label": "Adaptadores hembra"
+    "group_label": "Adaptadores hembra",
+    "studio_image": "catalog/products/crops/adaptadores-hembra.jpeg"
   },
   {
     "code": "5152B",
-    "nombre": "ADAPTADOR HEMBRA PVC 2\"",
+    "nombre": "ADAPTADOR HEMBRA PVC",
     "description": "ADAPTADOR HEMBRA PVC 2\"",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/adaptadores-hembra.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-hembra",
-    "group_label": "Adaptadores hembra"
+    "group_label": "Adaptadores hembra",
+    "studio_image": "catalog/products/crops/adaptadores-hembra.jpeg"
   },
   {
     "code": "5153B",
-    "nombre": "ADAPTADOR HEMBRA PVC 3\"",
+    "nombre": "ADAPTADOR HEMBRA PVC",
     "description": "ADAPTADOR HEMBRA PVC 3\"",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "3\"",
+    "image": "catalog/products/crops/adaptadores-hembra.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-hembra",
-    "group_label": "Adaptadores hembra"
+    "group_label": "Adaptadores hembra",
+    "studio_image": "catalog/products/crops/adaptadores-hembra.jpeg"
   },
   {
     "code": "5154B",
-    "nombre": "ADAPTADOR HEMBRA PVC 4\"",
+    "nombre": "ADAPTADOR HEMBRA PVC",
     "description": "ADAPTADOR HEMBRA PVC 4\"",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/adaptadores-hembra.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "adaptadores-hembra",
-    "group_label": "Adaptadores hembra"
+    "group_label": "Adaptadores hembra",
+    "studio_image": "catalog/products/crops/adaptadores-hembra.jpeg"
   },
   {
     "code": "5190B",
     "nombre": "CODO PVC 1/2\"X90",
     "description": "CODO PVC 1/2\"X90",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "2\"×90°",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5181B",
     "nombre": "CODO PVC 1/2\"X45",
     "description": "CODO PVC 1/2\"X45",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "2\"×45°",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5182B",
-    "nombre": "CODO PVC PRESION 45 X 3/4\" BUFFALO",
+    "nombre": "CODO PVC PRESION",
     "description": "CODO PVC PRESION 45 X 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5191B",
-    "nombre": "CODO PVC PRESION 90 X 3/4\" BUFFALO",
+    "nombre": "CODO PVC PRESION",
     "description": "CODO PVC PRESION 90 X 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5183B",
-    "nombre": "CODO PVC PRESION 45 X 1\" BUFFALO",
+    "nombre": "CODO PVC PRESION 45 X",
     "description": "CODO PVC PRESION 45 X 1\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "1\"",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5193B",
-    "nombre": "CODO PVC 1-1/4\"X90",
+    "nombre": "CODO PVC",
     "description": "CODO PVC 1-1/4\"X90",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "1-1/4\"×90°",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5184B",
-    "nombre": "CODO PVC 1-1/4\" X45",
+    "nombre": "CODO PVC",
     "description": "CODO PVC 1-1/4\" X45",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "1-1/4\"×45°",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5185B",
-    "nombre": "CODO PVC 1-1/2\" X45",
+    "nombre": "CODO PVC",
     "description": "CODO PVC 1-1/2\" X45",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "1-1/2\"×45°",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5194B",
-    "nombre": "CODO PVC 1-1/2\"X90",
+    "nombre": "CODO PVC",
     "description": "CODO PVC 1-1/2\"X90",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "1-1/2\"×90°",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5195B",
-    "nombre": "CODO PVC 2\"X90",
+    "nombre": "CODO PVC",
     "description": "CODO PVC 2\"X90",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "2\"×90°",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5186B",
-    "nombre": "CODO PVC 2\"X45",
+    "nombre": "CODO PVC",
     "description": "CODO PVC 2\"X45",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "2\"×45°",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5196B",
-    "nombre": "CODO PVC 3\"X90",
+    "nombre": "CODO PVC",
     "description": "CODO PVC 3\"X90",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "3\"×90°",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5187B",
-    "nombre": "CODO PVC 3\"X45",
+    "nombre": "CODO PVC",
     "description": "CODO PVC 3\"X45",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "3\"×45°",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5197B",
-    "nombre": "CODO PVC 4\"X90",
+    "nombre": "CODO PVC",
     "description": "CODO PVC 4\"X90",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "4\"×90°",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5188B",
-    "nombre": "CODO PVC 4\"X45",
+    "nombre": "CODO PVC",
     "description": "CODO PVC 4\"X45",
-    "image": "catalog/products/pvc/IMG_0480.jpeg",
+    "medida": "4\"×45°",
+    "image": "catalog/products/crops/codos-presion.jpeg",
+    "page_image": "pvc/IMG_0480.jpeg",
     "category_key": "pvc-presion",
     "group_id": "codos-presion",
-    "group_label": "Codos presión"
+    "group_label": "Codos presión",
+    "studio_image": "catalog/products/crops/codos-presion.jpeg"
   },
   {
     "code": "5202B",
-    "nombre": "TEE PVC 1-1/2\"",
+    "nombre": "TEE PVC",
     "description": "TEE PVC 1-1/2\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "1-1/2\"",
+    "image": "catalog/products/crops/tees-presion.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tees-presion",
-    "group_label": "Tees presión"
+    "group_label": "Tees presión",
+    "studio_image": "catalog/products/crops/tees-presion.jpeg"
   },
   {
     "code": "5200B",
-    "nombre": "TEE PVC 1\"",
+    "nombre": "TEE PVC",
     "description": "TEE PVC 1\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "1\"",
+    "image": "catalog/products/crops/tees-presion.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tees-presion",
-    "group_label": "Tees presión"
+    "group_label": "Tees presión",
+    "studio_image": "catalog/products/crops/tees-presion.jpeg"
   },
   {
     "code": "5198B",
     "nombre": "TEE PVC 1/2\"",
     "description": "TEE PVC 1/2\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/tees-presion.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tees-presion",
-    "group_label": "Tees presión"
+    "group_label": "Tees presión",
+    "studio_image": "catalog/products/crops/tees-presion.jpeg"
   },
   {
     "code": "5201B",
-    "nombre": "TEE PVC 1-1/4\"",
+    "nombre": "TEE PVC",
     "description": "TEE PVC 1-1/4\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "1-1/4\"",
+    "image": "catalog/products/crops/tees-presion.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tees-presion",
-    "group_label": "Tees presión"
+    "group_label": "Tees presión",
+    "studio_image": "catalog/products/crops/tees-presion.jpeg"
   },
   {
     "code": "5203B",
-    "nombre": "TEE PVC 2\"",
+    "nombre": "TEE PVC",
     "description": "TEE PVC 2\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/tees-presion.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tees-presion",
-    "group_label": "Tees presión"
+    "group_label": "Tees presión",
+    "studio_image": "catalog/products/crops/tees-presion.jpeg"
   },
   {
     "code": "5204B",
-    "nombre": "TEE PVC 3\"",
+    "nombre": "TEE PVC",
     "description": "TEE PVC 3\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "3\"",
+    "image": "catalog/products/crops/tees-presion.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tees-presion",
-    "group_label": "Tees presión"
+    "group_label": "Tees presión",
+    "studio_image": "catalog/products/crops/tees-presion.jpeg"
   },
   {
     "code": "5205B",
-    "nombre": "TEE PVC 4\"",
+    "nombre": "TEE PVC",
     "description": "TEE PVC 4\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/tees-presion.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tees-presion",
-    "group_label": "Tees presión"
+    "group_label": "Tees presión",
+    "studio_image": "catalog/products/crops/tees-presion.jpeg"
   },
   {
     "code": "5199B",
-    "nombre": "TEE PVC LISA PRESION 3/4\" BUFFALO",
+    "nombre": "TEE PVC LISA PRESION 3/4\"",
     "description": "TEE PVC LISA PRESION 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/tees-presion.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tees-presion",
-    "group_label": "Tees presión"
+    "group_label": "Tees presión",
+    "studio_image": "catalog/products/crops/tees-presion.jpeg"
   },
   {
     "code": "5206B",
-    "nombre": "TAPON HEMBRA LISO 1/2\" BUFFALO",
+    "nombre": "TAPON HEMBRA LISO 1/2\"",
     "description": "TAPON HEMBRA LISO 1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/tapones.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tapones",
-    "group_label": "Tapones"
+    "group_label": "Tapones",
+    "studio_image": "catalog/products/crops/tapones.jpeg"
   },
   {
     "code": "5207B",
-    "nombre": "TAPON HEMBRA LISO 3/4\" BUFFALO",
+    "nombre": "TAPON HEMBRA LISO 3/4\"",
     "description": "TAPON HEMBRA LISO 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/tapones.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tapones",
-    "group_label": "Tapones"
+    "group_label": "Tapones",
+    "studio_image": "catalog/products/crops/tapones.jpeg"
   },
   {
     "code": "5208B",
-    "nombre": "TAPON HEMBRA LISO 1-1/4\" BUFFALO",
+    "nombre": "TAPON HEMBRA LISO",
     "description": "TAPON HEMBRA LISO 1-1/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "1-1/4\"",
+    "image": "catalog/products/crops/tapones.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tapones",
-    "group_label": "Tapones"
+    "group_label": "Tapones",
+    "studio_image": "catalog/products/crops/tapones.jpeg"
   },
   {
     "code": "5209B",
-    "nombre": "TAPON HEMBRA LISO 1-1/2\" BUFFALO",
+    "nombre": "TAPON HEMBRA LISO",
     "description": "TAPON HEMBRA LISO 1-1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "1-1/2\"",
+    "image": "catalog/products/crops/tapones.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tapones",
-    "group_label": "Tapones"
+    "group_label": "Tapones",
+    "studio_image": "catalog/products/crops/tapones.jpeg"
   },
   {
     "code": "5210B",
-    "nombre": "TAPON PVC 2\"",
+    "nombre": "TAPON PVC",
     "description": "TAPON PVC 2\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/tapones.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tapones",
-    "group_label": "Tapones"
+    "group_label": "Tapones",
+    "studio_image": "catalog/products/crops/tapones.jpeg"
   },
   {
     "code": "5211B",
-    "nombre": "TAPON PVC 3\"",
+    "nombre": "TAPON PVC",
     "description": "TAPON PVC 3\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "3\"",
+    "image": "catalog/products/crops/tapones.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tapones",
-    "group_label": "Tapones"
+    "group_label": "Tapones",
+    "studio_image": "catalog/products/crops/tapones.jpeg"
   },
   {
     "code": "5212B",
-    "nombre": "TAPON PVC 4\"",
+    "nombre": "TAPON PVC",
     "description": "TAPON PVC 4\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/tapones.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "tapones",
-    "group_label": "Tapones"
+    "group_label": "Tapones",
+    "studio_image": "catalog/products/crops/tapones.jpeg"
   },
   {
     "code": "5216B",
-    "nombre": "UNION PVC LISA 1-1/4\"",
+    "nombre": "UNION PVC LISA",
     "description": "UNION PVC LISA 1-1/4\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "1-1/4\"",
+    "image": "catalog/products/crops/uniones-lisas.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-lisas",
-    "group_label": "Uniones lisas"
+    "group_label": "Uniones lisas",
+    "studio_image": "catalog/products/crops/uniones-lisas.jpeg"
   },
   {
     "code": "5215B",
-    "nombre": "UNION PVC LISA 1\"",
+    "nombre": "UNION PVC LISA",
     "description": "UNION PVC LISA 1\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "1\"",
+    "image": "catalog/products/crops/uniones-lisas.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-lisas",
-    "group_label": "Uniones lisas"
+    "group_label": "Uniones lisas",
+    "studio_image": "catalog/products/crops/uniones-lisas.jpeg"
   },
   {
     "code": "5213B",
     "nombre": "UNION PVC LISA 1/2\"",
     "description": "UNION PVC LISA 1/2\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/uniones-lisas.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-lisas",
-    "group_label": "Uniones lisas"
+    "group_label": "Uniones lisas",
+    "studio_image": "catalog/products/crops/uniones-lisas.jpeg"
   },
   {
     "code": "5217B",
-    "nombre": "UNION PVC LISA 1-1/2\"",
+    "nombre": "UNION PVC LISA",
     "description": "UNION PVC LISA 1-1/2\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "1-1/2\"",
+    "image": "catalog/products/crops/uniones-lisas.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-lisas",
-    "group_label": "Uniones lisas"
+    "group_label": "Uniones lisas",
+    "studio_image": "catalog/products/crops/uniones-lisas.jpeg"
   },
   {
     "code": "5218B",
-    "nombre": "UNION PVC LISA 2\"",
+    "nombre": "UNION PVC LISA",
     "description": "UNION PVC LISA 2\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/uniones-lisas.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-lisas",
-    "group_label": "Uniones lisas"
+    "group_label": "Uniones lisas",
+    "studio_image": "catalog/products/crops/uniones-lisas.jpeg"
   },
   {
     "code": "5220B",
-    "nombre": "UNION PVC LISA 3\"",
+    "nombre": "UNION PVC LISA",
     "description": "UNION PVC LISA 3\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "3\"",
+    "image": "catalog/products/crops/uniones-lisas.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-lisas",
-    "group_label": "Uniones lisas"
+    "group_label": "Uniones lisas",
+    "studio_image": "catalog/products/crops/uniones-lisas.jpeg"
   },
   {
     "code": "5221B",
-    "nombre": "UNION PVC LISA 4\"",
+    "nombre": "UNION PVC LISA",
     "description": "UNION PVC LISA 4\"",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/uniones-lisas.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-lisas",
-    "group_label": "Uniones lisas"
+    "group_label": "Uniones lisas",
+    "studio_image": "catalog/products/crops/uniones-lisas.jpeg"
   },
   {
     "code": "5214B",
-    "nombre": "UNION LISA PVC DE 3/4\" BUFFALO",
+    "nombre": "UNION LISA PVC DE 3/4\"",
     "description": "UNION LISA PVC DE 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0481.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/uniones-lisas.jpeg",
+    "page_image": "pvc/IMG_0481.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-lisas",
-    "group_label": "Uniones lisas"
+    "group_label": "Uniones lisas",
+    "studio_image": "catalog/products/crops/uniones-lisas.jpeg"
   },
   {
     "code": "5232B",
-    "nombre": "BUJE DWV REDUCTOR DRENAJE INYECTADO 3\"X2\"",
+    "nombre": "BUJE DWV REDUCTOR DRENAJE INYECTADO",
     "description": "BUJE DWV REDUCTOR DRENAJE INYECTADO 3\"X2\"",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "3\"×2°",
+    "image": "catalog/products/crops/bujes-dwv.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "bujes-dwv",
-    "group_label": "Bujes DWV"
+    "group_label": "Bujes DWV",
+    "studio_image": "catalog/products/crops/bujes-dwv.jpeg"
   },
   {
     "code": "5233B",
-    "nombre": "BUJE DWV REDUCTOR DRENAJE INYECTADO 4\"X2\"",
+    "nombre": "BUJE DWV REDUCTOR DRENAJE INYECTADO",
     "description": "BUJE DWV REDUCTOR DRENAJE INYECTADO 4\"X2\"",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "4\"×2°",
+    "image": "catalog/products/crops/bujes-dwv.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "bujes-dwv",
-    "group_label": "Bujes DWV"
+    "group_label": "Bujes DWV",
+    "studio_image": "catalog/products/crops/bujes-dwv.jpeg"
   },
   {
     "code": "5234B",
-    "nombre": "BUJE DWV REDUCTOR DRENAJE INYECTADO 4\"X3\"",
+    "nombre": "BUJE DWV REDUCTOR DRENAJE INYECTADO",
     "description": "BUJE DWV REDUCTOR DRENAJE INYECTADO 4\"X3\"",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "4\"×3°",
+    "image": "catalog/products/crops/bujes-dwv.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "bujes-dwv",
-    "group_label": "Bujes DWV"
+    "group_label": "Bujes DWV",
+    "studio_image": "catalog/products/crops/bujes-dwv.jpeg"
   },
   {
     "code": "4947B",
-    "nombre": "UNION DRENAJE INYECTADA 2\" BUFFALO",
+    "nombre": "UNION DRENAJE INYECTADA",
     "description": "UNION DRENAJE INYECTADA 2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/uniones-drenaje.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "uniones-drenaje",
-    "group_label": "Uniones drenaje"
+    "group_label": "Uniones drenaje",
+    "studio_image": "catalog/products/crops/uniones-drenaje.jpeg"
   },
   {
     "code": "4949B",
-    "nombre": "UNION DWV DRENAJE INYECTADA 4\"",
+    "nombre": "UNION DWV DRENAJE INYECTADA",
     "description": "UNION DWV DRENAJE INYECTADA 4\"",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/uniones-drenaje.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-drenaje",
     "group_id": "uniones-drenaje",
-    "group_label": "Uniones drenaje"
+    "group_label": "Uniones drenaje",
+    "studio_image": "catalog/products/crops/uniones-drenaje.jpeg"
   },
   {
     "code": "5229B",
-    "nombre": "UNION PVC DE COMPRESION 1-1/2\" BUFFALO",
+    "nombre": "UNION PVC DE COMPRESION",
     "description": "UNION PVC DE COMPRESION 1-1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "1-1/2\"",
+    "image": "catalog/products/crops/uniones-compresion.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-compresion",
-    "group_label": "Uniones compresión"
+    "group_label": "Uniones compresión",
+    "studio_image": "catalog/products/crops/uniones-compresion.jpeg"
   },
   {
     "code": "5227B",
-    "nombre": "UNION PVC COMPRESION 1\" BUFFALO",
+    "nombre": "UNION PVC COMPRESION",
     "description": "UNION PVC COMPRESION 1\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "1\"",
+    "image": "catalog/products/crops/uniones-compresion.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-compresion",
-    "group_label": "Uniones compresión"
+    "group_label": "Uniones compresión",
+    "studio_image": "catalog/products/crops/uniones-compresion.jpeg"
   },
   {
     "code": "5225B",
-    "nombre": "UNION PVC COMPRESION 1/2\" BUFFALO",
+    "nombre": "UNION PVC COMPRESION 1/2\"",
     "description": "UNION PVC COMPRESION 1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/uniones-compresion.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-compresion",
-    "group_label": "Uniones compresión"
+    "group_label": "Uniones compresión",
+    "studio_image": "catalog/products/crops/uniones-compresion.jpeg"
   },
   {
     "code": "5228B",
-    "nombre": "UNION PVC COMPRESION 1-1/4\" BUFFALO",
+    "nombre": "UNION PVC COMPRESION",
     "description": "UNION PVC COMPRESION 1-1/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "1-1/4\"",
+    "image": "catalog/products/crops/uniones-compresion.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-compresion",
-    "group_label": "Uniones compresión"
+    "group_label": "Uniones compresión",
+    "studio_image": "catalog/products/crops/uniones-compresion.jpeg"
   },
   {
     "code": "5230B",
-    "nombre": "UNION PVC COMPRESION 2\" BUFFALO",
+    "nombre": "UNION PVC COMPRESION",
     "description": "UNION PVC COMPRESION 2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/uniones-compresion.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-compresion",
-    "group_label": "Uniones compresión"
+    "group_label": "Uniones compresión",
+    "studio_image": "catalog/products/crops/uniones-compresion.jpeg"
   },
   {
     "code": "5231B",
-    "nombre": "UNION PVC COMPRESION 3\" BUFFALO",
+    "nombre": "UNION PVC COMPRESION",
     "description": "UNION PVC COMPRESION 3\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "3\"",
+    "image": "catalog/products/crops/uniones-compresion.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-compresion",
-    "group_label": "Uniones compresión"
+    "group_label": "Uniones compresión",
+    "studio_image": "catalog/products/crops/uniones-compresion.jpeg"
   },
   {
     "code": "5226B",
-    "nombre": "UNION PVC COMPRESION 3/4\" BUFFALO",
+    "nombre": "UNION PVC COMPRESION 3/4\"",
     "description": "UNION PVC COMPRESION 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/uniones-compresion.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-compresion",
-    "group_label": "Uniones compresión"
+    "group_label": "Uniones compresión",
+    "studio_image": "catalog/products/crops/uniones-compresion.jpeg"
   },
   {
     "code": "7737B",
-    "nombre": "UNION PVC COMPRESION 4\" BUFFALO",
+    "nombre": "UNION PVC COMPRESION",
     "description": "UNION PVC COMPRESION 4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/uniones-compresion.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-compresion",
-    "group_label": "Uniones compresión"
+    "group_label": "Uniones compresión",
+    "studio_image": "catalog/products/crops/uniones-compresion.jpeg"
   },
   {
     "code": "7738B",
-    "nombre": "UNION PVC COMPRESION 6\" BUFFALO",
+    "nombre": "UNION PVC COMPRESION",
     "description": "UNION PVC COMPRESION 6\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "6\"",
+    "image": "catalog/products/crops/uniones-compresion.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-compresion",
-    "group_label": "Uniones compresión"
+    "group_label": "Uniones compresión",
+    "studio_image": "catalog/products/crops/uniones-compresion.jpeg"
   },
   {
     "code": "5224B",
-    "nombre": "UNION PVC UNIVERSAL 1\" BUFFALO",
+    "nombre": "UNION PVC UNIVERSAL",
     "description": "UNION PVC UNIVERSAL 1\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "1\"",
+    "image": "catalog/products/crops/uniones-universales.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-universales",
-    "group_label": "Uniones universales"
+    "group_label": "Uniones universales",
+    "studio_image": "catalog/products/crops/uniones-universales.jpeg"
   },
   {
     "code": "5222B",
-    "nombre": "UNION PVC UNIVERSAL 1/2\" BUFFALO",
+    "nombre": "UNION PVC UNIVERSAL 1/2\"",
     "description": "UNION PVC UNIVERSAL 1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/uniones-universales.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-universales",
-    "group_label": "Uniones universales"
+    "group_label": "Uniones universales",
+    "studio_image": "catalog/products/crops/uniones-universales.jpeg"
   },
   {
     "code": "1881B",
-    "nombre": "UNION PVC UNIVERSAL 1-1/2\" BUFFALO",
+    "nombre": "UNION PVC UNIVERSAL",
     "description": "UNION PVC UNIVERSAL 1-1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "1-1/2\"",
+    "image": "catalog/products/crops/uniones-universales.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-universales",
-    "group_label": "Uniones universales"
+    "group_label": "Uniones universales",
+    "studio_image": "catalog/products/crops/uniones-universales.jpeg"
   },
   {
     "code": "1882B",
-    "nombre": "UNION PVC UNIVERSAL 1-1/4\" BUFFALO",
+    "nombre": "UNION PVC UNIVERSAL",
     "description": "UNION PVC UNIVERSAL 1-1/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "1-1/4\"",
+    "image": "catalog/products/crops/uniones-universales.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-universales",
-    "group_label": "Uniones universales"
+    "group_label": "Uniones universales",
+    "studio_image": "catalog/products/crops/uniones-universales.jpeg"
   },
   {
     "code": "1883B",
-    "nombre": "UNION PVC UNIVERSAL 2\"",
+    "nombre": "UNION PVC UNIVERSAL",
     "description": "UNION PVC UNIVERSAL 2\"",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/uniones-universales.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-universales",
-    "group_label": "Uniones universales"
+    "group_label": "Uniones universales",
+    "studio_image": "catalog/products/crops/uniones-universales.jpeg"
   },
   {
     "code": "8782B",
-    "nombre": "UNION PVC UNIVERSAL 3\" BUFFALO",
+    "nombre": "UNION PVC UNIVERSAL",
     "description": "UNION PVC UNIVERSAL 3\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "3\"",
+    "image": "catalog/products/crops/uniones-universales.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-universales",
-    "group_label": "Uniones universales"
+    "group_label": "Uniones universales",
+    "studio_image": "catalog/products/crops/uniones-universales.jpeg"
   },
   {
     "code": "5223B",
-    "nombre": "UNION PVC UNIVERSAL 3/4\" BUFFALO",
+    "nombre": "UNION PVC UNIVERSAL 3/4\"",
     "description": "UNION PVC UNIVERSAL 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/uniones-universales.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-universales",
-    "group_label": "Uniones universales"
+    "group_label": "Uniones universales",
+    "studio_image": "catalog/products/crops/uniones-universales.jpeg"
   },
   {
     "code": "8974B",
-    "nombre": "UNION PVC UNIVERSAL 4\" BUFFALO",
+    "nombre": "UNION PVC UNIVERSAL",
     "description": "UNION PVC UNIVERSAL 4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0482.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/uniones-universales.jpeg",
+    "page_image": "pvc/IMG_0482.jpeg",
     "category_key": "pvc-presion",
     "group_id": "uniones-universales",
-    "group_label": "Uniones universales"
+    "group_label": "Uniones universales",
+    "studio_image": "catalog/products/crops/uniones-universales.jpeg"
   },
   {
     "code": "3010B",
-    "nombre": "VALVULA COMPACTA PVC 1\"",
+    "nombre": "VALVULA COMPACTA PVC",
     "description": "VALVULA COMPACTA PVC 1\"",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "1\"",
+    "image": "catalog/products/crops/valvulas-bola.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "pvc-valvulas",
     "group_id": "valvulas-bola",
-    "group_label": "Válvulas de bola"
+    "group_label": "Válvulas de bola",
+    "studio_image": "catalog/products/crops/valvulas-bola.jpeg"
   },
   {
     "code": "3008B",
     "nombre": "VALVULA COMPACTA PVC 1/2\"",
     "description": "VALVULA COMPACTA PVC 1/2\"",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/valvulas-bola.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "pvc-valvulas",
     "group_id": "valvulas-bola",
-    "group_label": "Válvulas de bola"
+    "group_label": "Válvulas de bola",
+    "studio_image": "catalog/products/crops/valvulas-bola.jpeg"
   },
   {
     "code": "3011B",
-    "nombre": "VALVULA COMPACTA PVC 1-1/2\"",
+    "nombre": "VALVULA COMPACTA PVC",
     "description": "VALVULA COMPACTA PVC 1-1/2\"",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "1-1/2\"",
+    "image": "catalog/products/crops/valvulas-bola.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "pvc-valvulas",
     "group_id": "valvulas-bola",
-    "group_label": "Válvulas de bola"
+    "group_label": "Válvulas de bola",
+    "studio_image": "catalog/products/crops/valvulas-bola.jpeg"
   },
   {
     "code": "3012B",
-    "nombre": "VALVULA COMPACTA PVC 2\"",
+    "nombre": "VALVULA COMPACTA PVC",
     "description": "VALVULA COMPACTA PVC 2\"",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/valvulas-bola.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "pvc-valvulas",
     "group_id": "valvulas-bola",
-    "group_label": "Válvulas de bola"
+    "group_label": "Válvulas de bola",
+    "studio_image": "catalog/products/crops/valvulas-bola.jpeg"
   },
   {
     "code": "3015B",
-    "nombre": "VALVULA COMPACTA PVC 3\"",
+    "nombre": "VALVULA COMPACTA PVC",
     "description": "VALVULA COMPACTA PVC 3\"",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "3\"",
+    "image": "catalog/products/crops/valvulas-bola.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "pvc-valvulas",
     "group_id": "valvulas-bola",
-    "group_label": "Válvulas de bola"
+    "group_label": "Válvulas de bola",
+    "studio_image": "catalog/products/crops/valvulas-bola.jpeg"
   },
   {
     "code": "3038B",
-    "nombre": "VALVULA LISA PVC D/BOLA PVC 6\" BUFFALO",
+    "nombre": "VALVULA LISA PVC D/BOLA PVC",
     "description": "VALVULA LISA PVC D/BOLA PVC 6\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "6\"",
+    "image": "catalog/products/crops/valvulas-bola.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "pvc-valvulas",
     "group_id": "valvulas-bola",
-    "group_label": "Válvulas de bola"
+    "group_label": "Válvulas de bola",
+    "studio_image": "catalog/products/crops/valvulas-bola.jpeg"
   },
   {
     "code": "7302B",
-    "nombre": "VALVULA PVC BOLA 3/4\" BUFFALO",
+    "nombre": "VALVULA PVC BOLA 3/4\"",
     "description": "VALVULA PVC BOLA 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/valvulas-bola.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "pvc-valvulas",
     "group_id": "valvulas-bola",
-    "group_label": "Válvulas de bola"
+    "group_label": "Válvulas de bola",
+    "studio_image": "catalog/products/crops/valvulas-bola.jpeg"
   },
   {
     "code": "5976B",
-    "nombre": "VALVULA PVC D/BOLA 1-1/4\" BUFFALO",
+    "nombre": "VALVULA PVC D/BOLA",
     "description": "VALVULA PVC D/BOLA 1-1/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "1-1/4\"",
+    "image": "catalog/products/crops/valvulas-bola.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "pvc-valvulas",
     "group_id": "valvulas-bola",
-    "group_label": "Válvulas de bola"
+    "group_label": "Válvulas de bola",
+    "studio_image": "catalog/products/crops/valvulas-bola.jpeg"
   },
   {
     "code": "7864B",
-    "nombre": "VALVULA PVC D/BOLA 4\" BUFFALO",
+    "nombre": "VALVULA PVC D/BOLA",
     "description": "VALVULA PVC D/BOLA 4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/valvulas-bola.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "pvc-valvulas",
     "group_id": "valvulas-bola",
-    "group_label": "Válvulas de bola"
+    "group_label": "Válvulas de bola",
+    "studio_image": "catalog/products/crops/valvulas-bola.jpeg"
   },
   {
     "code": "1838B",
-    "nombre": "TRAMPA/SIFON DRENAJE INYECTADO 1-1/2\" BUFFALO",
+    "nombre": "TRAMPA/SIFON DRENAJE INYECTADO",
     "description": "TRAMPA/SIFON DRENAJE INYECTADO 1-1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "1-1/2\"",
+    "image": "catalog/products/crops/trampas-sifones.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "pvc-valvulas",
     "group_id": "trampas-sifones",
-    "group_label": "Trampas y sifones"
+    "group_label": "Trampas y sifones",
+    "studio_image": "catalog/products/crops/trampas-sifones.jpeg"
   },
   {
     "code": "5251B",
-    "nombre": "TRAMPA/SIFON PVC INYECTADA 2\" BUFFALO",
+    "nombre": "TRAMPA/SIFON PVC INYECTADA",
     "description": "TRAMPA/SIFON PVC INYECTADA 2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/trampas-sifones.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "pvc-valvulas",
     "group_id": "trampas-sifones",
-    "group_label": "Trampas y sifones"
+    "group_label": "Trampas y sifones",
+    "studio_image": "catalog/products/crops/trampas-sifones.jpeg"
   },
   {
     "code": "1755B",
-    "nombre": "ADAPTADOR CPVC HEMBRA 3/4\" BUFFALO",
+    "nombre": "ADAPTADOR CPVC HEMBRA 3/4\"",
     "description": "ADAPTADOR CPVC HEMBRA 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "0954B",
-    "nombre": "ADAPTADOR CPVC MACHO 1/2\" BUFFALO",
+    "nombre": "ADAPTADOR CPVC MACHO 1/2\"",
     "description": "ADAPTADOR CPVC MACHO 1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "1763B",
-    "nombre": "ADAPTADOR CPVC MACHO 3/4\" BUFFALO",
+    "nombre": "ADAPTADOR CPVC MACHO 3/4\"",
     "description": "ADAPTADOR CPVC MACHO 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "8901B",
-    "nombre": "ADAPTADOR HEMBRA CPVC 1/2\" BUFFALO",
+    "nombre": "ADAPTADOR HEMBRA CPVC 1/2\"",
     "description": "ADAPTADOR HEMBRA CPVC 1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "0927B",
-    "nombre": "CODO CPVC 45 X 1/2\" BUFFALO",
+    "nombre": "CODO CPVC",
     "description": "CODO CPVC 45 X 1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "0928B",
-    "nombre": "CODO CPVC 45 X 3/4\" BUFFALO",
+    "nombre": "CODO CPVC",
     "description": "CODO CPVC 45 X 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "0926B",
-    "nombre": "CODO CPVC 90\" X 3/4\" BUFFALO",
+    "nombre": "CODO CPVC",
     "description": "CODO CPVC 90\" X 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "90\"×3°",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "4755B",
-    "nombre": "CODO CPVC 90 X 1/2\" BUFFALO",
+    "nombre": "CODO CPVC",
     "description": "CODO CPVC 90 X 1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "5502B",
-    "nombre": "REDUCCION/BUJE CPVC 3/4\"X1/2\" BUFFALO",
+    "nombre": "REDUCCION/BUJE CPVC 3/4\"X1/2\"",
     "description": "REDUCCION/BUJE CPVC 3/4\"X1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "4\"×1°",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "1861B",
-    "nombre": "TAPON LISO CPVC 1/2\" BUFFALO",
+    "nombre": "TAPON LISO CPVC 1/2\"",
     "description": "TAPON LISO CPVC 1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "0929B",
-    "nombre": "TAPON LISO CPVC 3/4\" BUFFALO",
+    "nombre": "TAPON LISO CPVC 3/4\"",
     "description": "TAPON LISO CPVC 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "0930B",
-    "nombre": "TEE CPVC 1/2\" BUFFALO",
+    "nombre": "TEE CPVC 1/2\"",
     "description": "TEE CPVC 1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "0931B",
-    "nombre": "TEE CPVC 3/4\" BUFFALO",
+    "nombre": "TEE CPVC 3/4\"",
     "description": "TEE CPVC 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "4972B",
-    "nombre": "UNION CPVC 1/2\" BUFFALO",
+    "nombre": "UNION CPVC 1/2\"",
     "description": "UNION CPVC 1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "0932B",
-    "nombre": "UNION CPVC 3/4\" BUFFALO",
+    "nombre": "UNION CPVC 3/4\"",
     "description": "UNION CPVC 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "1899B",
-    "nombre": "VALVULA CPVC 1/2\" BUFFALO",
+    "nombre": "VALVULA CPVC 1/2\"",
     "description": "VALVULA CPVC 1/2\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "2\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "1117B",
-    "nombre": "VALVULA CPVC 3/4\" BUFFALO",
+    "nombre": "VALVULA CPVC 3/4\"",
     "description": "VALVULA CPVC 3/4\" BUFFALO",
-    "image": "catalog/products/pvc/IMG_0483.jpeg",
+    "medida": "4\"",
+    "image": "catalog/products/crops/accesorios-cpvc.jpeg",
+    "page_image": "pvc/IMG_0483.jpeg",
     "category_key": "cpvc",
     "group_id": "accesorios-cpvc",
-    "group_label": "Accesorios CPVC"
+    "group_label": "Accesorios CPVC",
+    "studio_image": "catalog/products/crops/accesorios-cpvc.jpeg"
   },
   {
     "code": "5909H",
-    "nombre": "FORJA CARACOL INDIA 88/H/3 75X130MM 12X6MM",
+    "nombre": "FORJA CARACOL INDIA 88/H/3",
     "description": "FORJA CARACOL INDIA 88/H/3 75X130MM 12X6MM",
-    "image": "catalog/products/forjas/IMG_0501.jpeg",
+    "medida": "75×130 mm",
+    "image": "catalog/products/crops/5909h.jpeg",
+    "page_image": "forjas/IMG_0501.jpeg",
     "category_key": "forjas",
     "group_id": "forja-barras",
-    "group_label": "Barras y paneles"
+    "group_label": "Barras y paneles",
+    "studio_image": "catalog/products/crops/5909h.jpeg"
   },
   {
     "code": "5924H",
-    "nombre": "FORJA 48/2 BARRA 12MM 55X900MM",
+    "nombre": "FORJA 48/2 BARRA 12MM",
     "description": "FORJA 48/2 BARRA 12MM 55X900MM",
-    "image": "catalog/products/forjas/IMG_0501.jpeg",
+    "medida": "55×900 mm",
+    "image": "catalog/products/crops/5924h.jpeg",
+    "page_image": "forjas/IMG_0501.jpeg",
     "category_key": "forjas",
     "group_id": "forja-barras",
-    "group_label": "Barras y paneles"
+    "group_label": "Barras y paneles",
+    "studio_image": "catalog/products/crops/5924h.jpeg"
   },
   {
     "code": "5925H",
     "nombre": "FORJA 64/F/4 BARRA 12MM 900MM",
     "description": "FORJA 64/F/4 BARRA 12MM 900MM",
-    "image": "catalog/products/forjas/IMG_0501.jpeg",
+    "medida": "12 mm",
+    "image": "catalog/products/crops/5925h.jpeg",
+    "page_image": "forjas/IMG_0501.jpeg",
     "category_key": "forjas",
     "group_id": "forja-barras",
-    "group_label": "Barras y paneles"
+    "group_label": "Barras y paneles",
+    "studio_image": "catalog/products/crops/5925h.jpeg"
   },
   {
     "code": "5926H",
-    "nombre": "FORJA 50/8 BARRA 12MM 140X900MM",
+    "nombre": "FORJA 50/8 BARRA 12MM",
     "description": "FORJA 50/8 BARRA 12MM 140X900MM",
-    "image": "catalog/products/forjas/IMG_0501.jpeg",
+    "medida": "140×900 mm",
+    "image": "catalog/products/crops/5926h.jpeg",
+    "page_image": "forjas/IMG_0501.jpeg",
     "category_key": "forjas",
     "group_id": "forja-barras",
-    "group_label": "Barras y paneles"
+    "group_label": "Barras y paneles",
+    "studio_image": "catalog/products/crops/5926h.jpeg"
   },
   {
     "code": "5927H",
-    "nombre": "FORJA 48/1 BARRA 12MM 55X900MM",
+    "nombre": "FORJA 48/1 BARRA 12MM",
     "description": "FORJA 48/1 BARRA 12MM 55X900MM",
-    "image": "catalog/products/forjas/IMG_0501.jpeg",
+    "medida": "55×900 mm",
+    "image": "catalog/products/crops/5927h.jpeg",
+    "page_image": "forjas/IMG_0501.jpeg",
     "category_key": "forjas",
     "group_id": "forja-barras",
-    "group_label": "Barras y paneles"
+    "group_label": "Barras y paneles",
+    "studio_image": "catalog/products/crops/5927h.jpeg"
   },
   {
     "code": "5928H",
-    "nombre": "FORJA 50/7 BARRA 12MM 140X900MM",
+    "nombre": "FORJA 50/7 BARRA 12MM",
     "description": "FORJA 50/7 BARRA 12MM 140X900MM",
-    "image": "catalog/products/forjas/IMG_0501.jpeg",
+    "medida": "140×900 mm",
+    "image": "catalog/products/crops/5928h.jpeg",
+    "page_image": "forjas/IMG_0501.jpeg",
     "category_key": "forjas",
     "group_id": "forja-barras",
-    "group_label": "Barras y paneles"
+    "group_label": "Barras y paneles",
+    "studio_image": "catalog/products/crops/5928h.jpeg"
   },
   {
     "code": "1989H",
-    "nombre": "PANEL 0688 900X160MM MES FLOR A AMBOS LADOS",
+    "nombre": "PANEL 0688",
     "description": "PANEL 0688 900X160MM MES FLOR A AMBOS LADOS",
-    "image": "catalog/products/forjas/IMG_0501.jpeg",
+    "medida": "900×160 mm",
+    "image": "catalog/products/crops/1989h.jpeg",
+    "page_image": "forjas/IMG_0501.jpeg",
     "category_key": "forjas",
     "group_id": "forja-barras",
-    "group_label": "Barras y paneles"
+    "group_label": "Barras y paneles",
+    "studio_image": "catalog/products/crops/1989h.jpeg"
   },
   {
     "code": "9065H",
-    "nombre": "FORJA BARRA INDIA 49/3 12MM 180X900MM",
+    "nombre": "FORJA BARRA INDIA 49/3 12MM",
     "description": "FORJA BARRA INDIA 49/3 12MM 180X900MM",
-    "image": "catalog/products/forjas/IMG_0501.jpeg",
+    "medida": "180×900 mm",
+    "image": "catalog/products/crops/9065h.jpeg",
+    "page_image": "forjas/IMG_0501.jpeg",
     "category_key": "forjas",
     "group_id": "forja-barras",
-    "group_label": "Barras y paneles"
+    "group_label": "Barras y paneles",
+    "studio_image": "catalog/products/crops/9065h.jpeg"
   },
   {
     "code": "5923H",
     "nombre": "FORJA 497/2/C BARRA 12MM H 1000MM",
     "description": "FORJA 497/2/C BARRA 12MM H 1000MM",
-    "image": "catalog/products/forjas/IMG_0501.jpeg",
+    "medida": "12 mm",
+    "image": "catalog/products/crops/5923h.jpeg",
+    "page_image": "forjas/IMG_0501.jpeg",
     "category_key": "forjas",
     "group_id": "forja-barras",
-    "group_label": "Barras y paneles"
+    "group_label": "Barras y paneles",
+    "studio_image": "catalog/products/crops/5923h.jpeg"
   },
   {
     "code": "1983H",
-    "nombre": "PANEL 74/2 360X120MM W12MM X T6MM",
+    "nombre": "PANEL 74/2",
     "description": "PANEL 74/2 360X120MM W12MM X T6MM",
-    "image": "catalog/products/forjas/IMG_0502.jpeg",
+    "medida": "360×120 mm",
+    "image": "catalog/products/crops/1983h.jpeg",
+    "page_image": "forjas/IMG_0502.jpeg",
     "category_key": "forjas",
     "group_id": "forja-paneles",
-    "group_label": "Paneles decorativos"
+    "group_label": "Paneles decorativos",
+    "studio_image": "catalog/products/crops/1983h.jpeg"
   },
   {
     "code": "1984H",
-    "nombre": "PANEL 74/14 290X120MM W12MM X T6MM",
+    "nombre": "PANEL 74/14",
     "description": "PANEL 74/14 290X120MM W12MM X T6MM",
-    "image": "catalog/products/forjas/IMG_0502.jpeg",
+    "medida": "290×120 mm",
+    "image": "catalog/products/crops/1984h.jpeg",
+    "page_image": "forjas/IMG_0502.jpeg",
     "category_key": "forjas",
     "group_id": "forja-paneles",
-    "group_label": "Paneles decorativos"
+    "group_label": "Paneles decorativos",
+    "studio_image": "catalog/products/crops/1984h.jpeg"
   },
   {
     "code": "1986H",
-    "nombre": "PANEL 1671/3 870X350MM W12MM X T6MM",
+    "nombre": "PANEL 1671/3",
     "description": "PANEL 1671/3 870X350MM W12MM X T6MM",
-    "image": "catalog/products/forjas/IMG_0502.jpeg",
+    "medida": "870×350 mm",
+    "image": "catalog/products/crops/1986h.jpeg",
+    "page_image": "forjas/IMG_0502.jpeg",
     "category_key": "forjas",
     "group_id": "forja-paneles",
-    "group_label": "Paneles decorativos"
+    "group_label": "Paneles decorativos",
+    "studio_image": "catalog/products/crops/1986h.jpeg"
   },
   {
     "code": "1987H",
-    "nombre": "PANEL 1647/16 10X440MM W12MM X T6MM",
+    "nombre": "PANEL 1647/16",
     "description": "PANEL 1647/16 10X440MM W12MM X T6MM",
-    "image": "catalog/products/forjas/IMG_0502.jpeg",
+    "medida": "10×440 mm",
+    "image": "catalog/products/crops/1987h.jpeg",
+    "page_image": "forjas/IMG_0502.jpeg",
     "category_key": "forjas",
     "group_id": "forja-paneles",
-    "group_label": "Paneles decorativos"
+    "group_label": "Paneles decorativos",
+    "studio_image": "catalog/products/crops/1987h.jpeg"
   },
   {
     "code": "1988H",
-    "nombre": "PANEL 36/12 50X220MM W12MM X T6MM",
+    "nombre": "PANEL 36/12",
     "description": "PANEL 36/12 50X220MM W12MM X T6MM",
-    "image": "catalog/products/forjas/IMG_0502.jpeg",
+    "medida": "50×220 mm",
+    "image": "catalog/products/crops/1988h.jpeg",
+    "page_image": "forjas/IMG_0502.jpeg",
     "category_key": "forjas",
     "group_id": "forja-paneles",
-    "group_label": "Paneles decorativos"
+    "group_label": "Paneles decorativos",
+    "studio_image": "catalog/products/crops/1988h.jpeg"
   },
   {
     "code": "6024H",
-    "nombre": "FORJA #36/2 CARACOL INDIA 12X6MM 380X230MM",
+    "nombre": "FORJA #36/2 CARACOL INDIA",
     "description": "FORJA #36/2 CARACOL INDIA 12X6MM 380X230MM",
-    "image": "catalog/products/forjas/IMG_0502.jpeg",
+    "medida": "12×6 mm",
+    "image": "catalog/products/crops/6024h.jpeg",
+    "page_image": "forjas/IMG_0502.jpeg",
     "category_key": "forjas",
     "group_id": "forja-paneles",
-    "group_label": "Paneles decorativos"
+    "group_label": "Paneles decorativos",
+    "studio_image": "catalog/products/crops/6024h.jpeg"
   },
   {
     "code": "7601H",
-    "nombre": "FORJA ROSETA INDIA 23/1 10X5X250MM",
+    "nombre": "FORJA ROSETA INDIA 23/1",
     "description": "FORJA ROSETA INDIA 23/1 10X5X250MM",
-    "image": "catalog/products/forjas/IMG_0502.jpeg",
+    "medida": "5×250 mm",
+    "image": "catalog/products/crops/7601h.jpeg",
+    "page_image": "forjas/IMG_0502.jpeg",
     "category_key": "forjas",
     "group_id": "forja-paneles",
-    "group_label": "Paneles decorativos"
+    "group_label": "Paneles decorativos",
+    "studio_image": "catalog/products/crops/7601h.jpeg"
   },
   {
     "code": "9985H",
     "nombre": "CARACOL FORJA INDIA 33/2 250MM 12MM X 6MM",
     "description": "CARACOL FORJA INDIA 33/2 250MM 12MM X 6MM",
-    "image": "catalog/products/forjas/IMG_0502.jpeg",
+    "medida": "250 mm",
+    "image": "catalog/products/crops/9985h.jpeg",
+    "page_image": "forjas/IMG_0502.jpeg",
     "category_key": "forjas",
     "group_id": "forja-paneles",
-    "group_label": "Paneles decorativos"
+    "group_label": "Paneles decorativos",
+    "studio_image": "catalog/products/crops/9985h.jpeg"
   },
   {
     "code": "5892H",
-    "nombre": "FORJA 80/A/1 CARACOL INDIA 110X270MM 12X6MM",
+    "nombre": "FORJA 80/A/1 CARACOL INDIA",
     "description": "FORJA 80/A/1 CARACOL INDIA 110X270MM 12X6MM",
-    "image": "catalog/products/forjas/IMG_0502.jpeg",
+    "medida": "110×270 mm",
+    "image": "catalog/products/crops/5892h.jpeg",
+    "page_image": "forjas/IMG_0502.jpeg",
     "category_key": "forjas",
     "group_id": "forja-paneles",
-    "group_label": "Paneles decorativos"
+    "group_label": "Paneles decorativos",
+    "studio_image": "catalog/products/crops/5892h.jpeg"
   },
   {
     "code": "6821H",
     "nombre": "FORJA 88/H/4 COLOCHA GRANDE 160MM X 75MM",
     "description": "FORJA 88/H/4 COLOCHA GRANDE 160MM X 75MM",
-    "image": "catalog/products/forjas/IMG_0502.jpeg",
+    "medida": "160 mm",
+    "image": "catalog/products/crops/6821h.jpeg",
+    "page_image": "forjas/IMG_0502.jpeg",
     "category_key": "forjas",
     "group_id": "forja-paneles",
-    "group_label": "Paneles decorativos"
+    "group_label": "Paneles decorativos",
+    "studio_image": "catalog/products/crops/6821h.jpeg"
   },
   {
     "code": "6486H",
     "nombre": "FORJA 159/3 DECORATIVA CANASTA OVALADA",
     "description": "FORJA 159/3 DECORATIVA CANASTA OVALADA",
-    "image": "catalog/products/forjas/IMG_0503.jpeg",
+    "medida": "6486H",
+    "image": "catalog/products/crops/6486h.jpeg",
+    "page_image": "forjas/IMG_0503.jpeg",
     "category_key": "forjas",
     "group_id": "forja-flores",
-    "group_label": "Flores y mariposas"
+    "group_label": "Flores y mariposas",
+    "studio_image": "catalog/products/crops/6486h.jpeg"
   },
   {
     "code": "8010H",
     "nombre": "FORJA 644/5 INDIA FLOR RHINOCERONTE C/ESFERA 90MM",
     "description": "FORJA 644/5 INDIA FLOR RHINOCERONTE C/ESFERA 90MM",
-    "image": "catalog/products/forjas/IMG_0503.jpeg",
+    "medida": "90 mm",
+    "image": "catalog/products/crops/8010h.jpeg",
+    "page_image": "forjas/IMG_0503.jpeg",
     "category_key": "forjas",
     "group_id": "forja-flores",
-    "group_label": "Flores y mariposas"
+    "group_label": "Flores y mariposas",
+    "studio_image": "catalog/products/crops/8010h.jpeg"
   },
   {
     "code": "8011H",
     "nombre": "FORJA 140/1/3 FLOR ROSA",
     "description": "FORJA 140/1/3 FLOR ROSA",
-    "image": "catalog/products/forjas/IMG_0503.jpeg",
+    "medida": "8011H",
+    "image": "catalog/products/crops/8011h.jpeg",
+    "page_image": "forjas/IMG_0503.jpeg",
     "category_key": "forjas",
     "group_id": "forja-flores",
-    "group_label": "Flores y mariposas"
+    "group_label": "Flores y mariposas",
+    "studio_image": "catalog/products/crops/8011h.jpeg"
   },
   {
     "code": "8009H",
     "nombre": "FORJA 697/3 INDIA FLOR C/ESFERA",
     "description": "FORJA 697/3 INDIA FLOR C/ESFERA",
-    "image": "catalog/products/forjas/IMG_0503.jpeg",
+    "medida": "8009H",
+    "image": "catalog/products/crops/8009h.jpeg",
+    "page_image": "forjas/IMG_0503.jpeg",
     "category_key": "forjas",
     "group_id": "forja-flores",
-    "group_label": "Flores y mariposas"
+    "group_label": "Flores y mariposas",
+    "studio_image": "catalog/products/crops/8009h.jpeg"
   },
   {
     "code": "6012H",
     "nombre": "FORJA 3A/22 FLOR D/HIERRO P/VERJA",
     "description": "FORJA 3A/22 FLOR D/HIERRO P/VERJA",
-    "image": "catalog/products/forjas/IMG_0503.jpeg",
+    "medida": "6012H",
+    "image": "catalog/products/crops/6012h.jpeg",
+    "page_image": "forjas/IMG_0503.jpeg",
     "category_key": "forjas",
     "group_id": "forja-flores",
-    "group_label": "Flores y mariposas"
+    "group_label": "Flores y mariposas",
+    "studio_image": "catalog/products/crops/6012h.jpeg"
   },
   {
     "code": "3307H",
     "nombre": "FORJA 116/A/4 FLOR MARGARITA PEQ 8 PETALO",
     "description": "FORJA 116/A/4 FLOR MARGARITA PEQ 8 PETALO",
-    "image": "catalog/products/forjas/IMG_0503.jpeg",
+    "medida": "3307H",
+    "image": "catalog/products/crops/3307h.jpeg",
+    "page_image": "forjas/IMG_0503.jpeg",
     "category_key": "forjas",
     "group_id": "forja-flores",
-    "group_label": "Flores y mariposas"
+    "group_label": "Flores y mariposas",
+    "studio_image": "catalog/products/crops/3307h.jpeg"
   },
   {
     "code": "8012H",
-    "nombre": "FORJA 137/10 MARIPOSA 175X125MM",
+    "nombre": "FORJA 137/10 MARIPOSA",
     "description": "FORJA 137/10 MARIPOSA 175X125MM",
-    "image": "catalog/products/forjas/IMG_0503.jpeg",
+    "medida": "175×125 mm",
+    "image": "catalog/products/crops/8012h.jpeg",
+    "page_image": "forjas/IMG_0503.jpeg",
     "category_key": "forjas",
     "group_id": "forja-flores",
-    "group_label": "Flores y mariposas"
+    "group_label": "Flores y mariposas",
+    "studio_image": "catalog/products/crops/8012h.jpeg"
   },
   {
     "code": "0304H",
     "nombre": "FORJA 26/C/1 CON FLOR CENTRO (250-19B08)",
     "description": "FORJA 26/C/1 CON FLOR CENTRO (250-19B08)",
-    "image": "catalog/products/forjas/IMG_0503.jpeg",
+    "medida": "0304H",
+    "image": "catalog/products/crops/0304h.jpeg",
+    "page_image": "forjas/IMG_0503.jpeg",
     "category_key": "forjas",
     "group_id": "forja-flores",
-    "group_label": "Flores y mariposas"
+    "group_label": "Flores y mariposas",
+    "studio_image": "catalog/products/crops/0304h.jpeg"
   },
   {
     "code": "1980H",
     "nombre": "PANEL 17/18 X 8MM 250MM",
     "description": "PANEL 17/18 X 8MM 250MM",
-    "image": "catalog/products/forjas/IMG_0503.jpeg",
+    "medida": "18×8 mm",
+    "image": "catalog/products/crops/1980h.jpeg",
+    "page_image": "forjas/IMG_0503.jpeg",
     "category_key": "forjas",
     "group_id": "forja-flores",
-    "group_label": "Flores y mariposas"
+    "group_label": "Flores y mariposas",
+    "studio_image": "catalog/products/crops/1980h.jpeg"
   },
   {
     "code": "1982H",
-    "nombre": "PANEL 74/20 220X108MM W12MM X T6MM",
+    "nombre": "PANEL 74/20",
     "description": "PANEL 74/20 220X108MM W12MM X T6MM",
-    "image": "catalog/products/forjas/IMG_0503.jpeg",
+    "medida": "220×108 mm",
+    "image": "catalog/products/crops/1982h.jpeg",
+    "page_image": "forjas/IMG_0503.jpeg",
     "category_key": "forjas",
     "group_id": "forja-flores",
-    "group_label": "Flores y mariposas"
+    "group_label": "Flores y mariposas",
+    "studio_image": "catalog/products/crops/1982h.jpeg"
   },
   {
     "code": "1975H",
-    "nombre": "FORJA 154/2 HOLE 12.5MM 150X30MM",
+    "nombre": "FORJA 154/2 HOLE 12.5MM",
     "description": "FORJA 154/2 HOLE 12.5MM 150X30MM",
-    "image": "catalog/products/forjas/IMG_0504.jpeg",
+    "medida": "150×30 mm",
+    "image": "catalog/products/crops/1975h.jpeg",
+    "page_image": "forjas/IMG_0504.jpeg",
     "category_key": "forjas",
     "group_id": "forja-elementos",
-    "group_label": "Elementos y uniones"
+    "group_label": "Elementos y uniones",
+    "studio_image": "catalog/products/crops/1975h.jpeg"
   },
   {
     "code": "1978H",
-    "nombre": "FORJA 128/17 HOLE 12.5MM 39X40MM",
+    "nombre": "FORJA 128/17 HOLE 12.5MM",
     "description": "FORJA 128/17 HOLE 12.5MM 39X40MM",
-    "image": "catalog/products/forjas/IMG_0504.jpeg",
+    "medida": "39×40 mm",
+    "image": "catalog/products/crops/1978h.jpeg",
+    "page_image": "forjas/IMG_0504.jpeg",
     "category_key": "forjas",
     "group_id": "forja-elementos",
-    "group_label": "Elementos y uniones"
+    "group_label": "Elementos y uniones",
+    "studio_image": "catalog/products/crops/1978h.jpeg"
   },
   {
     "code": "7884H",
     "nombre": "FORJA 155/3 DECORATIVA INDIA UNION 12.5MM",
     "description": "FORJA 155/3 DECORATIVA INDIA UNION 12.5MM",
-    "image": "catalog/products/forjas/IMG_0504.jpeg",
+    "medida": "5 mm",
+    "image": "catalog/products/crops/7884h.jpeg",
+    "page_image": "forjas/IMG_0504.jpeg",
     "category_key": "forjas",
     "group_id": "forja-elementos",
-    "group_label": "Elementos y uniones"
+    "group_label": "Elementos y uniones",
+    "studio_image": "catalog/products/crops/7884h.jpeg"
   },
   {
     "code": "9194H",
     "nombre": "FORJA 155/2 DECORATIVA INDIA UNION 12MM 65",
     "description": "FORJA 155/2 DECORATIVA INDIA UNION 12MM 65",
-    "image": "catalog/products/forjas/IMG_0504.jpeg",
+    "medida": "12 mm",
+    "image": "catalog/products/crops/9194h.jpeg",
+    "page_image": "forjas/IMG_0504.jpeg",
     "category_key": "forjas",
     "group_id": "forja-elementos",
-    "group_label": "Elementos y uniones"
+    "group_label": "Elementos y uniones",
+    "studio_image": "catalog/products/crops/9194h.jpeg"
   },
   {
     "code": "1974H",
-    "nombre": "FORJA 126/F/1 HOLE 12MM 65 X 40MM",
+    "nombre": "FORJA 126/F/1 HOLE 12MM",
     "description": "FORJA 126/F/1 HOLE 12MM 65 X 40MM",
-    "image": "catalog/products/forjas/IMG_0504.jpeg",
+    "medida": "65×40 mm",
+    "image": "catalog/products/crops/1974h.jpeg",
+    "page_image": "forjas/IMG_0504.jpeg",
     "category_key": "forjas",
     "group_id": "forja-elementos",
-    "group_label": "Elementos y uniones"
+    "group_label": "Elementos y uniones",
+    "studio_image": "catalog/products/crops/1974h.jpeg"
   },
   {
     "code": "1977H",
     "nombre": "FORJA 1393/19 HOLE 14.2MM 19MM X 33MM",
     "description": "FORJA 1393/19 HOLE 14.2MM 19MM X 33MM",
-    "image": "catalog/products/forjas/IMG_0504.jpeg",
+    "medida": "2 mm",
+    "image": "catalog/products/crops/1977h.jpeg",
+    "page_image": "forjas/IMG_0504.jpeg",
     "category_key": "forjas",
     "group_id": "forja-elementos",
-    "group_label": "Elementos y uniones"
+    "group_label": "Elementos y uniones",
+    "studio_image": "catalog/products/crops/1977h.jpeg"
   },
   {
     "code": "1979H",
-    "nombre": "FORJA 155/4 HOLE 12.5MM 20 X 30MM",
+    "nombre": "FORJA 155/4 HOLE 12.5MM",
     "description": "FORJA 155/4 HOLE 12.5MM 20 X 30MM",
-    "image": "catalog/products/forjas/IMG_0504.jpeg",
+    "medida": "20×30 mm",
+    "image": "catalog/products/crops/1979h.jpeg",
+    "page_image": "forjas/IMG_0504.jpeg",
     "category_key": "forjas",
     "group_id": "forja-elementos",
-    "group_label": "Elementos y uniones"
+    "group_label": "Elementos y uniones",
+    "studio_image": "catalog/products/crops/1979h.jpeg"
   },
   {
     "code": "5829H",
-    "nombre": "TERMINAL 128/35 50X90MM",
+    "nombre": "TERMINAL 128/35",
     "description": "TERMINAL 128/35 50X90MM",
-    "image": "catalog/products/forjas/IMG_0504.jpeg",
+    "medida": "50×90 mm",
+    "image": "catalog/products/crops/5829h.jpeg",
+    "page_image": "forjas/IMG_0504.jpeg",
     "category_key": "forjas",
     "group_id": "forja-elementos",
-    "group_label": "Elementos y uniones"
+    "group_label": "Elementos y uniones",
+    "studio_image": "catalog/products/crops/5829h.jpeg"
   },
   {
     "code": "1976H",
-    "nombre": "FORJA 746/1 HOLE 12.5MM 45 X 40MM",
+    "nombre": "FORJA 746/1 HOLE 12.5MM",
     "description": "FORJA 746/1 HOLE 12.5MM 45 X 40MM",
-    "image": "catalog/products/forjas/IMG_0504.jpeg",
+    "medida": "45×40 mm",
+    "image": "catalog/products/crops/1976h.jpeg",
+    "page_image": "forjas/IMG_0504.jpeg",
     "category_key": "forjas",
     "group_id": "forja-elementos",
-    "group_label": "Elementos y uniones"
+    "group_label": "Elementos y uniones",
+    "studio_image": "catalog/products/crops/1976h.jpeg"
   },
   {
     "code": "1990H",
-    "nombre": "FORJA 158/B/1 CANASTA/PIÑA 12MM 55X130MM",
+    "nombre": "FORJA 158/B/1 CANASTA/PIÑA 12MM",
     "description": "FORJA 158/B/1 CANASTA/PIÑA 12MM 55X130MM",
-    "image": "catalog/products/forjas/IMG_0504.jpeg",
+    "medida": "55×130 mm",
+    "image": "catalog/products/crops/1990h.jpeg",
+    "page_image": "forjas/IMG_0504.jpeg",
     "category_key": "forjas",
     "group_id": "forja-elementos",
-    "group_label": "Elementos y uniones"
+    "group_label": "Elementos y uniones",
+    "studio_image": "catalog/products/crops/1990h.jpeg"
   },
   {
     "code": "8014H",
     "nombre": "FORJA MESO 110 ESFERA 40MM",
     "description": "FORJA MESO 110 ESFERA 40MM",
-    "image": "catalog/products/forjas/IMG_0506.jpeg",
+    "medida": "40 mm",
+    "image": "catalog/products/crops/8014h.jpeg",
+    "page_image": "forjas/IMG_0506.jpeg",
     "category_key": "forjas",
     "group_id": "forja-hojas",
-    "group_label": "Esferas y hojas"
+    "group_label": "Esferas y hojas",
+    "studio_image": "catalog/products/crops/8014h.jpeg"
   },
   {
     "code": "8015H",
     "nombre": "FORJA MESO 110 ESFERA 50MM",
     "description": "FORJA MESO 110 ESFERA 50MM",
-    "image": "catalog/products/forjas/IMG_0506.jpeg",
+    "medida": "50 mm",
+    "image": "catalog/products/crops/8015h.jpeg",
+    "page_image": "forjas/IMG_0506.jpeg",
     "category_key": "forjas",
     "group_id": "forja-hojas",
-    "group_label": "Esferas y hojas"
+    "group_label": "Esferas y hojas",
+    "studio_image": "catalog/products/crops/8015h.jpeg"
   },
   {
     "code": "1245H",
     "nombre": "FORJA 116/F/3 ESFERA INDIA SOLIDA 30MM",
     "description": "FORJA 116/F/3 ESFERA INDIA SOLIDA 30MM",
-    "image": "catalog/products/forjas/IMG_0506.jpeg",
+    "medida": "30 mm",
+    "image": "catalog/products/crops/1245h.jpeg",
+    "page_image": "forjas/IMG_0506.jpeg",
     "category_key": "forjas",
     "group_id": "forja-hojas",
-    "group_label": "Esferas y hojas"
+    "group_label": "Esferas y hojas",
+    "studio_image": "catalog/products/crops/1245h.jpeg"
   },
   {
     "code": "1246H",
     "nombre": "FORJA 116/F/1 ESFERA INDIA SOLIDA 20MM",
     "description": "FORJA 116/F/1 ESFERA INDIA SOLIDA 20MM",
-    "image": "catalog/products/forjas/IMG_0506.jpeg",
+    "medida": "20 mm",
+    "image": "catalog/products/crops/1246h.jpeg",
+    "page_image": "forjas/IMG_0506.jpeg",
     "category_key": "forjas",
     "group_id": "forja-hojas",
-    "group_label": "Esferas y hojas"
+    "group_label": "Esferas y hojas",
+    "studio_image": "catalog/products/crops/1246h.jpeg"
   },
   {
     "code": "5903H",
-    "nombre": "FORJA 136/2 HOJA DERECHA 110X40MM T2.5MM",
+    "nombre": "FORJA 136/2 HOJA DERECHA",
     "description": "FORJA 136/2 HOJA DERECHA 110X40MM T2.5MM",
-    "image": "catalog/products/forjas/IMG_0506.jpeg",
+    "medida": "110×40 mm",
+    "image": "catalog/products/crops/5903h.jpeg",
+    "page_image": "forjas/IMG_0506.jpeg",
     "category_key": "forjas",
     "group_id": "forja-hojas",
-    "group_label": "Esferas y hojas"
+    "group_label": "Esferas y hojas",
+    "studio_image": "catalog/products/crops/5903h.jpeg"
   },
   {
     "code": "6484H",
-    "nombre": "FORJA 136/1 HOJA IZQUIERDA 40X110MM",
+    "nombre": "FORJA 136/1 HOJA IZQUIERDA",
     "description": "FORJA 136/1 HOJA IZQUIERDA 40X110MM",
-    "image": "catalog/products/forjas/IMG_0506.jpeg",
+    "medida": "40×110 mm",
+    "image": "catalog/products/crops/6484h.jpeg",
+    "page_image": "forjas/IMG_0506.jpeg",
     "category_key": "forjas",
     "group_id": "forja-hojas",
-    "group_label": "Esferas y hojas"
+    "group_label": "Esferas y hojas",
+    "studio_image": "catalog/products/crops/6484h.jpeg"
   },
   {
     "code": "1965H",
-    "nombre": "FORJA 136/4 HOJA ANCHA IZQUIERDA 75X60MM",
+    "nombre": "FORJA 136/4 HOJA ANCHA IZQUIERDA",
     "description": "FORJA 136/4 HOJA ANCHA IZQUIERDA 75X60MM",
-    "image": "catalog/products/forjas/IMG_0506.jpeg",
+    "medida": "75×60 mm",
+    "image": "catalog/products/crops/1965h.jpeg",
+    "page_image": "forjas/IMG_0506.jpeg",
     "category_key": "forjas",
     "group_id": "forja-hojas",
-    "group_label": "Esferas y hojas"
+    "group_label": "Esferas y hojas",
+    "studio_image": "catalog/products/crops/1965h.jpeg"
   },
   {
     "code": "6485H",
-    "nombre": "FORJA 136/3 HOJA ANCHA DERECHA 75X60MM",
+    "nombre": "FORJA 136/3 HOJA ANCHA DERECHA",
     "description": "FORJA 136/3 HOJA ANCHA DERECHA 75X60MM",
-    "image": "catalog/products/forjas/IMG_0506.jpeg",
+    "medida": "75×60 mm",
+    "image": "catalog/products/crops/6485h.jpeg",
+    "page_image": "forjas/IMG_0506.jpeg",
     "category_key": "forjas",
     "group_id": "forja-hojas",
-    "group_label": "Esferas y hojas"
+    "group_label": "Esferas y hojas",
+    "studio_image": "catalog/products/crops/6485h.jpeg"
   },
   {
     "code": "8016H",
-    "nombre": "FORJA 662/6 HOJA 150X250MM 16X6MM DERE",
+    "nombre": "FORJA 662/6 HOJA",
     "description": "FORJA 662/6 HOJA 150X250MM 16X6MM DERE",
-    "image": "catalog/products/forjas/IMG_0506.jpeg",
+    "medida": "150×250 mm",
+    "image": "catalog/products/crops/8016h.jpeg",
+    "page_image": "forjas/IMG_0506.jpeg",
     "category_key": "forjas",
     "group_id": "forja-hojas",
-    "group_label": "Esferas y hojas"
+    "group_label": "Esferas y hojas",
+    "studio_image": "catalog/products/crops/8016h.jpeg"
   },
   {
     "code": "8013H",
-    "nombre": "FORJA 662/5 HOJA 150X250MM 16X6MM IZQUIE",
+    "nombre": "FORJA 662/5 HOJA",
     "description": "FORJA 662/5 HOJA 150X250MM 16X6MM IZQUIE",
-    "image": "catalog/products/forjas/IMG_0506.jpeg",
+    "medida": "150×250 mm",
+    "image": "catalog/products/crops/8013h.jpeg",
+    "page_image": "forjas/IMG_0506.jpeg",
     "category_key": "forjas",
     "group_id": "forja-hojas",
-    "group_label": "Esferas y hojas"
+    "group_label": "Esferas y hojas",
+    "studio_image": "catalog/products/crops/8013h.jpeg"
   },
   {
     "code": "8020H",
-    "nombre": "FORJA 180-1207 HOJA 116 X 50 X 3 MM",
+    "nombre": "FORJA 180-1207 HOJA",
     "description": "FORJA 180-1207 HOJA 116 X 50 X 3 MM",
-    "image": "catalog/products/forjas/IMG_0507.jpeg",
+    "medida": "50×3 mm",
+    "image": "catalog/products/crops/8020h.jpeg",
+    "page_image": "forjas/IMG_0507.jpeg",
     "category_key": "forjas",
     "group_id": "forja-lanzas",
-    "group_label": "Lanzas y puntas"
+    "group_label": "Lanzas y puntas",
+    "studio_image": "catalog/products/crops/8020h.jpeg"
   },
   {
     "code": "7351H",
     "nombre": "FORJA 125/1 DECORATIVA LANZA 35MM H 125MM",
     "description": "FORJA 125/1 DECORATIVA LANZA 35MM H 125MM",
-    "image": "catalog/products/forjas/IMG_0507.jpeg",
+    "medida": "35 mm",
+    "image": "catalog/products/crops/7351h.jpeg",
+    "page_image": "forjas/IMG_0507.jpeg",
     "category_key": "forjas",
     "group_id": "forja-lanzas",
-    "group_label": "Lanzas y puntas"
+    "group_label": "Lanzas y puntas",
+    "studio_image": "catalog/products/crops/7351h.jpeg"
   },
   {
     "code": "7349H",
-    "nombre": "FORJA 124/1 DECORATIVA LANZA 12X125MM",
+    "nombre": "FORJA 124/1 DECORATIVA LANZA",
     "description": "FORJA 124/1 DECORATIVA LANZA 12X125MM",
-    "image": "catalog/products/forjas/IMG_0507.jpeg",
+    "medida": "12×125 mm",
+    "image": "catalog/products/crops/7349h.jpeg",
+    "page_image": "forjas/IMG_0507.jpeg",
     "category_key": "forjas",
     "group_id": "forja-lanzas",
-    "group_label": "Lanzas y puntas"
+    "group_label": "Lanzas y puntas",
+    "studio_image": "catalog/products/crops/7349h.jpeg"
   },
   {
     "code": "7734H",
     "nombre": "PUNTA LU-2/08AD HIERRO P/VERJA H.115MM L5",
     "description": "PUNTA LU-2/08AD HIERRO P/VERJA H.115MM L5",
-    "image": "catalog/products/forjas/IMG_0507.jpeg",
+    "medida": "115 mm",
+    "image": "catalog/products/crops/7734h.jpeg",
+    "page_image": "forjas/IMG_0507.jpeg",
     "category_key": "forjas",
     "group_id": "forja-lanzas",
-    "group_label": "Lanzas y puntas"
+    "group_label": "Lanzas y puntas",
+    "studio_image": "catalog/products/crops/7734h.jpeg"
   },
   {
     "code": "7733H",
     "nombre": "FORJA 0020 DECORATIVA LANZA MEC 14.5MM 100MM X 38MM",
     "description": "FORJA 0020 DECORATIVA LANZA MEC 14.5MM 100MM X 38MM",
-    "image": "catalog/products/forjas/IMG_0507.jpeg",
+    "medida": "5 mm",
+    "image": "catalog/products/crops/7733h.jpeg",
+    "page_image": "forjas/IMG_0507.jpeg",
     "category_key": "forjas",
     "group_id": "forja-lanzas",
-    "group_label": "Lanzas y puntas"
+    "group_label": "Lanzas y puntas",
+    "studio_image": "catalog/products/crops/7733h.jpeg"
   },
   {
     "code": "1954H",
     "nombre": "FORJA 726/5 LANZA 13MM 140MM X 48MM",
     "description": "FORJA 726/5 LANZA 13MM 140MM X 48MM",
-    "image": "catalog/products/forjas/IMG_0507.jpeg",
+    "medida": "13 mm",
+    "image": "catalog/products/crops/1954h.jpeg",
+    "page_image": "forjas/IMG_0507.jpeg",
     "category_key": "forjas",
     "group_id": "forja-lanzas",
-    "group_label": "Lanzas y puntas"
+    "group_label": "Lanzas y puntas",
+    "studio_image": "catalog/products/crops/1954h.jpeg"
   },
   {
     "code": "2002H",
     "nombre": "FORJA 3A/05 LANZA",
     "description": "FORJA 3A/05 LANZA",
-    "image": "catalog/products/forjas/IMG_0507.jpeg",
+    "medida": "2002H",
+    "image": "catalog/products/crops/2002h.jpeg",
+    "page_image": "forjas/IMG_0507.jpeg",
     "category_key": "forjas",
     "group_id": "forja-lanzas",
-    "group_label": "Lanzas y puntas"
+    "group_label": "Lanzas y puntas",
+    "studio_image": "catalog/products/crops/2002h.jpeg"
   },
   {
     "code": "1971H",
     "nombre": "FORJA 727/9 LANZA 25MM 120MM X W70MM",
     "description": "FORJA 727/9 LANZA 25MM 120MM X W70MM",
-    "image": "catalog/products/forjas/IMG_0507.jpeg",
+    "medida": "25 mm",
+    "image": "catalog/products/crops/1971h.jpeg",
+    "page_image": "forjas/IMG_0507.jpeg",
     "category_key": "forjas",
     "group_id": "forja-lanzas",
-    "group_label": "Lanzas y puntas"
+    "group_label": "Lanzas y puntas",
+    "studio_image": "catalog/products/crops/1971h.jpeg"
   },
   {
     "code": "1972H",
-    "nombre": "FORJA 128/6 HOLE 12.5MM 65X40MM",
+    "nombre": "FORJA 128/6 HOLE 12.5MM",
     "description": "FORJA 128/6 HOLE 12.5MM 65X40MM",
-    "image": "catalog/products/forjas/IMG_0507.jpeg",
+    "medida": "65×40 mm",
+    "image": "catalog/products/crops/1972h.jpeg",
+    "page_image": "forjas/IMG_0507.jpeg",
     "category_key": "forjas",
     "group_id": "forja-lanzas",
-    "group_label": "Lanzas y puntas"
+    "group_label": "Lanzas y puntas",
+    "studio_image": "catalog/products/crops/1972h.jpeg"
   },
   {
     "code": "1969H",
-    "nombre": "FORJA 747/9 HOLE 13.5MM 115 X 40MM",
+    "nombre": "FORJA 747/9 HOLE 13.5MM",
     "description": "FORJA 747/9 HOLE 13.5MM 115 X 40MM",
-    "image": "catalog/products/forjas/IMG_0507.jpeg",
+    "medida": "115×40 mm",
+    "image": "catalog/products/crops/1969h.jpeg",
+    "page_image": "forjas/IMG_0507.jpeg",
     "category_key": "forjas",
     "group_id": "forja-lanzas",
-    "group_label": "Lanzas y puntas"
+    "group_label": "Lanzas y puntas",
+    "studio_image": "catalog/products/crops/1969h.jpeg"
   },
   {
     "code": "1992H",
     "nombre": "RODO 17 60MM",
     "description": "RODO 17 60MM",
-    "image": "catalog/products/forjas/IMG_0505.jpeg",
+    "medida": "60 mm",
+    "image": "catalog/products/crops/1992h.jpeg",
+    "page_image": "forjas/IMG_0505.jpeg",
     "category_key": "herrajes-porton",
     "group_id": "rodillos",
-    "group_label": "Rodillos"
+    "group_label": "Rodillos",
+    "studio_image": "catalog/products/crops/1992h.jpeg"
   },
   {
     "code": "1993H",
     "nombre": "RODO 20 S/BASE C/PERNO 80MM",
     "description": "RODO 20 S/BASE C/PERNO 80MM",
-    "image": "catalog/products/forjas/IMG_0505.jpeg",
+    "medida": "80 mm",
+    "image": "catalog/products/crops/1993h.jpeg",
+    "page_image": "forjas/IMG_0505.jpeg",
     "category_key": "herrajes-porton",
     "group_id": "rodillos",
-    "group_label": "Rodillos"
+    "group_label": "Rodillos",
+    "studio_image": "catalog/products/crops/1993h.jpeg"
   },
   {
     "code": "1991H",
     "nombre": "RODO 15 S/BASE C/PERNO 50MM",
     "description": "RODO 15 S/BASE C/PERNO 50MM",
-    "image": "catalog/products/forjas/IMG_0505.jpeg",
+    "medida": "50 mm",
+    "image": "catalog/products/crops/1991h.jpeg",
+    "page_image": "forjas/IMG_0505.jpeg",
     "category_key": "herrajes-porton",
     "group_id": "rodillos",
-    "group_label": "Rodillos"
+    "group_label": "Rodillos",
+    "studio_image": "catalog/products/crops/1991h.jpeg"
   },
   {
     "code": "1994H",
     "nombre": "RODO 20 50MM DOUBLE BEARING",
     "description": "RODO 20 50MM DOUBLE BEARING",
-    "image": "catalog/products/forjas/IMG_0505.jpeg",
+    "medida": "50 mm",
+    "image": "catalog/products/crops/1994h.jpeg",
+    "page_image": "forjas/IMG_0505.jpeg",
     "category_key": "herrajes-porton",
     "group_id": "rodillos",
-    "group_label": "Rodillos"
+    "group_label": "Rodillos",
+    "studio_image": "catalog/products/crops/1994h.jpeg"
   },
   {
     "code": "1995H",
     "nombre": "RODO 23 80MM DOUBLE BEARING",
     "description": "RODO 23 80MM DOUBLE BEARING",
-    "image": "catalog/products/forjas/IMG_0505.jpeg",
+    "medida": "80 mm",
+    "image": "catalog/products/crops/1995h.jpeg",
+    "page_image": "forjas/IMG_0505.jpeg",
     "category_key": "herrajes-porton",
     "group_id": "rodillos",
-    "group_label": "Rodillos"
+    "group_label": "Rodillos",
+    "studio_image": "catalog/products/crops/1995h.jpeg"
   },
   {
     "code": "1996H",
     "nombre": "RODO 15 C/BASE 50MM",
     "description": "RODO 15 C/BASE 50MM",
-    "image": "catalog/products/forjas/IMG_0505.jpeg",
+    "medida": "50 mm",
+    "image": "catalog/products/crops/1996h.jpeg",
+    "page_image": "forjas/IMG_0505.jpeg",
     "category_key": "herrajes-porton",
     "group_id": "rodillos",
-    "group_label": "Rodillos"
+    "group_label": "Rodillos",
+    "studio_image": "catalog/products/crops/1996h.jpeg"
   },
   {
     "code": "1997H",
     "nombre": "RODO 20 C/BASE 80MM",
     "description": "RODO 20 C/BASE 80MM",
-    "image": "catalog/products/forjas/IMG_0505.jpeg",
+    "medida": "80 mm",
+    "image": "catalog/products/crops/1997h.jpeg",
+    "page_image": "forjas/IMG_0505.jpeg",
     "category_key": "herrajes-porton",
     "group_id": "rodillos",
-    "group_label": "Rodillos"
+    "group_label": "Rodillos",
+    "studio_image": "catalog/products/crops/1997h.jpeg"
   },
   {
     "code": "2003H",
-    "nombre": "RODO DL55-A AEREO 55 X 43MM FOUR WHEEL",
+    "nombre": "RODO DL55-A AEREO",
     "description": "RODO DL55-A AEREO 55 X 43MM FOUR WHEEL",
-    "image": "catalog/products/forjas/IMG_0505.jpeg",
+    "medida": "55×43 mm",
+    "image": "catalog/products/crops/2003h.jpeg",
+    "page_image": "forjas/IMG_0505.jpeg",
     "category_key": "herrajes-porton",
     "group_id": "rodillos",
-    "group_label": "Rodillos"
+    "group_label": "Rodillos",
+    "studio_image": "catalog/products/crops/2003h.jpeg"
   },
   {
     "code": "1998H",
-    "nombre": "RIEL TIPO U P/PORTON DE 8 PIES BUFFALO",
+    "nombre": "RIEL TIPO U P/PORTON DE 8 PIES",
     "description": "RIEL TIPO U P/PORTON DE 8 PIES BUFFALO",
-    "image": "catalog/products/forjas/IMG_0505.jpeg",
+    "medida": "8 pies",
+    "image": "catalog/products/crops/1998h.jpeg",
+    "page_image": "forjas/IMG_0505.jpeg",
     "category_key": "herrajes-porton",
     "group_id": "rieles",
-    "group_label": "Rieles de portón"
+    "group_label": "Rieles de portón",
+    "studio_image": "catalog/products/crops/1998h.jpeg"
   },
   {
     "code": "1999H",
-    "nombre": "RIEL TIPO U P/PORTON DE 10 PIES BUFFALO",
+    "nombre": "RIEL TIPO U P/PORTON DE 10 PIES",
     "description": "RIEL TIPO U P/PORTON DE 10 PIES BUFFALO",
-    "image": "catalog/products/forjas/IMG_0505.jpeg",
+    "medida": "10 pies",
+    "image": "catalog/products/crops/1999h.jpeg",
+    "page_image": "forjas/IMG_0505.jpeg",
     "category_key": "herrajes-porton",
     "group_id": "rieles",
-    "group_label": "Rieles de portón"
+    "group_label": "Rieles de portón",
+    "studio_image": "catalog/products/crops/1999h.jpeg"
   },
   {
     "code": "2000H",
-    "nombre": "RIEL TIPO U P/PORTON DE 12 PIES BUFFALO",
+    "nombre": "RIEL TIPO U P/PORTON DE 12 PIES",
     "description": "RIEL TIPO U P/PORTON DE 12 PIES BUFFALO",
-    "image": "catalog/products/forjas/IMG_0505.jpeg",
+    "medida": "12 pies",
+    "image": "catalog/products/crops/2000h.jpeg",
+    "page_image": "forjas/IMG_0505.jpeg",
     "category_key": "herrajes-porton",
     "group_id": "rieles",
-    "group_label": "Rieles de portón"
+    "group_label": "Rieles de portón",
+    "studio_image": "catalog/products/crops/2000h.jpeg"
   },
   {
     "code": "2001H",
     "nombre": "RIEL TIPO U DE 20 PIES",
     "description": "RIEL TIPO U DE 20 PIES",
-    "image": "catalog/products/forjas/IMG_0505.jpeg",
+    "medida": "20 pies",
+    "image": "catalog/products/crops/2001h.jpeg",
+    "page_image": "forjas/IMG_0505.jpeg",
     "category_key": "herrajes-porton",
     "group_id": "rieles",
-    "group_label": "Rieles de portón"
+    "group_label": "Rieles de portón",
+    "studio_image": "catalog/products/crops/2001h.jpeg"
   },
   {
     "code": "TBN-14X2",
     "nombre": "Tornillo para techo punta broca #14×2\"",
     "description": "Tornillo para techo punta broca #14×2\"",
+    "medida": "#14×2\"",
     "image": "catalog/products/tornillos/techo-14x2-250.jpeg",
+    "page_image": "",
     "category_key": "tornillos",
     "group_id": "techo-punta-broca",
     "group_label": "Techo punta broca",
@@ -1986,7 +2645,9 @@
     "code": "TBN-14X3",
     "nombre": "Tornillo para techo punta broca #14×3\"",
     "description": "Tornillo para techo punta broca #14×3\"",
+    "medida": "#14×3\"",
     "image": "catalog/products/tornillos/techo-14x3-200.jpeg",
+    "page_image": "",
     "category_key": "tornillos",
     "group_id": "techo-punta-broca",
     "group_label": "Techo punta broca",
@@ -1998,7 +2659,9 @@
     "code": "TBN-BOX",
     "nombre": "Tornillo para techo punta broca Buffalo",
     "description": "Tornillo para techo punta broca Buffalo",
+    "medida": "Hexagonal",
     "image": "catalog/products/tornillos/techo-broca-open.jpeg",
+    "page_image": "",
     "category_key": "tornillos",
     "group_id": "techo-punta-broca",
     "group_label": "Techo punta broca",
@@ -2010,7 +2673,9 @@
     "code": "ESP-160",
     "nombre": "Esponja Multi-Uso 3W Plus",
     "description": "Esponja Multi-Uso 3W Plus",
+    "medida": "160×100×60 mm",
     "image": "catalog/products/accesorios/esponja-3w-160.jpeg",
+    "page_image": "",
     "category_key": "accesorios",
     "group_id": "esponjas",
     "group_label": "Esponjas multi-uso",
@@ -2022,7 +2687,9 @@
     "code": "ESP-190",
     "nombre": "Esponja Multi-Uso 3W Plus",
     "description": "Esponja Multi-Uso 3W Plus",
+    "medida": "190×109×50 mm",
     "image": "catalog/products/accesorios/esponja-3w-190.jpeg",
+    "page_image": "",
     "category_key": "accesorios",
     "group_id": "esponjas",
     "group_label": "Esponjas multi-uso",

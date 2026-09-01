@@ -7,9 +7,12 @@
 - `catalog/products/accesorios/` — esponjas multi-uso
 - `gallery/` — fotos de productos en tienda (tornillos, esponjas)
 
-Regenerar `assets/js/products.js` después de editar el catálogo:
+Regenerar catálogo después de editar páginas o datos:
 
 ```bash
 python3 scripts/extract-buffalo-catalog.py
+python3 scripts/crop-buffalo-catalog.py
 python3 scripts/generate-brand-products.py
 ```
+
+Las páginas PVC se recortan en 3 fotos de producto por hoja; las forjas se recortan fila por fila en `catalog/products/crops/`.
