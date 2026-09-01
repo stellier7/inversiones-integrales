@@ -1,24 +1,33 @@
 const galleryItems = [
   {
     type: 'image',
-    src: 'assets/images/gallery/gallery1.jpeg',
-    caption: 'Celima',
+    src: 'assets/images/gallery/IMG_0484.jpeg',
+    caption: 'Área de piscina',
     objectPosition: 'center center',
   },
   {
-    type: 'video',
-    src: 'assets/images/gallery/gallery-video1.mov',
-    caption: 'Producto en acción',
+    type: 'image',
+    src: 'assets/images/gallery/IMG_0486.jpeg',
+    caption: 'Cocina · rayas arena',
+    objectPosition: 'center center',
   },
   {
     type: 'image',
-    src: 'assets/images/gallery/gallery2.jpeg',
-    caption: 'Revestimientos cerámicos',
+    src: 'assets/images/gallery/IMG_0487.jpeg',
+    caption: 'Cocina · textura geométrica',
+    objectPosition: 'center center',
   },
   {
-    type: 'video',
-    src: 'assets/images/gallery/gallery-video2.mov',
-    caption: 'Demostración',
+    type: 'image',
+    src: 'assets/images/gallery/IMG_0488.jpeg',
+    caption: 'Baño · rayas grises',
+    objectPosition: 'center center',
+  },
+  {
+    type: 'image',
+    src: 'assets/images/gallery/IMG_0489.jpeg',
+    caption: 'Cocina · ambiente cálido',
+    objectPosition: 'center center',
   },
 ];
 
