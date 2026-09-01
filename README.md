@@ -88,7 +88,7 @@ Colores de referencia MegaWatt: `--orange: #E8611F`, `--charcoal: #161513`, `--p
 
 ## Cómo agregar un vendedor (tarjetas NFC)
 
-Edita `/{marca}/assets/js/sellers.js`:
+Los vendedores son **compartidos entre todas las marcas**. Edita el registro en cualquier `/{marca}/assets/js/sellers.js` (o en `assets/js/sellers.js` para el landing) — mantén las copias sincronizadas:
 
 ```js
 const SELLERS = {
@@ -109,32 +109,34 @@ const BRAND_WHATSAPP = '50495002199';  // fallback sin vendedor activo
 
 ## Sistema /v/ — URLs NFC de vendedores
 
-Cada vendedor tiene una URL corta impresa en su tarjeta NFC:
+Cada vendedor tiene una URL corta impresa en su tarjeta NFC. La URL **portal-wide** (recomendada) funciona para todas las marcas:
+
+```
+https://tu-dominio.vercel.app/v/ramon
+```
+
+También funcionan URLs por marca:
 
 ```
 https://tu-dominio.vercel.app/megawatt/v/ramon
-https://tu-dominio.vercel.app/zafiro/v/maria
+https://tu-dominio.vercel.app/zafiro/v/ramon
 ```
 
 ### Flujo
 
-1. **Redirect (vercel.json):** `/megawatt/v/ramon` → `/megawatt?vendedor=ramon` (307)
-2. **Detección (seller.js):** Lee `?vendedor=` o el path `/megawatt/v/{slug}`
-3. **Persistencia:** Guarda el slug en `localStorage` (`megawatt-seller`, `zafiro-seller`, etc.) para que la atribución sobreviva al navegar sin el parámetro
-4. **Links internos:** Todos los enlaces relevantes agregan `?vendedor={slug}`
+1. **Redirect (vercel.json):** `/v/ramon` → `/?vendedor=ramon` (307); `/{marca}/v/ramon` → `/{marca}?vendedor=ramon`
+2. **Detección (seller.js / portal-seller.js):** Lee `?vendedor=` o el path `/v/{slug}` / `/{marca}/v/{slug}`
+3. **Persistencia portal-wide:** Guarda el slug en `localStorage` con la clave `ii-seller` — una sola atribución para **todas** las marcas
+4. **Links internos:** Enlaces entre marcas, al portal (`/`) y páginas internas agregan `?vendedor={slug}` cuando hay vendedor activo
 5. **WhatsApp (whatsapp.js):** `activeWhatsAppNumber()` devuelve el WhatsApp del vendedor activo, o `BRAND_WHATSAPP` como fallback
 6. **Mensajes (contact.js, cart.js):** Saludos personalizados: *"Hola Ramón, quiero ser distribuidor Zafiro."*
 
-### Claves localStorage por marca
+### Claves localStorage
 
-| Marca    | Seller key        | Cart key        |
-|----------|-------------------|-----------------|
-| Megawatt | `megawatt-seller` | `megawatt-cart` |
-| Buffalo  | `buffalo-seller`  | `buffalo-cart`  |
-| Zafiro   | `zafiro-seller`   | `zafiro-cart`   |
-| Celima   | `celima-seller`   | `celima-cart`   |
-| Trébol   | `trebol-seller`   | `trebol-cart`   |
-| Lumiart  | `lumiart-seller`  | `lumiart-cart`  |
+| Propósito | Clave |
+|-----------|-------|
+| Vendedor activo (portal-wide) | `ii-seller` |
+| Carrito de cotización por marca | `megawatt-cart`, `buffalo-cart`, `zafiro-cart`, etc. |
 
 ## Despliegue en Vercel
 

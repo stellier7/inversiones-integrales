@@ -2,14 +2,65 @@
 const BRAND_WHATSAPP = '50495002199';
 
 /**
- * Vendedores Lumiart (tarjetas NFC).
- * URL canónica: /megawatt/v/{slug} → redirige a /megawatt?vendedor={slug}
+ * Vendedores del portal (tarjetas NFC) — compartidos entre todas las marcas.
+ * URL canónica portal: /v/{slug} → /?vendedor={slug}
+ * URL por marca: /lumiart/v/{slug} → /lumiart?vendedor={slug}
  */
 const SELLERS = {
-  ejemplo: {
-    name: 'Vendedor Ejemplo',
-    firstName: 'Ejemplo',
-    whatsapp: '50400000000',
+  ramon: {
+    name: 'Ramón Euceda',
+    firstName: 'Ramón',
+    whatsapp: '50432928908',
+  },
+  isaac: {
+    name: 'Isaac Rodriguez',
+    firstName: 'Isaac',
+    whatsapp: '50431848938',
+  },
+  edson: {
+    name: 'Edson Nuñez',
+    firstName: 'Edson',
+    whatsapp: '50432925571',
+  },
+  yeison: {
+    name: 'Yeison Padilla',
+    firstName: 'Yeison',
+    whatsapp: '50432300141',
+  },
+  marvin: {
+    name: 'Marvin Reyes',
+    firstName: 'Marvin',
+    whatsapp: '50498366204',
+  },
+  'jose-carlos': {
+    name: 'Jose Carlos Dias',
+    firstName: 'José Carlos',
+    whatsapp: '50431527927',
+  },
+  nelson: {
+    name: 'Nelson Leiva',
+    firstName: 'Nelson',
+    whatsapp: '50431548087',
+  },
+  edwin: {
+    name: 'Edwin Ramos',
+    firstName: 'Edwin',
+    whatsapp: '50497811893',
+  },
+  ruth: {
+    name: 'Ruth Alcerro',
+    firstName: 'Ruth',
+    whatsapp: '50494378923',
+  },
+  marwan: {
+    name: 'Marwan Khaliliyeh',
+    firstName: 'Marwan',
+    whatsapp: '50496534139',
+  },
+  santiago: {
+    name: 'Santiago',
+    firstName: 'Santiago',
+    whatsapp: '50496784674',
   },
 };
 

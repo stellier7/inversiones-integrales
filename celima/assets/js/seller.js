@@ -1,5 +1,7 @@
 function getSellerSlugFromPath() {
-  const match = window.location.pathname.match(/^\/celima\/v\/([^/]+)\/?$/);
+  const match = window.location.pathname.match(
+    /^\/(?:megawatt|buffalo|zafiro|celima|trebol|lumiart)\/v\/([^/]+)\/?$/
+  );
   return match ? decodeURIComponent(match[1]) : '';
 }
 
@@ -20,7 +22,7 @@ function getResolvedSeller() {
   return resolveSeller(getSellerRawFromUrl());
 }
 
-const SELLER_STORAGE_KEY = 'celima-seller';
+const SELLER_STORAGE_KEY = 'ii-seller';
 
 function rememberSeller(slug) {
   if (!slug) return;
@@ -41,7 +43,7 @@ function getRememberedSeller() {
 
 /**
  * Vendedor activo para WhatsApp / links: el de la URL, o el recordado
- * de una visita NFC anterior (para que la cotización le caiga al vendedor).
+ * de una visita NFC anterior (portal-wide, todas las marcas).
  */
 function getActiveSeller() {
   return getResolvedSeller() || getRememberedSeller();
@@ -49,6 +51,13 @@ function getActiveSeller() {
 
 function sellerQuery(slug) {
   return slug ? '?vendedor=' + encodeURIComponent(slug) : '';
+}
+
+function withSellerQuery(url, slug) {
+  if (!slug || !url) return url;
+  if (url.startsWith('#') || url.startsWith('javascript')) return url;
+  const sep = url.includes('?') ? '&' : '?';
+  return url + sep + 'vendedor=' + encodeURIComponent(slug);
 }
 
 function setSeller(slug) {
@@ -72,6 +81,14 @@ function setSeller(slug) {
   if (footerHome) {
     footerHome.href = 'index.html' + sellerQuery(slug);
   }
+
+  document.querySelectorAll('.brand-links a[href]').forEach((link) => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('javascript')) return;
+    if (href.startsWith('/')) {
+      link.href = withSellerQuery(href, slug);
+    }
+  });
 }
 
 function initSeller() {

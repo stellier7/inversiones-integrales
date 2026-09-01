@@ -1,10 +1,9 @@
-/** Buffalo — contacto central (sin vendedor en la URL). */
-const BRAND_WHATSAPP = '50495002199';
+/** Inversiones Integrales — registro de vendedores del portal (todas las marcas). */
 
 /**
  * Vendedores del portal (tarjetas NFC) — compartidos entre todas las marcas.
  * URL canónica portal: /v/{slug} → /?vendedor={slug}
- * URL por marca: /buffalo/v/{slug} → /buffalo?vendedor={slug}
+ * URL por marca: /{marca}/v/{slug} → /{marca}?vendedor={slug}
  */
 const SELLERS = {
   ramon: {
@@ -143,7 +142,6 @@ function resolveSeller(raw) {
     return { slug, ...SELLERS[slug] };
   }
 
-  // Typos cercanos (ej. issaacc → isaac, yeisson → yeison), solo si hay un único mejor match.
   const fuzzyLimit = Math.min(2, Math.max(1, Math.floor(key.length / 4)));
   let bestSlug = null;
   let bestDistance = Infinity;

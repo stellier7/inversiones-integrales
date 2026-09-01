@@ -2,8 +2,9 @@
 const BRAND_WHATSAPP = '50495002199';
 
 /**
- * Vendedores MegaWatt (tarjetas NFC).
- * URL canónica: /megawatt/v/{slug} → redirige a /megawatt?vendedor={slug}
+ * Vendedores del portal (tarjetas NFC) — compartidos entre todas las marcas.
+ * URL canónica portal: /v/{slug} → /?vendedor={slug}
+ * URL por marca: /megawatt/v/{slug} → /megawatt?vendedor={slug}
  */
 const SELLERS = {
   ramon: {
