@@ -31,14 +31,17 @@ street-light.jpeg
 
 ## Gallery (`assets/images/gallery/`)
 
+Celima lifestyle photos (pool deck, kitchen and bath tile installations):
+
 ```
-gallery1.jpeg
-gallery2.jpeg
-gallery-video1.mov
-gallery-video2.mov
+IMG_0484.jpeg
+IMG_0486.jpeg
+IMG_0487.jpeg
+IMG_0488.jpeg
+IMG_0489.jpeg
 ```
 
-Videos autoplay muted in the homepage gallery carousel. `.mov` works best in Safari; add `.mp4` copies if you need broader browser support.
+Referenced in `assets/js/gallery.js` for the homepage carousel and lightbox.
 
 Street lights and interior focos **7W–18W** use **9:16**.
 Focos **20W–100W** use **5:7**.

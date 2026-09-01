@@ -152,12 +152,85 @@ def pad_bbox(bbox, page_rect, pad=4):
     )
 
 
-def enhance_image(im: Image.Image, min_width: int) -> Image.Image:
+def dark_pixel_ratio(im: Image.Image, threshold: int = 40) -> float:
+    gray = im.convert('L')
+    hist = gray.histogram()
+    dark = sum(hist[:threshold])
+    return dark / max(1, sum(hist))
+
+
+def normalize_on_white(im: Image.Image, min_width: int) -> Image.Image:
+    """Trim PDF dark letterboxing and composite the product on a white well."""
+    from PIL import ImageDraw
+
     im = im.convert('RGB')
+    w, h = im.size
+    seeds = {(0, 0), (w - 1, 0), (0, h - 1), (w - 1, h - 1)}
+    step_x = max(1, w // 24)
+    step_y = max(1, h // 24)
+    for x in range(0, w, step_x):
+        seeds.add((x, 0))
+        seeds.add((x, h - 1))
+    for y in range(0, h, step_y):
+        seeds.add((0, y))
+        seeds.add((w - 1, y))
+
+    for seed in seeds:
+        try:
+            if sum(im.getpixel(seed)) / 3 < 210:
+                ImageDraw.floodfill(im, seed, (255, 255, 255), thresh=48)
+        except Exception:
+            pass
+
+    gray = im.convert('L')
+    bbox = gray.point(lambda x: 255 if x > 245 else 0).getbbox()
+    if bbox:
+        im = im.crop(bbox)
+
+    pad = max(8, int(max(im.width, im.height) * 0.06))
+    canvas = Image.new('RGB', (im.width + pad * 2, im.height + pad * 2), (255, 255, 255))
+    canvas.paste(im, (pad, pad))
+    im = canvas
+
     if im.width < min_width:
         scale = min_width / im.width
         im = im.resize((min_width, max(1, int(im.height * scale))), Image.Resampling.LANCZOS)
     return im.filter(ImageFilter.UnsharpMask(radius=1.2, percent=90, threshold=2))
+
+
+def enhance_image(im: Image.Image, min_width: int) -> Image.Image:
+    return normalize_on_white(im, min_width)
+
+
+def load_native_image(doc, xref: int) -> Image.Image | None:
+    try:
+        info = doc.extract_image(xref)
+    except Exception:
+        return None
+    try:
+        return Image.open(io.BytesIO(info['image']))
+    except Exception:
+        return None
+
+
+def render_page_crop(page, bbox, scale: float) -> Image.Image:
+    clip = pymupdf.Rect(bbox)
+    matrix = pymupdf.Matrix(scale, scale)
+    pix = page.get_pixmap(matrix=matrix, clip=clip, alpha=False)
+    return Image.open(io.BytesIO(pix.tobytes('jpeg')))
+
+
+def pick_best_crop(native_im: Image.Image | None, render_im: Image.Image | None, min_width: int) -> Image.Image:
+    candidates = []
+    for source, im in (('native', native_im), ('render', render_im)):
+        if im is None:
+            continue
+        enhanced = enhance_image(im, min_width)
+        candidates.append((dark_pixel_ratio(enhanced), source, enhanced))
+    if not candidates:
+        raise ValueError('no image candidates')
+    candidates.sort(key=lambda item: item[0])
+    return candidates[0][2]
 
 
 def save_jpeg(im: Image.Image, out_path: Path, quality: int):
@@ -173,16 +246,18 @@ def crop_page_region(page, bbox, out_path: Path, scale: float, quality: int, min
     save_jpeg(enhance_image(im, min_width), out_path, quality)
 
 
-def save_native_image(doc, xref: int, out_path: Path, quality: int, min_width: int) -> bool:
+def save_product_image(
+    out_path: Path,
+    quality: int,
+    min_width: int,
+    native_im: Image.Image | None = None,
+    render_im: Image.Image | None = None,
+) -> bool:
     try:
-        info = doc.extract_image(xref)
-    except Exception:
+        im = pick_best_crop(native_im, render_im, min_width)
+    except ValueError:
         return False
-    try:
-        im = Image.open(io.BytesIO(info['image']))
-    except Exception:
-        return False
-    save_jpeg(enhance_image(im, min_width), out_path, quality)
+    save_jpeg(im, out_path, quality)
     return True
 
 
@@ -196,6 +271,7 @@ def process_brand(brand_key: str):
 
     matched = 0
     native = 0
+    rendered = 0
     fallback = 0
     missing = []
 
@@ -225,18 +301,33 @@ def process_brand(brand_key: str):
             match = match_code_to_bbox(code_bbox, candidates)
             if match:
                 matched += 1
+                image_bbox = match['bbox'] if isinstance(match, dict) else match
+                native_im = None
                 if isinstance(match, dict) and match.get('xref'):
-                    image_bbox = match['bbox']
-                    if save_native_image(doc, match['xref'], out_path, cfg['jpg_quality'], cfg['min_width']):
+                    native_im = load_native_image(doc, match['xref'])
+                render_im = render_page_crop(
+                    page,
+                    pad_bbox(image_bbox, page.rect),
+                    cfg['scale'],
+                )
+                if native_im is not None:
+                    if save_product_image(
+                        out_path,
+                        cfg['jpg_quality'],
+                        cfg['min_width'],
+                        native_im=native_im,
+                        render_im=render_im,
+                    ):
                         native += 1
                         product['image'] = rel_path
                         continue
-                else:
-                    image_bbox = match if isinstance(match, (list, tuple)) else match['bbox']
-            else:
-                image_bbox = fallback_crop_bbox(code_bbox, page.rect, brand_key)
-                fallback += 1
+                save_jpeg(enhance_image(render_im, cfg['min_width']), out_path, cfg['jpg_quality'])
+                rendered += 1
+                product['image'] = rel_path
+                continue
 
+            image_bbox = fallback_crop_bbox(code_bbox, page.rect, brand_key)
+            fallback += 1
             crop_page_region(
                 page,
                 pad_bbox(image_bbox, page.rect),
@@ -252,7 +343,7 @@ def process_brand(brand_key: str):
 
     print(
         f'{brand_key}: saved {matched + fallback}/{len(items)} '
-        f'({native} native, {matched - native} rendered, {fallback} fallback, {len(missing)} missing)'
+        f'({native} native+render pick, {rendered} rendered, {fallback} fallback, {len(missing)} missing)'
     )
     if missing:
         print('  missing codes:', ', '.join(missing[:20]))

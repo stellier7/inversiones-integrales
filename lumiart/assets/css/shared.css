@@ -460,8 +460,8 @@ a { color: inherit; }
   height: 88px;
   border-radius: 14px;
   overflow: hidden;
-  background: #141312;
-  border: 1px solid var(--line);
+  background: var(--product-well);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .cat-card-thumb img {
@@ -618,11 +618,12 @@ a { color: inherit; }
   height: 64px;
   border-radius: 12px;
   overflow: hidden;
-  background: #141312;
+  background: var(--product-well);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .series-card-thumb img {
@@ -703,13 +704,14 @@ a { color: inherit; }
 
 .finder-photo {
   aspect-ratio: 1 / 1;
-  background: #101010;
+  background: var(--product-well);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 18%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .finder-photo img,
@@ -971,6 +973,22 @@ a { color: inherit; }
   .featured-carousel:not(.featured-carousel--static) .featured-card {
     scroll-snap-align: start;
   }
+
+  .gallery-carousel:not(.gallery-carousel--static) {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+    scroll-snap-type: x mandatory;
+  }
+
+  .gallery-carousel:not(.gallery-carousel--static) .gallery-track {
+    transform: none !important;
+  }
+
+  .gallery-carousel:not(.gallery-carousel--static) .gallery-slide {
+    scroll-snap-align: start;
+  }
+
 }
 
 /* ---------- gallery carousel ---------- */
@@ -1043,7 +1061,7 @@ a { color: inherit; }
 }
 
 .gallery-slide {
-  flex: 0 0 min(340px, 82vw);
+  flex: 0 0 min(220px, 52vw);
   margin: 0;
   padding: 0;
   border-radius: 16px;
@@ -1070,7 +1088,7 @@ a { color: inherit; }
 
 .gallery-media {
   display: block;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;
   background: linear-gradient(180deg, #1c1a18 0%, #121110 100%);
   overflow: hidden;
 }
@@ -1083,6 +1101,24 @@ a { color: inherit; }
   object-position: center;
   display: block;
   pointer-events: none;
+}
+
+
+.gallery-carousel--static {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-mask-image: none;
+  mask-image: none;
+  cursor: auto;
+  touch-action: pan-x pan-y;
+}
+
+.gallery-carousel--static .gallery-track {
+  transform: none !important;
+}
+
+.gallery-carousel--static .gallery-slide {
+  scroll-snap-align: start;
 }
 
 .gallery-caption {
@@ -2114,8 +2150,12 @@ body.cart-open {
 
 .grid-product-card .p-photo {
   aspect-ratio: 4 / 3;
-  background: var(--product-well);
+  background: var(--product-well) !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.page-catalog .p-photo.is-studio {
+  background: var(--product-well) !important;
 }
 
 .grid-group-tab {
