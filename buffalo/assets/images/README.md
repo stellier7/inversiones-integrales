@@ -3,5 +3,5 @@
 Add brand assets here:
 
 - `logo.jpeg` — site logo
-- `catalog/` — catalog PDF and per-product crops
+- `catalog/` — drop the catalog PDF here, plus `catalog/products/` for per-SKU crops
 - `gallery/` — homepage gallery photos and videos
