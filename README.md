@@ -12,12 +12,12 @@ Portal estático B2B para **Inversiones Integrales** (empresa holding). Cada mar
 ├── assets/
 │   ├── css/landing.css        → Estilos del landing
 │   └── logos/                 → Logos para el landing (el dueño los sube aquí)
-│       ├── megawatt.png
-│       ├── buffalo.png
-│       ├── zafiro.png
-│       ├── celima.png
-│       ├── trebol.png
-│       └── lumiart.png
+│       ├── megawatt.jpeg
+│       ├── buffalo.jpeg
+│       ├── zafiro.jpeg
+│       ├── celima.jpeg
+│       ├── trebol.jpeg
+│       └── lumiart.jpeg
 ├── megawatt/                  → Sitio completo MegaWatt (copia del repo original)
 ├── buffalo/
 ├── zafiro/
@@ -63,7 +63,7 @@ Cada carpeta de marca es **autocontenida**:
 
 ### Landing page (selector de marcas)
 
-Sube la imagen en `assets/logos/{marca}.png` (por ejemplo `assets/logos/megawatt.png`). El `index.html` raíz ya apunta a esas rutas. Si el archivo no existe, se muestra un recuadro placeholder con el nombre de la marca.
+Sube la imagen en `assets/logos/{marca}.jpeg` (por ejemplo `assets/logos/megawatt.jpeg`). El `index.html` raíz ya apunta a esas rutas. Si el archivo no existe, se muestra un recuadro placeholder con el nombre de la marca.
 
 ### Página de cada marca
 
