@@ -237,33 +237,36 @@ def generate_celima():
 
 def generate_lumiart():
     items = json.loads((EXTRACTED / 'lumiart-products.json').read_text())
-    # group by page ranges (~4 pages)
-    buckets = defaultdict(list)
-    for p in items:
-        bucket = p['page'] // 4
-        buckets[bucket].append(p)
+    category_defs = [
+        ('lamparas-smart', 'Lámparas Smart', 'Control por app y voz — lámparas inteligentes CCT.'),
+        ('lamparas-colgantes-led', 'Lámparas colgantes LED', 'Colgantes con LED integrado.'),
+        ('lamparas-colgantes', 'Lámparas colgantes', 'Colgantes para foco — base E27, G9 o E12.'),
+    ]
 
-    catalog_sections = [{
-        'id': 'iluminacion',
-        'linea': 'Iluminación',
-        'eyebrow': 'Lumiart',
-        'title': 'Catálogo de iluminación',
-        'intro': 'Lámparas LED de interior — cotiza por WhatsApp con tu vendedor.',
-        'image': "img('catalog/pages/lumiart-p03.jpeg')" if items else "''",
-        'groups': [],
-    }]
+    catalog_sections = []
     products_js = []
-    section = catalog_sections[0]
-    for bi, (bucket, prods) in enumerate(sorted(buckets.items())):
-        gid = f'lumiart-b{bi}'
-        label = f'Línea {bi + 1}'
-        section['groups'].append({
-            'id': gid,
-            'kicker': label,
-            'menuLabel': f'Productos {label}',
-            'finderLabel': label,
-            'title': label,
-            'blurb': f'{len(prods)} referencias.',
+
+    for cat_id, cat_title, cat_intro in category_defs:
+        prods = [p for p in items if p.get('category_key', p.get('section_key')) == cat_id]
+        if not prods:
+            continue
+        gid = cat_id
+        cover = prods[0].get('image', '')
+        catalog_sections.append({
+            'id': cat_id,
+            'linea': 'Iluminación',
+            'eyebrow': 'Lumiart',
+            'title': cat_title,
+            'intro': cat_intro,
+            'image': f"img('{cover}')" if cover else "''",
+            'groups': [{
+                'id': gid,
+                'kicker': cat_title,
+                'menuLabel': 'Ver modelos',
+                'finderLabel': cat_title,
+                'title': cat_title,
+                'blurb': f'{len(prods)} referencias en esta línea.',
+            }],
         })
         for p in prods:
             pid = slugify(f"lumiart-{p['code']}")
@@ -273,13 +276,13 @@ def generate_lumiart():
                 'group': gid,
                 'subcategoria': p['code'],
                 'linea': 'Lumiart',
-                'chip1': f"{p.get('watts','')}W" if p.get('watts') else '',
-                'chip2': f"{p.get('lumens','')} lm" if p.get('lumens') else '',
+                'chip1': f"{p.get('watts', '')}W" if p.get('watts') else '',
+                'chip2': f"{p.get('lumens', '')} lm" if p.get('lumens') else '',
                 'chip3': p.get('color', ''),
                 'image': p.get('image', ''),
                 'modelo': p['code'],
                 'temp': p.get('color', ''),
-                'flujo': f"{p.get('lumens','')} lm" if p.get('lumens') else '',
+                'flujo': f"{p.get('lumens', '')} lm" if p.get('lumens') else '',
                 'forma': p.get('dimensiones', ''),
             })
 

@@ -13,9 +13,11 @@
     "material": "Aluminio+Silicona",
     "uso": "Interior",
     "nombre": "DI-154-BK-CCT-Z · Negro · 26W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-154-BK-CCT-Z.jpeg"
+    "section": "Lámparas Smart",
+    "section_key": "lamparas-smart",
+    "image": "catalog/products/DI-154-BK-CCT-Z.jpeg",
+    "category_key": "lamparas-smart",
+    "category": "Lámparas Smart"
   },
   {
     "code": "DI-166-GD-CCT-Z",
@@ -31,9 +33,11 @@
     "material": "Aluminio+Silicona",
     "uso": "Interior",
     "nombre": "DI-166-GD-CCT-Z · Negro · 50W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-166-GD-CCT-Z.jpeg"
+    "section": "Lámparas Smart",
+    "section_key": "lamparas-smart",
+    "image": "catalog/products/DI-166-GD-CCT-Z.jpeg",
+    "category_key": "lamparas-smart",
+    "category": "Lámparas Smart"
   },
   {
     "code": "DI-167-GD-CCT-Z",
@@ -49,9 +53,11 @@
     "material": "Aluminio+Silicona",
     "uso": "Interior",
     "nombre": "DI-167-GD-CCT-Z · Dorado · 62W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-167-GD-CCT-Z.jpeg"
+    "section": "Lámparas Smart",
+    "section_key": "lamparas-smart",
+    "image": "catalog/products/DI-167-GD-CCT-Z.jpeg",
+    "category_key": "lamparas-smart",
+    "category": "Lámparas Smart"
   },
   {
     "code": "DI-173-GD-CCT-Z",
@@ -67,9 +73,11 @@
     "material": "Aluminio+Silicona",
     "uso": "Interior",
     "nombre": "DI-173-GD-CCT-Z · Dorado · 62W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-173-GD-CCT-Z.jpeg"
+    "section": "Lámparas Smart",
+    "section_key": "lamparas-smart",
+    "image": "catalog/products/DI-173-GD-CCT-Z.jpeg",
+    "category_key": "lamparas-smart",
+    "category": "Lámparas Smart"
   },
   {
     "code": "DI-463-GD-CCT-Z",
@@ -85,9 +93,11 @@
     "material": "Aluminio+Acrílico",
     "uso": "Interior",
     "nombre": "DI-463-GD-CCT-Z · Dorado · 62W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-463-GD-CCT-Z.jpeg"
+    "section": "Lámparas Smart",
+    "section_key": "lamparas-smart",
+    "image": "catalog/products/DI-463-GD-CCT-Z.jpeg",
+    "category_key": "lamparas-smart",
+    "category": "Lámparas Smart"
   },
   {
     "code": "DI-474-GD-CCT-Z",
@@ -103,9 +113,11 @@
     "material": "Aluminio+Acrílico",
     "uso": "Interior",
     "nombre": "DI-474-GD-CCT-Z · Dorado · 62W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-474-GD-CCT-Z.jpeg"
+    "section": "Lámparas Smart",
+    "section_key": "lamparas-smart",
+    "image": "catalog/products/DI-474-GD-CCT-Z.jpeg",
+    "category_key": "lamparas-smart",
+    "category": "Lámparas Smart"
   },
   {
     "code": "DI-477-BK-CCT-Z",
@@ -121,9 +133,11 @@
     "material": "Aluminio+Acrílico",
     "uso": "Interior",
     "nombre": "DI-477-BK-CCT-Z · Negro · 33W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-477-BK-CCT-Z.jpeg"
+    "section": "Lámparas Smart",
+    "section_key": "lamparas-smart",
+    "image": "catalog/products/DI-477-BK-CCT-Z.jpeg",
+    "category_key": "lamparas-smart",
+    "category": "Lámparas Smart"
   },
   {
     "code": "DI-478-CF-CCT-Z",
@@ -139,9 +153,11 @@
     "material": "Aluminio+Acrílico",
     "uso": "Interior",
     "nombre": "DI-478-CF-CCT-Z · Café · 33W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-478-CF-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-478-CF-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-485-BK-CCT-Z",
@@ -157,9 +173,11 @@
     "material": "Aluminio+Acrílico",
     "uso": "Interior",
     "nombre": "DI-485-BK-CCT-Z · Café · 33W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-485-BK-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-485-BK-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-648-CH-CCT-Z",
@@ -175,9 +193,11 @@
     "material": "Acero Inoxidable+Cristal",
     "uso": "Interior",
     "nombre": "DI-648-CH-CCT-Z · Cromo · 160W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-648-CH-CCT-Z.jpeg"
+    "section": "Lámparas Smart",
+    "section_key": "lamparas-smart",
+    "image": "catalog/products/DI-648-CH-CCT-Z.jpeg",
+    "category_key": "lamparas-smart",
+    "category": "Lámparas Smart"
   },
   {
     "code": "DI-647-CH-CCT-Z",
@@ -193,9 +213,11 @@
     "material": "Acero Inoxidable+Cristal",
     "uso": "Interior",
     "nombre": "DI-647-CH-CCT-Z · Cromo · 160W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-647-CH-CCT-Z.jpeg"
+    "section": "Lámparas Smart",
+    "section_key": "lamparas-smart",
+    "image": "catalog/products/DI-647-CH-CCT-Z.jpeg",
+    "category_key": "lamparas-smart",
+    "category": "Lámparas Smart"
   },
   {
     "code": "DI-192-GD-40K-Z",
@@ -211,9 +233,11 @@
     "material": "Metal + Vidrio",
     "uso": "Interior",
     "nombre": "DI-192-GD-40K-Z · Dorado · 102W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-192-GD-40K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-192-GD-40K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-376-BRS-30K-Z",
@@ -229,9 +253,11 @@
     "material": "Aluminio+Silicona",
     "uso": "Interior",
     "nombre": "DI-376-BRS-30K-Z · Latón · 48W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-376-BRS-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-376-BRS-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-377-BRS-30K-Z",
@@ -247,9 +273,11 @@
     "material": "Metal + Silicona",
     "uso": "Interior",
     "nombre": "DI-377-BRS-30K-Z · Latón · 48W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-377-BRS-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-377-BRS-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-493-GD-30K-Z",
@@ -265,9 +293,11 @@
     "material": "Metal + Silicona",
     "uso": "Interior",
     "nombre": "DI-493-GD-30K-Z · Latón · 210W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-493-GD-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-493-GD-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-494-GD-30K-Z",
@@ -283,9 +313,11 @@
     "material": "Aluminio+Aluminio+Acrílico",
     "uso": "Interior",
     "nombre": "DI-494-GD-30K-Z · Dorado · 78W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-494-GD-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-494-GD-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-143-BK-30K-Z",
@@ -301,9 +333,11 @@
     "material": "Aluminio+Aluminio+Acrílico",
     "uso": "Interior",
     "nombre": "DI-143-BK-30K-Z · Dorado · 78W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-143-BK-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-143-BK-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-407-30K-Z",
@@ -319,9 +353,11 @@
     "material": "Madera",
     "uso": "Interior",
     "nombre": "DI-407-30K-Z · Madera · 18W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-407-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-407-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-540-BK-30K-Z",
@@ -337,9 +373,11 @@
     "material": "Metal + Vidrio",
     "uso": "Interior",
     "nombre": "DI-540-BK-30K-Z · Negro + Ahumado · 5W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-540-BK-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-540-BK-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-636-GD-30K-Z",
@@ -355,9 +393,11 @@
     "material": "Metal + Vidrio",
     "uso": "Interior",
     "nombre": "DI-636-GD-30K-Z · Negro + Ahumado · 5W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-636-GD-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-636-GD-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-634-GD-30K-Z",
@@ -373,9 +413,11 @@
     "material": "Acero + Vidrio",
     "uso": "Interior",
     "nombre": "DI-634-GD-30K-Z · Dorado · 6W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-634-GD-30K-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-634-GD-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-628-BK-30K-Z",
@@ -391,9 +433,11 @@
     "material": "Acero + Vidrio",
     "uso": "Interior",
     "nombre": "DI-628-BK-30K-Z · Ahumado + Negro · 6W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-628-BK-30K-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-628-BK-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-630-BK-30K-Z",
@@ -409,9 +453,11 @@
     "material": "Acero + Vidrio",
     "uso": "Interior",
     "nombre": "DI-630-BK-30K-Z · Ahumado + Negro · 6W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-630-BK-30K-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-630-BK-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-873-BK-30K-Z",
@@ -427,9 +473,11 @@
     "material": "Hierro+Aluminio+Vidrio",
     "uso": "Interior",
     "nombre": "DI-873-BK-30K-Z · Negro · 80W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-873-BK-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-873-BK-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-856-BK-CCT-Z",
@@ -445,9 +493,11 @@
     "material": "Hierro+Aluminio+Vidrio",
     "uso": "Interior",
     "nombre": "DI-856-BK-CCT-Z · Negro · 40W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-856-BK-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-856-BK-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-877-BK-30K-Z",
@@ -463,9 +513,11 @@
     "material": "Hierro+Aluminio+Acrílico",
     "uso": "Interior",
     "nombre": "DI-877-BK-30K-Z · Negro · 40W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-877-BK-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-877-BK-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-813-GD-30K-Z",
@@ -481,9 +533,11 @@
     "material": "Hierro+Aluminio+Crista",
     "uso": "Interior",
     "nombre": "DI-813-GD-30K-Z · Dorado · 36W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-813-GD-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-813-GD-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-754-BK-CCT-Z",
@@ -499,9 +553,11 @@
     "material": "Hierro+Aluminio+Crista",
     "uso": "Interior",
     "nombre": "DI-754-BK-CCT-Z · Dorado · 9W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-754-BK-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-754-BK-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-725-BRS-30K-Z",
@@ -517,9 +573,11 @@
     "material": "Metal + Vidrio",
     "uso": "Interior",
     "nombre": "DI-725-BRS-30K-Z · Latón · 15W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-725-BRS-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-725-BRS-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-724-BRS-30K-Z",
@@ -535,9 +593,11 @@
     "material": "Metal + Vidrio",
     "uso": "Interior",
     "nombre": "DI-724-BRS-30K-Z · Latón · 15W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-724-BRS-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-724-BRS-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-702-BRS-30K-Z",
@@ -553,9 +613,11 @@
     "material": "Metal + Vidrio",
     "uso": "Interior",
     "nombre": "DI-702-BRS-30K-Z · Latón · 15W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-702-BRS-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-702-BRS-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-878-GD-30K-Z",
@@ -571,9 +633,11 @@
     "material": "Hierro+Vidrio+Acrílico",
     "uso": "Interior",
     "nombre": "DI-878-GD-30K-Z · Latón · 15W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-878-GD-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-878-GD-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-881-BK-30K-Z",
@@ -589,9 +653,11 @@
     "material": "Aluminio+Vidrio",
     "uso": "Interior",
     "nombre": "DI-881-BK-30K-Z · Negro · 6W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-881-BK-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-881-BK-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-799-GD-30K-Z",
@@ -607,9 +673,11 @@
     "material": "Aluminio+Vidrio",
     "uso": "Interior",
     "nombre": "DI-799-GD-30K-Z · Negro · 100W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-799-GD-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-799-GD-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-802-GD-30K-Z",
@@ -625,9 +693,11 @@
     "material": "Metal + Vidrio + Acrílico",
     "uso": "Interior",
     "nombre": "DI-802-GD-30K-Z · Dorado · 100W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-802-GD-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-802-GD-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-766-BK-CCT-Z",
@@ -643,9 +713,11 @@
     "material": "Metal + Vidrio + Acrílico",
     "uso": "Interior",
     "nombre": "DI-766-BK-CCT-Z · Dorado · 24W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-766-BK-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-766-BK-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-554-BLU-30K-Z",
@@ -661,9 +733,11 @@
     "material": "Hierro+Aluminio+Acrílico",
     "uso": "Interior",
     "nombre": "DI-554-BLU-30K-Z · Negro · 24W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-554-BLU-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-554-BLU-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-381-BK-Z",
@@ -673,9 +747,11 @@
     "page": 11,
     "smart": false,
     "nombre": "DI-381-BK-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-381-BK-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-381-BK-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-603-BK-Z",
@@ -685,9 +761,11 @@
     "page": 11,
     "smart": false,
     "nombre": "DI-603-BK-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-603-BK-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-603-BK-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-602-BK-Z",
@@ -697,9 +775,11 @@
     "page": 11,
     "smart": false,
     "nombre": "DI-602-BK-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-602-BK-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-602-BK-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-609-AM-Z",
@@ -709,9 +789,11 @@
     "page": 11,
     "smart": false,
     "nombre": "DI-609-AM-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-609-AM-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-609-AM-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-542-BK-Z",
@@ -721,9 +803,11 @@
     "page": 11,
     "smart": false,
     "nombre": "DI-542-BK-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-542-BK-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-542-BK-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-730-BK-Z",
@@ -733,9 +817,11 @@
     "page": 11,
     "smart": false,
     "nombre": "DI-730-BK-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-730-BK-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-730-BK-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-866-GD-Z",
@@ -745,9 +831,11 @@
     "page": 12,
     "smart": false,
     "nombre": "DI-866-GD-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-866-GD-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-866-GD-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-552-GD-Z",
@@ -757,9 +845,11 @@
     "page": 12,
     "smart": false,
     "nombre": "DI-552-GD-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-552-GD-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-552-GD-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-500-GD-Z",
@@ -769,9 +859,11 @@
     "page": 12,
     "smart": false,
     "nombre": "DI-500-GD-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-500-GD-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-500-GD-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-613-ST-Z",
@@ -781,9 +873,11 @@
     "page": 13,
     "smart": false,
     "nombre": "DI-613-ST-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-613-ST-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-613-ST-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-612-ST-Z",
@@ -793,9 +887,11 @@
     "page": 13,
     "smart": false,
     "nombre": "DI-612-ST-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-612-ST-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-612-ST-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-798-ST-Z",
@@ -805,9 +901,11 @@
     "page": 13,
     "smart": false,
     "nombre": "DI-798-ST-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-798-ST-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-798-ST-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-673-BK-Z",
@@ -817,9 +915,11 @@
     "page": 13,
     "smart": false,
     "nombre": "DI-673-BK-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-673-BK-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-673-BK-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-807-BG-Z",
@@ -829,9 +929,11 @@
     "page": 14,
     "smart": false,
     "nombre": "DI-807-BG-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-807-BG-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-807-BG-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-688-BK-Z",
@@ -841,9 +943,11 @@
     "page": 14,
     "smart": false,
     "nombre": "DI-688-BK-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-688-BK-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-688-BK-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-558-BK-Z",
@@ -853,9 +957,11 @@
     "page": 14,
     "smart": false,
     "nombre": "DI-558-BK-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-558-BK-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-558-BK-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-430-WH-Z",
@@ -865,9 +971,11 @@
     "page": 14,
     "smart": false,
     "nombre": "DI-430-WH-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-430-WH-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-430-WH-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-429-WH-Z",
@@ -877,9 +985,11 @@
     "page": 14,
     "smart": false,
     "nombre": "DI-429-WH-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-429-WH-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-429-WH-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-231-WD-Z",
@@ -889,9 +999,11 @@
     "page": 15,
     "smart": false,
     "nombre": "DI-231-WD-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-231-WD-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-231-WD-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-296-LW-Z",
@@ -901,9 +1013,11 @@
     "page": 15,
     "smart": false,
     "nombre": "DI-296-LW-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-296-LW-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-296-LW-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-300-WD-Z",
@@ -913,9 +1027,11 @@
     "page": 15,
     "smart": false,
     "nombre": "DI-300-WD-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-300-WD-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-300-WD-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-304-BK-Z",
@@ -925,9 +1041,11 @@
     "page": 15,
     "smart": false,
     "nombre": "DI-304-BK-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-304-BK-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-304-BK-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-132-AB-Z",
@@ -937,9 +1055,11 @@
     "page": 15,
     "smart": false,
     "nombre": "DI-132-AB-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-132-AB-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-132-AB-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-340-GD-Z",
@@ -949,9 +1069,11 @@
     "page": 16,
     "smart": false,
     "nombre": "DI-340-GD-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-340-GD-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-340-GD-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-148-BK-30K-Z",
@@ -967,9 +1089,11 @@
     "material": "Aluminio+Silicona",
     "uso": "Interior",
     "nombre": "DI-148-BK-30K-Z · Negro · 63W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-148-BK-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-148-BK-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-149-GD-30K-Z",
@@ -985,9 +1109,11 @@
     "material": "Aluminio+Silicona",
     "uso": "Interior",
     "nombre": "DI-149-GD-30K-Z · Negro · 42W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-149-GD-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-149-GD-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-45-BK-30K-Z",
@@ -1003,9 +1129,11 @@
     "material": "Aluminio+Acrílico",
     "uso": "Interior",
     "nombre": "DI-45-BK-30K-Z · Dorado · 20W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-45-BK-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-45-BK-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-679-CMP-30K-Z",
@@ -1021,9 +1149,11 @@
     "material": "Acrílico + MDF + Hierro",
     "uso": "Interior",
     "nombre": "DI-679-CMP-30K-Z · Champán + Blanco · 10W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-679-CMP-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-679-CMP-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-681-CMP-30K-Z",
@@ -1039,9 +1169,11 @@
     "material": "Acrílico + MDF + Hierro",
     "uso": "Interior",
     "nombre": "DI-681-CMP-30K-Z · Champán + Blanco · 10W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-681-CMP-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-681-CMP-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-682-BK-30K-Z",
@@ -1057,9 +1189,11 @@
     "material": "MDF + Plástico",
     "uso": "Interior",
     "nombre": "DI-682-BK-30K-Z · Champán + Blanco · 10W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-682-BK-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-682-BK-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-840-GD-CCT-Z",
@@ -1075,9 +1209,11 @@
     "material": "Hierro+Plástico",
     "uso": "Interior",
     "nombre": "DI-840-GD-CCT-Z · Blanco+Gris+Dorado · 45W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-840-GD-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-840-GD-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-141-WH-30K-Z",
@@ -1093,9 +1229,11 @@
     "material": "Hierro+Plástico",
     "uso": "Interior",
     "nombre": "DI-141-WH-30K-Z · Blanco+Gris+Dorado · 45W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-141-WH-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-141-WH-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-264-AB-Z",
@@ -1105,9 +1243,11 @@
     "page": 19,
     "smart": false,
     "nombre": "DI-264-AB-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-264-AB-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-264-AB-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-516-BK-Z",
@@ -1117,9 +1257,11 @@
     "page": 19,
     "smart": false,
     "nombre": "DI-516-BK-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-516-BK-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-516-BK-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-765-ST-Z",
@@ -1129,9 +1271,11 @@
     "page": 19,
     "smart": false,
     "nombre": "DI-765-ST-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-765-ST-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-765-ST-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-19-36WWH-RGB-Z",
@@ -1147,9 +1291,11 @@
     "material": "PP",
     "uso": "Interior",
     "nombre": "DI-19-36WWH-RGB-Z · Blanco · 32W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-19-36WWH-RGB-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-19-36WWH-RGB-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-10-60WWH-CCT-Z",
@@ -1165,9 +1311,11 @@
     "material": "Hierro + Plástico+Acrílico",
     "uso": "Interior",
     "nombre": "DI-10-60WWH-CCT-Z · Blanco · 60W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-10-60WWH-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-10-60WWH-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-10-60WBK-CCT-Z",
@@ -1183,9 +1331,11 @@
     "material": "Hierro + Plástico+Acrílico",
     "uso": "Interior",
     "nombre": "DI-10-60WBK-CCT-Z · Blanco · 18W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-10-60WBK-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-10-60WBK-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-11-18WGD-CCT-Z",
@@ -1201,9 +1351,11 @@
     "material": "Hierro + Plástico+Acrílico",
     "uso": "Interior",
     "nombre": "DI-11-18WGD-CCT-Z · Negro · 18W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-11-18WGD-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-11-18WGD-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-12-18WWH-CCT-Z",
@@ -1219,9 +1371,11 @@
     "material": "Hierro + Plástico+Acrílico",
     "uso": "Interior",
     "nombre": "DI-12-18WWH-CCT-Z · Dorado · 60W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-12-18WWH-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-12-18WWH-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-13-60WBK-CCT-Z",
@@ -1237,9 +1391,11 @@
     "material": "Hierro + Plástico+Acrílico",
     "uso": "Interior",
     "nombre": "DI-13-60WBK-CCT-Z · Blanco · 60W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-13-60WBK-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-13-60WBK-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-13-60WWH-CCT-Z",
@@ -1255,9 +1411,11 @@
     "material": "Hierro + Plástico+Acrílico",
     "uso": "Interior",
     "nombre": "DI-13-60WWH-CCT-Z · Negro · 60W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-13-60WWH-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-13-60WWH-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-15-36WWD-CCT-Z",
@@ -1273,9 +1431,11 @@
     "material": "Hierro+Plástico+Acrílico",
     "uso": "Interior",
     "nombre": "DI-15-36WWD-CCT-Z · Negro · 12W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-15-36WWD-CCT-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-15-36WWD-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-18-36WBK-CCT-Z",
@@ -1291,9 +1451,11 @@
     "material": "Hierro+Plástico+Acrílico",
     "uso": "Interior",
     "nombre": "DI-18-36WBK-CCT-Z · Negro · 36W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-18-36WBK-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-18-36WBK-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-719-12WGD-CCT-Z",
@@ -1309,9 +1471,11 @@
     "material": "Hierro+Plástico+Acrílico",
     "uso": "Interior",
     "nombre": "DI-719-12WGD-CCT-Z · Negro · 36W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-719-12WGD-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-719-12WGD-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-720-36WBK-CCT-Z",
@@ -1327,9 +1491,11 @@
     "material": "PVC + Hierro",
     "uso": "Interior",
     "nombre": "DI-720-36WBK-CCT-Z · Negro · 36W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-720-36WBK-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-720-36WBK-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-720-36WWH-CCT-Z",
@@ -1345,9 +1511,11 @@
     "material": "PVC + Hierro",
     "uso": "Interior",
     "nombre": "DI-720-36WWH-CCT-Z · Blanco",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-720-36WWH-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-720-36WWH-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-720-36WWD-CCT-Z",
@@ -1363,9 +1531,11 @@
     "material": "PVC + Hierro",
     "uso": "Interior",
     "nombre": "DI-720-36WWD-CCT-Z · Madera",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-720-36WWD-CCT-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-720-36WWD-CCT-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-471-GD-30K-Z",
@@ -1381,9 +1551,11 @@
     "material": "Metal + Acrílico",
     "uso": "Interior",
     "nombre": "DI-471-GD-30K-Z · Dorado · 7W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-471-GD-30K-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-471-GD-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-547-BK-30K-Z",
@@ -1399,9 +1571,11 @@
     "material": "Metal + Acrílico",
     "uso": "Interior",
     "nombre": "DI-547-BK-30K-Z · Dorado · 6W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-547-BK-30K-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-547-BK-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-339-BRS-Z",
@@ -1417,9 +1591,11 @@
     "material": "Vidrio+Metal",
     "uso": "Interior",
     "nombre": "DI-339-BRS-Z · Negro · 6W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-339-BRS-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-339-BRS-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-801-GD-30K-Z",
@@ -1435,9 +1611,11 @@
     "material": "Metal + Vidrio + Acrílico",
     "uso": "Interior",
     "nombre": "DI-801-GD-30K-Z · Dorado · 6W",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-801-GD-30K-Z.jpeg"
+    "section": "Lámparas colgantes LED",
+    "section_key": "lamparas-colgantes-led",
+    "image": "catalog/products/DI-801-GD-30K-Z.jpeg",
+    "category_key": "lamparas-colgantes-led",
+    "category": "Lámparas colgantes LED"
   },
   {
     "code": "DI-241-BK-Z",
@@ -1447,9 +1625,11 @@
     "page": 24,
     "smart": false,
     "nombre": "DI-241-BK-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-241-BK-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-241-BK-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-556-WD-Z",
@@ -1459,9 +1639,11 @@
     "page": 24,
     "smart": false,
     "nombre": "DI-556-WD-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-556-WD-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-556-WD-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   },
   {
     "code": "DI-548-BRS-Z",
@@ -1471,8 +1653,10 @@
     "page": 24,
     "smart": false,
     "nombre": "DI-548-BRS-Z",
-    "section": "Lámparas e iluminación",
-    "section_key": "lamparas",
-    "image": "catalog/products/DI-548-BRS-Z.jpeg"
+    "section": "Lámparas colgantes",
+    "section_key": "lamparas-colgantes",
+    "image": "catalog/products/DI-548-BRS-Z.jpeg",
+    "category_key": "lamparas-colgantes",
+    "category": "Lámparas colgantes"
   }
 ]

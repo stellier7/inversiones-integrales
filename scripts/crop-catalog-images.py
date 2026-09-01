@@ -2,6 +2,7 @@
 """Crop per-product images from Lumiart and Celima catalog PDFs."""
 from __future__ import annotations
 
+import io
 import json
 import re
 import sys
@@ -9,10 +10,10 @@ from collections import defaultdict
 from pathlib import Path
 
 import pymupdf
+from PIL import Image, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[1]
 EXTRACTED = ROOT / 'scripts' / 'extracted'
-SCALE = 2.5
 
 BRANDS = {
     'celima': {
@@ -22,6 +23,9 @@ BRANDS = {
         'code_pattern': re.compile(r'\b(\d{5})\b'),
         'filename': lambda code: f'{code}.jpeg',
         'min_img_area': 6000,
+        'scale': 4.0,
+        'jpg_quality': 92,
+        'min_width': 320,
     },
     'lumiart': {
         'pdf': ROOT / 'lumiart/assets/images/catalog/El Jordan Catalogo sin Logos_compressed.pdf',
@@ -30,6 +34,9 @@ BRANDS = {
         'code_pattern': re.compile(r'([A-Z]{2,3}-\d{2,4}[A-Z0-9-]*)'),
         'filename': lambda code: re.sub(r'[^\w.-]+', '-', code) + '.jpeg',
         'min_img_area': 5000,
+        'scale': 5.0,
+        'jpg_quality': 92,
+        'min_width': 400,
     },
 }
 
@@ -82,11 +89,30 @@ def product_images_on_page(page, min_area):
     return images
 
 
-def match_code_to_image(code_bbox, images):
+def page_image_infos(page, min_area):
+    infos = []
+    for info in page.get_image_info(xrefs=True):
+        xref = info.get('xref') or 0
+        if not xref:
+            continue
+        bb = info['bbox']
+        if not is_valid_product_image(bb, page.rect, min_area):
+            continue
+        infos.append({
+            'bbox': bb,
+            'xref': xref,
+            'width': info['width'],
+            'height': info['height'],
+        })
+    return infos
+
+
+def match_code_to_bbox(code_bbox, candidates):
     _, cy = bbox_center(code_bbox)
     best = None
     best_score = float('inf')
-    for image_bbox in images:
+    for item in candidates:
+        image_bbox = item if isinstance(item, (list, tuple)) else item['bbox']
         ix, _ = bbox_center(image_bbox)
         cx, _ = bbox_center(code_bbox)
         if image_bbox[3] > cy + 30:
@@ -99,7 +125,7 @@ def match_code_to_image(code_bbox, images):
         score = hdist * 2 + max(0, vdist) * 0.3 - overlap * 0.5
         if score < best_score:
             best_score = score
-            best = image_bbox
+            best = item
     return best
 
 
@@ -108,7 +134,7 @@ def fallback_crop_bbox(code_bbox, page_rect, brand):
     if brand == 'celima':
         width, height = 155, 145
     else:
-        width, height = 150, 200
+        width, height = 150, 220
     x0 = max(16, cx - width / 2)
     x1 = min(page_rect.width - 16, cx + width / 2)
     y1 = code_bbox[1] - 8
@@ -126,12 +152,38 @@ def pad_bbox(bbox, page_rect, pad=4):
     )
 
 
-def crop_page_region(page, bbox, out_path: Path):
-    clip = pymupdf.Rect(bbox)
-    matrix = pymupdf.Matrix(SCALE, SCALE)
-    pix = page.get_pixmap(matrix=matrix, clip=clip, alpha=False)
+def enhance_image(im: Image.Image, min_width: int) -> Image.Image:
+    im = im.convert('RGB')
+    if im.width < min_width:
+        scale = min_width / im.width
+        im = im.resize((min_width, max(1, int(im.height * scale))), Image.Resampling.LANCZOS)
+    return im.filter(ImageFilter.UnsharpMask(radius=1.2, percent=90, threshold=2))
+
+
+def save_jpeg(im: Image.Image, out_path: Path, quality: int):
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    pix.save(str(out_path), output='jpeg', jpg_quality=88)
+    im.save(out_path, format='JPEG', quality=quality, optimize=True)
+
+
+def crop_page_region(page, bbox, out_path: Path, scale: float, quality: int, min_width: int):
+    clip = pymupdf.Rect(bbox)
+    matrix = pymupdf.Matrix(scale, scale)
+    pix = page.get_pixmap(matrix=matrix, clip=clip, alpha=False)
+    im = Image.open(io.BytesIO(pix.tobytes('jpeg')))
+    save_jpeg(enhance_image(im, min_width), out_path, quality)
+
+
+def save_native_image(doc, xref: int, out_path: Path, quality: int, min_width: int) -> bool:
+    try:
+        info = doc.extract_image(xref)
+    except Exception:
+        return False
+    try:
+        im = Image.open(io.BytesIO(info['image']))
+    except Exception:
+        return False
+    save_jpeg(enhance_image(im, min_width), out_path, quality)
+    return True
 
 
 def process_brand(brand_key: str):
@@ -143,6 +195,7 @@ def process_brand(brand_key: str):
         by_page[product['page']].append(product)
 
     matched = 0
+    native = 0
     fallback = 0
     missing = []
 
@@ -154,7 +207,10 @@ def process_brand(brand_key: str):
 
         page = doc[page_num]
         codes = find_codes_on_page(page, cfg['code_pattern'])
-        images = product_images_on_page(page, cfg['min_img_area'])
+        block_images = product_images_on_page(page, cfg['min_img_area'])
+        xref_images = page_image_infos(page, cfg['min_img_area']) if brand_key == 'lumiart' else []
+
+        candidates = xref_images or block_images
 
         for product in products:
             code = product['code']
@@ -166,22 +222,37 @@ def process_brand(brand_key: str):
                 missing.append(code)
                 continue
 
-            image_bbox = match_code_to_image(code_bbox, images)
-            if image_bbox:
+            match = match_code_to_bbox(code_bbox, candidates)
+            if match:
                 matched += 1
+                if isinstance(match, dict) and match.get('xref'):
+                    image_bbox = match['bbox']
+                    if save_native_image(doc, match['xref'], out_path, cfg['jpg_quality'], cfg['min_width']):
+                        native += 1
+                        product['image'] = rel_path
+                        continue
+                else:
+                    image_bbox = match if isinstance(match, (list, tuple)) else match['bbox']
             else:
                 image_bbox = fallback_crop_bbox(code_bbox, page.rect, brand_key)
                 fallback += 1
 
-            crop_page_region(page, pad_bbox(image_bbox, page.rect), out_path)
+            crop_page_region(
+                page,
+                pad_bbox(image_bbox, page.rect),
+                out_path,
+                cfg['scale'],
+                cfg['jpg_quality'],
+                cfg['min_width'],
+            )
             product['image'] = rel_path
 
     doc.close()
     cfg['json'].write_text(json.dumps(items, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
     print(
-        f'{brand_key}: saved {matched + fallback}/{len(items)} crops '
-        f'({matched} embedded, {fallback} fallback, {len(missing)} missing)'
+        f'{brand_key}: saved {matched + fallback}/{len(items)} '
+        f'({native} native, {matched - native} rendered, {fallback} fallback, {len(missing)} missing)'
     )
     if missing:
         print('  missing codes:', ', '.join(missing[:20]))
