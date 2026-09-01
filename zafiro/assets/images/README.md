@@ -3,7 +3,7 @@
 - `logo.jpeg` — site logo
 - `catalog/products/piso/` — pisos organizados por acabado (`brillante`, `mate`, `decorativo`)
 - `catalog/products/muro/` — muros organizados por acabado
-- `gallery/` — fotos para la galería del inicio
+- `gallery/` — videos para la galería del inicio (`.mov`)
 
 Regenerar catálogo:
 
