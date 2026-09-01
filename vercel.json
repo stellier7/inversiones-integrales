@@ -1,0 +1,54 @@
+{
+  "redirects": [
+    {
+      "source": "/megawatt/v/:slug",
+      "destination": "/megawatt?vendedor=:slug",
+      "permanent": false
+    },
+    {
+      "source": "/megawatt/v/:slug/",
+      "destination": "/megawatt?vendedor=:slug",
+      "permanent": false
+    },
+    {
+      "source": "/buffalo/v/:slug",
+      "destination": "/buffalo?vendedor=:slug",
+      "permanent": false
+    },
+    {
+      "source": "/buffalo/v/:slug/",
+      "destination": "/buffalo?vendedor=:slug",
+      "permanent": false
+    },
+    {
+      "source": "/zafiro/v/:slug",
+      "destination": "/zafiro?vendedor=:slug",
+      "permanent": false
+    },
+    {
+      "source": "/zafiro/v/:slug/",
+      "destination": "/zafiro?vendedor=:slug",
+      "permanent": false
+    },
+    {
+      "source": "/celima/v/:slug",
+      "destination": "/celima?vendedor=:slug",
+      "permanent": false
+    },
+    {
+      "source": "/celima/v/:slug/",
+      "destination": "/celima?vendedor=:slug",
+      "permanent": false
+    },
+    {
+      "source": "/trebol/v/:slug",
+      "destination": "/trebol?vendedor=:slug",
+      "permanent": false
+    },
+    {
+      "source": "/trebol/v/:slug/",
+      "destination": "/trebol?vendedor=:slug",
+      "permanent": false
+    }
+  ]
+}

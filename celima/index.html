@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CELIMA — Celima</title>
+  <meta name="description" content="Celima — Soluciones para tu hogar y negocio. Catálogo y contacto para distribuidores.">
+  <link rel="icon" href="assets/images/logo.jpeg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="assets/images/logo.jpeg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CELIMA — Celima">
+  <meta property="og:description" content="Celima — Soluciones para tu hogar y negocio. Catálogo y contacto para distribuidores.">
+  <meta property="og:image" content="https://mega-watt-wheat.vercel.app/assets/images/logo.jpeg">
+  <meta property="og:url" content="https://mega-watt-wheat.vercel.app/">
+  <meta property="og:locale" content="es_HN">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/shared.css?v=skbt-frame">
+</head>
+<body>
+
+  <section class="hero" id="hero">
+    <div class="bolt-field" id="boltField"></div>
+    <div class="hero-mark" id="heroMark">
+      <img src="assets/images/logo.jpeg" alt="CELIMA">
+    </div>
+    <h1 class="wordmark">CELIMA<span class="bolt-char">🏠</span></h1>
+    <p class="tag">Soluciones para tu hogar y negocio — catálogo, contacto y cotización en un solo lugar.</p>
+  </section>
+
+  <section class="stack-section">
+    <div class="container">
+      <div class="cards-wrap">
+        <a class="action-card card-products reveal reveal-from-left" id="catalogCard" href="productos.html">
+          <svg class="ghost-bolt" viewBox="0 0 24 24" fill="var(--orange)"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+          <div>
+            <h3>Catálogo de<br>Productos</h3>
+            <p>Catálogo de productos — abre la serie y elige los watts.</p>
+          </div>
+          <div class="cta-row"><span>Encontrar producto</span><div class="arrow">→</div></div>
+        </a>
+        <button type="button" class="action-card card-reseller reveal reveal-from-right" onclick="scrollToSection('distribuidor')">
+          <svg class="ghost-bolt" viewBox="0 0 24 24" fill="#1b0e05"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+          <div>
+            <h3>Sé<br>Distribuidor</h3>
+            <p>Lleva la línea Celima a tu negocio. Condiciones, pedido mínimo y contacto directo.</p>
+          </div>
+          <div class="cta-row"><span>Quiero distribuir</span><div class="arrow">→</div></div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt featured-section" id="destacados">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Selección Celima</div>
+        <h2>Productos destacados</h2>
+        <p>Una muestra de cada línea. En el catálogo abres el capítulo, la serie y la potencia.</p>
+      </div>
+    </div>
+
+    <div class="featured-carousel reveal" id="featuredCarousel" aria-label="Carrusel de productos destacados">
+      <div class="featured-track" id="featuredTrack"></div>
+    </div>
+
+    <div class="container">
+      <p class="featured-cta reveal">
+        <a href="productos.html" id="featuredCatalogLink" class="featured-link">Encontrar un producto →</a>
+      </p>
+    </div>
+
+    <div class="gallery-divider reveal" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="section-head gallery-head reveal">
+        <div class="eyebrow">En acción</div>
+        <h2>Galería</h2>
+        <p>Desliza con el dedo o arrastra — toca para ampliar.</p>
+      </div>
+      <div class="gallery-actions reveal">
+        <button type="button" class="gallery-open-btn" id="galleryOpenBtn">Abrir galería</button>
+      </div>
+    </div>
+
+    <div class="gallery-carousel reveal" id="galleryCarousel" aria-label="Galería desplazable" tabindex="0">
+      <div class="gallery-track" id="galleryTrack"></div>
+    </div>
+  </section>
+
+  <section class="section" id="distribuidor">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Sé distribuidor Celima</h2>
+        <p>Suma la línea Celima a tu negocio. Distribuidores en Centroamérica y más allá.</p>
+      </div>
+
+      <div class="reseller-wrap reveal">
+        <div>
+          <div class="benefit">
+            <div class="num">01</div>
+            <div>
+              <h4>Catálogo completo, un solo pedido</h4>
+              <p>Productos para tu hogar y negocio bajo una misma línea — sin manejar varios proveedores.</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="num">02</div>
+            <div>
+              <h4>Material de venta listo</h4>
+              <p>Fotos, fichas y esta misma página, con tu nombre y contacto, para mostrar a tus clientes.</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="num">03</div>
+            <div>
+              <h4>Acompañamiento directo</h4>
+              <p>Un contacto Celima para resolver pedidos, reposición y garantías.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lead-form">
+          <h3>Cuéntanos de tu negocio</h3>
+          <div class="sub">Te contactamos en menos de 24 horas.</div>
+          <label for="lead-name">Nombre completo</label>
+          <input id="lead-name" type="text" placeholder="Tu nombre">
+          <label for="lead-business">Negocio</label>
+          <input id="lead-business" type="text" placeholder="Nombre del negocio">
+          <label for="lead-phone">Teléfono / WhatsApp</label>
+          <div class="phone-field">
+            <div class="country-picker" id="leadCountryPicker">
+              <button type="button" class="country-picker-trigger" id="leadCountryTrigger" aria-haspopup="listbox" aria-expanded="false">
+                <span class="country-flag" aria-hidden="true">🇭🇳</span>
+                <span class="country-dial">+504</span>
+              </button>
+              <div class="country-picker-panel" id="leadCountryPanel" role="dialog" aria-label="Seleccionar país">
+                <input type="search" id="leadCountrySearch" class="country-picker-search" placeholder="Buscar país o código..." autocomplete="off" enterkeyhint="search">
+                <ul class="country-picker-list" id="leadCountryList" role="listbox"></ul>
+              </div>
+            </div>
+            <input id="lead-phone" type="tel" inputmode="tel" placeholder="9999-9999" autocomplete="tel-national">
+          </div>
+          <label for="lead-city">Ciudad, País</label>
+          <input id="lead-city" type="text" placeholder="Ciudad, País">
+          <button type="button" class="submit-btn">Quiero ser distribuidor</button>
+          <a class="wa-link" href="https://wa.me/50495002199" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.2-1.77 1.24-.45.04-.9.23-3.03-.63-2.57-1.03-4.24-3.6-4.37-3.77-.13-.17-1.04-1.38-1.04-2.63 0-1.25.65-1.86.89-2.11.22-.24.5-.3.66-.3h.48c.15 0 .36-.03.55.42.22.53.75 1.83.82 1.96.06.13.1.28.02.45-.08.17-.13.27-.25.42-.13.15-.27.33-.38.44-.13.13-.26.27-.11.53.15.27.68 1.13 1.47 1.83 1.01.9 1.86 1.18 2.13 1.31.27.13.42.11.58-.07.15-.18.65-.76.83-1.02.17-.26.34-.22.57-.13.23.08 1.47.7 1.72.82.25.13.42.19.48.3.06.11.06.62-.16 1.24z"/></svg>
+            Escribir por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-row">
+        <div class="foot-mark">
+          <img class="foot-logo" src="assets/images/logo.jpeg" alt="CELIMA">
+          <b>CELIMA</b>
+        </div>
+        <div class="brand-links">
+          <a href="/">Inicio</a>
+          <a href="/zafiro/">Zafiro</a>
+          <a href="/buffalo/">Búfalo</a>
+          <a href="/celima/">Celima</a>
+          <a href="/trebol/">Trébol</a>
+        </div>
+      </div>
+      <div class="foot-fine">Inversiones Integrales — Comayagua, Honduras</div>
+      <div class="foot-credit">
+        Desarrollado por <a href="https://iagodigital.vercel.app" target="_blank" rel="noopener">IAGO Digital</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/sellers.js"></script>
+  <script src="assets/js/seller.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/country-codes.js"></script>
+  <script src="assets/js/contact.js"></script>
+  <script src="assets/js/products.js?v=user-alta3"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/gallery.js"></script>
+  <script src="assets/js/landing.js"></script>
+  <script>
+    initSeller();
+    initContact();
+    initFeatured();
+    initCart();
+    initGallery();
+    initLanding();
+  </script>
+</body>
+</html>
