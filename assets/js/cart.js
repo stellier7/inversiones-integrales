@@ -1,9 +1,104 @@
-const CART_STORAGE_KEY = 'zafiro-cart';
+/** Portal-wide quote cart — shared across main page and all brands. */
 
-/** @type {{ id: string, qty: number }[]} */
+const CART_STORAGE_KEY = 'ii-cart';
+const CART_EVENT = 'ii:cart';
+
+const BRAND_NAMES = {
+  megawatt: 'MegaWatt',
+  lumiart: 'Lumiart',
+  buffalo: 'Buffalo',
+  zafiro: 'Zafiro',
+  celima: 'Celima',
+  trebol: 'Trébol',
+};
+
+const LEGACY_CART_KEYS = [
+  'megawatt-cart',
+  'buffalo-cart',
+  'zafiro-cart',
+  'celima-cart',
+  'trebol-cart',
+  'lumiart-cart',
+];
+
+/** @type {{ brand: string, id: string, qty: number, snapshot: object }[]} */
 let cartItems = [];
 
+function getCurrentBrand() {
+  const match = window.location.pathname.match(/^\/(megawatt|buffalo|zafiro|celima|trebol|lumiart)\/?/);
+  return match ? match[1] : null;
+}
+
+function normalizeImagePath(image, brand) {
+  if (!image) return '';
+  if (image.startsWith('http') || image.startsWith('/')) return image;
+  return `/${brand}/${image}`;
+}
+
+function productSnapshot(product, brand) {
+  return {
+    nombre: product.nombre,
+    image: normalizeImagePath(product.image, brand),
+    temp: product.temp || '',
+    flujo: product.flujo || '',
+    forma: product.forma || '',
+    linea: product.linea || '',
+  };
+}
+
+function migrateLegacyCarts() {
+  if (localStorage.getItem(CART_STORAGE_KEY)) return;
+
+  const merged = [];
+  LEGACY_CART_KEYS.forEach((key) => {
+    const brand = key.replace('-cart', '');
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return;
+      const items = JSON.parse(raw);
+      if (!Array.isArray(items)) return;
+      items.forEach((item) => {
+        if (!item || typeof item.id !== 'string' || Number(item.qty) < 1) return;
+        merged.push({
+          brand,
+          id: item.id,
+          qty: Math.min(999, Math.floor(Number(item.qty)) || 1),
+          snapshot: { nombre: item.id, image: '', temp: '', flujo: '', forma: '', linea: '' },
+        });
+      });
+    } catch {
+      /* ignore */
+    }
+  });
+
+  if (merged.length) {
+    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(merged));
+  }
+}
+
+function normalizeCartItem(raw) {
+  if (!raw || typeof raw.id !== 'string' || Number(raw.qty) < 1) return null;
+
+  if (raw.brand && raw.snapshot) {
+    return {
+      brand: raw.brand,
+      id: raw.id,
+      qty: Math.min(999, Math.max(1, Math.floor(Number(raw.qty)) || 1)),
+      snapshot: raw.snapshot,
+    };
+  }
+
+  const brand = raw.brand || getCurrentBrand() || 'megawatt';
+  return {
+    brand,
+    id: raw.id,
+    qty: Math.min(999, Math.max(1, Math.floor(Number(raw.qty)) || 1)),
+    snapshot: raw.snapshot || { nombre: raw.id, image: '', temp: '', flujo: '', forma: '', linea: '' },
+  };
+}
+
 function loadCart() {
+  migrateLegacyCarts();
   try {
     const raw = localStorage.getItem(CART_STORAGE_KEY);
     if (!raw) {
@@ -15,9 +110,7 @@ function loadCart() {
       cartItems = [];
       return;
     }
-    cartItems = parsed
-      .filter((item) => item && typeof item.id === 'string' && Number(item.qty) > 0)
-      .map((item) => ({ id: item.id, qty: Math.min(999, Math.max(1, Math.floor(Number(item.qty)) || 1)) }));
+    cartItems = parsed.map(normalizeCartItem).filter(Boolean);
   } catch {
     cartItems = [];
   }
@@ -25,11 +118,16 @@ function loadCart() {
 
 function saveCart() {
   localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
-  document.dispatchEvent(new CustomEvent('zafiro:cart'));
+  document.dispatchEvent(new CustomEvent(CART_EVENT));
 }
 
-function getCartQty(id) {
-  const item = cartItems.find((entry) => entry.id === id);
+function findCartItem(brand, id) {
+  return cartItems.find((entry) => entry.brand === brand && entry.id === id);
+}
+
+function getCartQty(id, brand = getCurrentBrand()) {
+  if (!brand) return 0;
+  const item = findCartItem(brand, id);
   return item ? item.qty : 0;
 }
 
@@ -37,46 +135,74 @@ function getCartTotalUnits() {
   return cartItems.reduce((sum, item) => sum + item.qty, 0);
 }
 
+function refreshSnapshotsForCurrentBrand() {
+  const brand = getCurrentBrand();
+  if (!brand || typeof products === 'undefined') return;
+
+  let changed = false;
+  cartItems.forEach((item) => {
+    if (item.brand !== brand) return;
+    const product = products.find((p) => p.id === item.id);
+    if (product) {
+      item.snapshot = productSnapshot(product, brand);
+      changed = true;
+    }
+  });
+
+  if (changed) saveCart();
+}
+
 function getCartLines() {
   return cartItems
-    .map((item) => {
-      const product = typeof products !== 'undefined' ? products.find((p) => p.id === item.id) : null;
-      if (!product) return null;
-      return { ...item, product };
-    })
-    .filter(Boolean);
+    .map((item) => ({
+      brand: item.brand,
+      id: item.id,
+      qty: item.qty,
+      product: item.snapshot ? { ...item.snapshot, id: item.id } : null,
+    }))
+    .filter((line) => line.product);
 }
 
 function addToCart(id, amount = 1) {
-  if (!id) return;
+  const brand = getCurrentBrand();
+  if (!brand || !id) return;
+  if (typeof products === 'undefined') return;
+
+  const product = products.find((p) => p.id === id);
+  if (!product) return;
+
   const delta = Math.max(1, Math.floor(Number(amount)) || 1);
-  const existing = cartItems.find((entry) => entry.id === id);
+  const existing = findCartItem(brand, id);
   if (existing) {
     existing.qty = Math.min(999, existing.qty + delta);
+    existing.snapshot = productSnapshot(product, brand);
   } else {
-    cartItems.push({ id, qty: Math.min(999, delta) });
+    cartItems.push({
+      brand,
+      id,
+      qty: Math.min(999, delta),
+      snapshot: productSnapshot(product, brand),
+    });
   }
   saveCart();
 }
 
-function setQty(id, qty) {
+function setQty(brand, id, qty) {
   const next = Math.floor(Number(qty));
-  if (!id) return;
+  if (!brand || !id) return;
   if (!Number.isFinite(next) || next < 1) {
-    removeFromCart(id);
+    removeFromCart(brand, id);
     return;
   }
-  const existing = cartItems.find((entry) => entry.id === id);
+  const existing = findCartItem(brand, id);
   if (existing) {
     existing.qty = Math.min(999, next);
-  } else {
-    cartItems.push({ id, qty: Math.min(999, next) });
   }
   saveCart();
 }
 
-function removeFromCart(id) {
-  cartItems = cartItems.filter((entry) => entry.id !== id);
+function removeFromCart(brand, id) {
+  cartItems = cartItems.filter((entry) => !(entry.brand === brand && entry.id === id));
   saveCart();
 }
 
@@ -88,15 +214,15 @@ function clearCart() {
 function cartQuoteGreeting() {
   const seller = typeof getActiveSeller === 'function' ? getActiveSeller() : null;
   if (seller) {
-    return `Hola ${seller.firstName}, quiero cotizar estos productos Zafiro y confirmar disponibilidad:`;
+    return `Hola ${seller.firstName}, quiero cotizar estos productos y confirmar disponibilidad:`;
   }
-  return 'Hola, quiero cotizar estos productos Zafiro y confirmar disponibilidad:';
+  return 'Hola, quiero cotizar estos productos y confirmar disponibilidad:';
 }
 
 function cartDestinationLabel() {
   const seller = typeof getActiveSeller === 'function' ? getActiveSeller() : null;
   if (seller) return seller.firstName;
-  return 'Zafiro';
+  return 'Inversiones Integrales';
 }
 
 function formatCartLineSpecs(product) {
@@ -115,7 +241,8 @@ function quantityLabel(qty) {
 function buildCartQuoteMessage() {
   const lines = getCartLines();
   const body = lines.map((line, index) => {
-    return `${index + 1}. ${line.product.nombre} — ${quantityLabel(line.qty)}`;
+    const brandLabel = BRAND_NAMES[line.brand] || line.brand;
+    return `${index + 1}. [${brandLabel}] ${line.product.nombre} — ${quantityLabel(line.qty)}`;
   });
 
   return [cartQuoteGreeting(), '', ...body, '', '¿Me confirmas precios y disponibilidad? Gracias.'].join('\n');
@@ -124,7 +251,9 @@ function buildCartQuoteMessage() {
 function submitCartQuote() {
   const lines = getCartLines();
   if (!lines.length) return;
-  window.open(whatsAppUrl(buildCartQuoteMessage()), '_blank', 'noopener');
+  if (typeof whatsAppUrl === 'function') {
+    window.open(whatsAppUrl(buildCartQuoteMessage()), '_blank', 'noopener');
+  }
 }
 
 function updateCartDestinationCopy() {
@@ -136,7 +265,7 @@ function updateCartDestinationCopy() {
   if (sub) {
     sub.textContent = seller
       ? `La lista se envía a ${destination} por WhatsApp para cotizar y confirmar disponibilidad.`
-      : 'Arma la lista y envíala por WhatsApp a Zafiro.';
+      : 'Arma la lista y envíala por WhatsApp para cotizar.';
   }
   if (quoteBtn) {
     quoteBtn.textContent = seller
@@ -156,20 +285,22 @@ function cartThumbHtml(product) {
 }
 
 function cartLineHtml(line) {
-  const { product, qty, id } = line;
+  const { product, qty, id, brand } = line;
+  const brandLabel = BRAND_NAMES[brand] || brand;
   return `
-    <li class="cart-line" data-product-id="${id}">
+    <li class="cart-line" data-brand="${brand}" data-product-id="${id}">
       ${cartThumbHtml(product)}
       <div class="cart-line-body">
+        <div class="cart-line-brand">${brandLabel}</div>
         <div class="cart-line-title">${product.nombre}</div>
         <div class="cart-line-meta">${formatCartLineSpecs(product)}</div>
         <div class="cart-line-actions">
           <div class="cart-qty" role="group" aria-label="Cantidad de ${product.nombre}">
-            <button type="button" class="cart-qty-btn" data-cart-action="dec" data-product-id="${id}" aria-label="Quitar una unidad">−</button>
+            <button type="button" class="cart-qty-btn" data-cart-action="dec" data-brand="${brand}" data-product-id="${id}" aria-label="Quitar una unidad">−</button>
             <span class="cart-qty-value" aria-live="polite">${qty}</span>
-            <button type="button" class="cart-qty-btn" data-cart-action="inc" data-product-id="${id}" aria-label="Agregar una unidad">+</button>
+            <button type="button" class="cart-qty-btn" data-cart-action="inc" data-brand="${brand}" data-product-id="${id}" aria-label="Agregar una unidad">+</button>
           </div>
-          <button type="button" class="cart-remove-btn" data-cart-action="remove" data-product-id="${id}">Quitar</button>
+          <button type="button" class="cart-remove-btn" data-cart-action="remove" data-brand="${brand}" data-product-id="${id}">Quitar</button>
         </div>
       </div>
     </li>
@@ -204,7 +335,7 @@ function ensureCartShell() {
       <div class="cart-drawer-body">
         <ul class="cart-lines" id="cartLines"></ul>
         <div class="cart-empty" id="cartEmpty" hidden>
-          <p>Aún no hay productos. Agrega bombillos, empotrables o luminarias desde el catálogo.</p>
+          <p>Aún no hay productos. Agrega artículos desde el catálogo de cualquier marca.</p>
         </div>
       </div>
       <div class="cart-drawer-foot" id="cartDrawerFoot">
@@ -282,14 +413,7 @@ function onCartChanged() {
 
 function initCart() {
   loadCart();
-  if (typeof products !== 'undefined') {
-    const validIds = new Set(products.map((p) => p.id));
-    const pruned = cartItems.filter((item) => validIds.has(item.id));
-    if (pruned.length !== cartItems.length) {
-      cartItems = pruned;
-      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
-    }
-  }
+  refreshSnapshotsForCurrentBrand();
   ensureCartShell();
   onCartChanged();
 
@@ -302,13 +426,14 @@ function initCart() {
       return;
     }
 
-    const actionBtn = e.target.closest('[data-cart-action][data-product-id]');
+    const actionBtn = e.target.closest('[data-cart-action][data-product-id][data-brand]');
     if (actionBtn) {
+      const brand = actionBtn.dataset.brand;
       const id = actionBtn.dataset.productId;
       const action = actionBtn.dataset.cartAction;
-      if (action === 'inc') setQty(id, getCartQty(id) + 1);
-      else if (action === 'dec') setQty(id, getCartQty(id) - 1);
-      else if (action === 'remove') removeFromCart(id);
+      if (action === 'inc') setQty(brand, id, getCartQty(id, brand) + 1);
+      else if (action === 'dec') setQty(brand, id, getCartQty(id, brand) - 1);
+      else if (action === 'remove') removeFromCart(brand, id);
       return;
     }
   });
@@ -327,5 +452,5 @@ function initCart() {
     }
   });
 
-  document.addEventListener('zafiro:cart', onCartChanged);
+  document.addEventListener(CART_EVENT, onCartChanged);
 }

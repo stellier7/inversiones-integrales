@@ -136,7 +136,11 @@ https://tu-dominio.vercel.app/zafiro/v/ramon
 | Propósito | Clave |
 |-----------|-------|
 | Vendedor activo (portal-wide) | `ii-seller` |
-| Carrito de cotización por marca | `megawatt-cart`, `buffalo-cart`, `zafiro-cart`, etc. |
+| Carrito de cotización (portal-wide) | `ii-cart` |
+
+El carrito guarda productos de **todas las marcas** en una sola lista. Cada ítem incluye la marca, el ID del producto y una copia de los datos para mostrar (nombre, imagen, especificaciones). Al cotizar por WhatsApp, cada línea indica la marca: `[MegaWatt] Foco LED 12W — 2 unidades`.
+
+Carritos antiguos por marca (`megawatt-cart`, etc.) se migran automáticamente a `ii-cart` la primera vez que se abre el sitio.
 
 ## Despliegue en Vercel
 

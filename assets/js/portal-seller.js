@@ -44,6 +44,10 @@ function withSellerQuery(url, slug) {
   return url + sep + 'vendedor=' + encodeURIComponent(slug);
 }
 
+function getActiveSeller() {
+  return getResolvedSeller() || getRememberedSeller();
+}
+
 function initPortalSeller() {
   const fromUrl = getResolvedSeller();
   if (fromUrl) rememberSeller(fromUrl.slug);

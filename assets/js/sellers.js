@@ -1,4 +1,5 @@
 /** Inversiones Integrales — registro de vendedores del portal (todas las marcas). */
+const BRAND_WHATSAPP = '50495002199';
 
 /**
  * Vendedores del portal (tarjetas NFC) — compartidos entre todas las marcas.

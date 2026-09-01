@@ -1935,6 +1935,15 @@ body.cart-open {
   border: 1px dashed var(--line);
 }
 
+.cart-line-brand {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 2px;
+}
+
 .cart-line-title {
   font-size: 14px;
   font-weight: 800;
