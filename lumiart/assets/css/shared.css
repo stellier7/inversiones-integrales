@@ -2095,3 +2095,27 @@ body.cart-open {
   text-align: center;
   color: var(--steel);
 }
+
+/* ---------- grid catalog (PDF import) ---------- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.grid-product-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.grid-product-card .p-photo {
+  aspect-ratio: 4 / 3;
+  background: #121110;
+}
+
+.grid-group-tab {
+  min-height: 72px;
+}

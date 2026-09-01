@@ -1,0 +1,336 @@
+#!/usr/bin/env python3
+"""Generate products.js from extracted catalog JSON."""
+import json
+import re
+from pathlib import Path
+from collections import OrderedDict, defaultdict
+
+ROOT = Path(__file__).resolve().parents[1]
+EXTRACTED = ROOT / 'scripts' / 'extracted'
+
+GRID_RUNTIME = r'''
+const img = (file) => (file ? `assets/images/${file}` : '');
+
+const catalogState = { category: '', group: '' };
+
+function isVideoPath(path) {
+  return /\.(mp4|webm|mov)$/i.test(path || '');
+}
+
+function cartQtyForProduct(id) {
+  if (typeof getCartQty !== 'function') return 0;
+  return getCartQty(id);
+}
+
+function addToCartButtonHtml(p) {
+  const qty = cartQtyForProduct(p.id);
+  const inCart = qty > 0;
+  return `<button type="button" class="add-to-cart-btn${inCart ? ' is-in-cart' : ''}" data-product-id="${p.id}" aria-label="${inCart ? `Agregar otra unidad de ${p.nombre}` : `Agregar ${p.nombre} al carrito`}">${inCart ? `En el carrito · ${qty}` : 'Agregar'}</button>`;
+}
+
+function productPhotoHtml(product) {
+  if (!product.image) return '<span>Foto pendiente</span>';
+  if (isVideoPath(product.image)) {
+    return `<video src="${product.image}" muted playsinline preload="metadata" aria-label="${product.nombre}"></video>`;
+  }
+  return `<img src="${product.image}" alt="${product.nombre}" loading="lazy">`;
+}
+
+function specChipsHtml(p) {
+  const chips = [];
+  if (p.chip1) chips.push(p.chip1);
+  if (p.chip2) chips.push(p.chip2);
+  if (p.chip3) chips.push(p.chip3);
+  if (p.linea) chips.push(p.linea);
+  return chips.map((c) => `<span>${c}</span>`).join('');
+}
+
+function groupProducts(groupId) {
+  return products.filter((p) => p.group === groupId);
+}
+
+function categoryMeta(id) {
+  return catalogSections.find((s) => s.id === id) || null;
+}
+
+function productCardHtml(p) {
+  return `
+    <article class="product-card grid-product-card" data-product-id="${p.id}">
+      <div class="p-photo is-studio">${productPhotoHtml(p)}</div>
+      <div class="p-body">
+        <div class="p-cat">${p.subcategoria || ''}</div>
+        <h4>${p.nombre}</h4>
+        <div class="p-specs">${specChipsHtml(p)}</div>
+        ${addToCartButtonHtml(p)}
+      </div>
+    </article>`;
+}
+
+function productGridHtml(groupId) {
+  const items = groupProducts(groupId);
+  return `<div class="product-grid">${items.map(productCardHtml).join('')}</div>`;
+}
+
+function groupTabHtml(group, sectionId) {
+  const selected = catalogState.group === group.id && catalogState.category === sectionId;
+  return `<button type="button" class="series-card grid-group-tab${selected ? ' is-selected' : ''}" data-group="${group.id}" data-category="${sectionId}"><span class="series-card-copy"><span class="p-cat">${group.kicker}</span><span class="series-card-title">${group.menuLabel}</span></span></button>`;
+}
+
+function categoryCardHtml(section) {
+  const open = catalogState.category === section.id;
+  const activeGroup = section.groups.find((g) => g.id === catalogState.group);
+  return `
+    <article class="cat-card${open ? ' is-open' : ''}" data-category="${section.id}">
+      <button type="button" class="cat-card-toggle" data-category="${section.id}" aria-expanded="${open}">
+        <span class="cat-card-thumb"><img src="${section.image}" alt=""></span>
+        <span class="cat-card-copy">
+          <span class="eyebrow">${section.eyebrow}</span>
+          <span class="cat-card-title">${section.title}</span>
+          <span class="cat-card-intro">${section.intro}</span>
+        </span>
+        <span class="cat-card-chevron" aria-hidden="true">${open ? '−' : '+'}</span>
+      </button>
+      ${open ? `<div class="cat-card-body">
+        <div class="series-grid series-grid--${Math.min(section.groups.length, 4)}">${section.groups.map((g) => groupTabHtml(g, section.id)).join('')}</div>
+        ${activeGroup ? productGridHtml(activeGroup.id) : '<p class="finder-hint">Elige un acabado o línea para ver los diseños.</p>'}
+      </div>` : ''}
+    </article>`;
+}
+
+function renderCatalog() {
+  const root = document.getElementById('catalogTree');
+  if (!root) return;
+  root.innerHTML = catalogSections.map(categoryCardHtml).join('');
+  if (typeof refreshProductCardButtons === 'function') refreshProductCardButtons();
+}
+
+function toggleCategory(categoryId) {
+  if (catalogState.category === categoryId) {
+    catalogState.category = '';
+    catalogState.group = '';
+  } else {
+    catalogState.category = categoryId;
+    const section = categoryMeta(categoryId);
+    catalogState.group = section?.groups[0]?.id || '';
+  }
+  renderCatalog();
+}
+
+function toggleGroup(groupId, categoryId) {
+  catalogState.category = categoryId;
+  catalogState.group = catalogState.group === groupId ? '' : groupId;
+  renderCatalog();
+}
+
+function refreshProductCardButtons() {
+  document.querySelectorAll('.add-to-cart-btn[data-product-id]').forEach((btn) => {
+    const product = products.find((p) => p.id === btn.dataset.productId);
+    if (!product) return;
+    const qty = cartQtyForProduct(product.id);
+    const inCart = qty > 0;
+    btn.classList.toggle('is-in-cart', inCart);
+    btn.textContent = inCart ? `En el carrito · ${qty}` : 'Agregar';
+  });
+}
+
+function initCatalog() {
+  const root = document.getElementById('catalogTree');
+  if (!root) return;
+  root.addEventListener('click', (e) => {
+    const group = e.target.closest('.grid-group-tab');
+    if (group) {
+      toggleGroup(group.dataset.group, group.dataset.category);
+      return;
+    }
+    const category = e.target.closest('.cat-card-toggle');
+    if (category) toggleCategory(category.dataset.category);
+  });
+  renderCatalog();
+}
+
+function featuredCardHtml(p) {
+  return `<div class="product-card featured-card" data-product-id="${p.id}"><div class="p-photo featured-photo is-studio">${productPhotoHtml(p)}</div><div class="p-body"><div class="p-cat">${p.subcategoria || ''}</div><h4>${p.nombre}</h4><div class="p-specs">${specChipsHtml(p)}</div>${addToCartButtonHtml(p)}</div></div>`;
+}
+
+function initFeatured() {
+  const track = document.getElementById('featuredTrack');
+  if (!track || !products.length) return;
+  const featured = products.slice(0, Math.min(8, products.length));
+  const cards = featured.map(featuredCardHtml).join('');
+  track.innerHTML = cards + cards;
+}
+'''
+
+
+def js_str(s):
+    return json.dumps(s or '', ensure_ascii=False)
+
+
+def slugify(s):
+    s = re.sub(r'[^\w\s-]', '', s.lower().strip())
+    return re.sub(r'[\s_]+', '-', s)[:60].strip('-')
+
+
+def generate_celima():
+    items = json.loads((EXTRACTED / 'celima-products.json').read_text())
+    for p in items:
+        if p['name'].startswith('Muro '):
+            p['name'] = p['name'][5:]
+        if p['name'].startswith('Piso '):
+            p['name'] = p['name'][5:]
+        p['nombre'] = f"{p['name']} {p['color']}".strip()
+
+    sections = OrderedDict()
+    for p in items:
+        sec = p['section']
+        if sec not in sections:
+            sections[sec] = OrderedDict()
+        fin = p['finish_group'] or 'General'
+        sections[sec].setdefault(fin, []).append(p)
+
+    catalog_sections = []
+    products_js = []
+    for sec_title, finishes in sections.items():
+        sec_id = slugify(sec_title)
+        groups = []
+        cover_image = ''
+        for fin, prods in finishes.items():
+            gid = slugify(f'{sec_id}-{fin}')
+            if prods and prods[0].get('image') and not cover_image:
+                cover_image = prods[0]['image']
+            groups.append({
+                'id': gid,
+                'kicker': fin,
+                'menuLabel': fin,
+                'finderLabel': fin,
+                'title': fin,
+                'blurb': f'{len(prods)} diseños en acabado {fin.lower()}.',
+            })
+            for p in prods:
+                pid = f"celima-{p['code']}"
+                products_js.append({
+                    'id': pid,
+                    'nombre': p['nombre'],
+                    'group': gid,
+                    'subcategoria': f"{p['acabado']} · Ref. {p['code']}",
+                    'linea': p['linea'],
+                    'chip1': p['medida'],
+                    'chip2': p['rendimiento'],
+                    'chip3': p['caja'],
+                    'image': p.get('image', ''),
+                    'modelo': p['code'],
+                    'linea_cat': p['linea'],
+                })
+        aplic = 'Pared' if 'Muro' in sec_title else 'Piso'
+        catalog_sections.append({
+            'id': sec_id,
+            'linea': aplic,
+            'eyebrow': p['linea'] if prods else 'Celima',
+            'title': sec_title.replace('Muro · ', 'Pared ').replace('Piso · ', 'Piso '),
+            'intro': f'Cerámica Celima — {sec_title}. Elige el acabado y agrega a tu cotización.',
+            'image': f"img('{cover_image}')" if cover_image else "''",
+            'groups': groups,
+        })
+
+    return build_file('Celima', 'celima', catalog_sections, products_js)
+
+
+def generate_lumiart():
+    items = json.loads((EXTRACTED / 'lumiart-products.json').read_text())
+    # group by page ranges (~4 pages)
+    buckets = defaultdict(list)
+    for p in items:
+        bucket = p['page'] // 4
+        buckets[bucket].append(p)
+
+    catalog_sections = [{
+        'id': 'iluminacion',
+        'linea': 'Iluminación',
+        'eyebrow': 'Lumiart',
+        'title': 'Catálogo de iluminación',
+        'intro': 'Lámparas LED de interior — cotiza por WhatsApp con tu vendedor.',
+        'image': "img('catalog/pages/lumiart-p03.jpeg')" if items else "''",
+        'groups': [],
+    }]
+    products_js = []
+    section = catalog_sections[0]
+    for bi, (bucket, prods) in enumerate(sorted(buckets.items())):
+        gid = f'lumiart-b{bi}'
+        label = f'Línea {bi + 1}'
+        section['groups'].append({
+            'id': gid,
+            'kicker': label,
+            'menuLabel': f'Productos {label}',
+            'finderLabel': label,
+            'title': label,
+            'blurb': f'{len(prods)} referencias.',
+        })
+        for p in prods:
+            pid = slugify(f"lumiart-{p['code']}")
+            products_js.append({
+                'id': pid,
+                'nombre': p['nombre'],
+                'group': gid,
+                'subcategoria': p['code'],
+                'linea': 'Lumiart',
+                'chip1': f"{p.get('watts','')}W" if p.get('watts') else '',
+                'chip2': f"{p.get('lumens','')} lm" if p.get('lumens') else '',
+                'chip3': p.get('color', ''),
+                'image': p.get('image', ''),
+                'modelo': p['code'],
+                'temp': p.get('color', ''),
+                'flujo': f"{p.get('lumens','')} lm" if p.get('lumens') else '',
+                'forma': p.get('dimensiones', ''),
+            })
+
+    return build_file('Lumiart', 'lumiart', catalog_sections, products_js)
+
+
+def build_file(brand_name, brand_id, catalog_sections, products_js):
+    lines = [f'// Catálogo {brand_name} — generado desde PDF']
+    lines.append(GRID_RUNTIME.strip())
+    lines.append('')
+    lines.append('const catalogSections = [')
+    for sec in catalog_sections:
+        img_val = sec['image'] if sec['image'].startswith('img(') else f"img({js_str(sec['image'])})"
+        lines.append('  {')
+        lines.append(f"    id: {js_str(sec['id'])},")
+        lines.append(f"    linea: {js_str(sec['linea'])},")
+        lines.append(f"    eyebrow: {js_str(sec['eyebrow'])},")
+        lines.append(f"    title: {js_str(sec['title'])},")
+        lines.append(f"    intro: {js_str(sec['intro'])},")
+        lines.append(f"    image: {img_val},")
+        lines.append('    groups: [')
+        for g in sec['groups']:
+            lines.append('      {')
+            for k in ('id', 'kicker', 'menuLabel', 'finderLabel', 'title', 'blurb'):
+                lines.append(f"        {k}: {js_str(g[k])},")
+            lines.append('      },')
+        lines.append('    ],')
+        lines.append('  },')
+    lines.append('];')
+    lines.append('')
+    lines.append('const products = [')
+    for p in products_js:
+        lines.append('  {')
+        for k, v in p.items():
+            lines.append(f"    {k}: {js_str(v)},")
+        lines.append('  },')
+    lines.append('];')
+    lines.append('')
+    lines.append('function studioForSpot() { return \'\'; }')
+    return '\n'.join(lines) + '\n'
+
+
+def main():
+    celima_js = generate_celima()
+    lumiart_js = generate_lumiart()
+    (ROOT / 'celima/assets/js/products.js').write_text(celima_js, encoding='utf-8')
+    (ROOT / 'lumiart/assets/js/products.js').write_text(lumiart_js, encoding='utf-8')
+    print('Wrote celima and lumiart products.js')
+    print('Celima products:', celima_js.count('id: \'celima-'))
+    print('Lumiart products:', lumiart_js.count('id: \'lumiart-'))
+
+
+if __name__ == '__main__':
+    main()
