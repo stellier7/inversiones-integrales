@@ -460,8 +460,8 @@ a { color: inherit; }
   height: 88px;
   border-radius: 14px;
   overflow: hidden;
-  background: #141312;
-  border: 1px solid var(--line);
+  background: var(--product-well);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .cat-card-thumb img {
@@ -618,11 +618,12 @@ a { color: inherit; }
   height: 64px;
   border-radius: 12px;
   overflow: hidden;
-  background: #141312;
+  background: var(--product-well);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .series-card-thumb img {
@@ -703,13 +704,14 @@ a { color: inherit; }
 
 .finder-photo {
   aspect-ratio: 1 / 1;
-  background: #101010;
+  background: var(--product-well);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 18%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .finder-photo img,
@@ -2114,8 +2116,12 @@ body.cart-open {
 
 .grid-product-card .p-photo {
   aspect-ratio: 4 / 3;
-  background: var(--product-well);
+  background: var(--product-well) !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.page-catalog .p-photo.is-studio {
+  background: var(--product-well) !important;
 }
 
 .grid-group-tab {
