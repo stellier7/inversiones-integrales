@@ -5,7 +5,7 @@
 - `catalog/products/forjas/` — páginas de forjas y herrajes (IMG_0501–0507)
 - `catalog/products/tornillos/` — fotos de tornillos para techo
 - `catalog/products/accesorios/` — esponjas multi-uso
-- `gallery/` — fotos y videos para la galería del inicio
+- `gallery/` — fotos de productos en tienda (tornillos, esponjas)
 
 Regenerar `assets/js/products.js` después de editar el catálogo:
 
