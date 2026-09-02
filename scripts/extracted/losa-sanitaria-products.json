@@ -1,0 +1,252 @@
+[
+  {
+    "code": "10187",
+    "nombre": "INODORO SISU 1002 ONE PIECE BLANCO 720 X 380 X 660 MM",
+    "description": "INODORO SISU 1002 ONE PIECE BLANCO 720 X 380 X 660 MM ZAFIRO",
+    "medida": "720 X 380 X 660 MM",
+    "category": "Inodoros",
+    "brands": [
+      "zafiro"
+    ],
+    "page": 0,
+    "image": "catalog/products/sanitario/10187.jpeg"
+  },
+  {
+    "code": "10591",
+    "nombre": "URINARIO SAHARA BLANCO",
+    "description": "URINARIO SAHARA BLANCO TREBOL",
+    "medida": "Consultar",
+    "category": "Urinarios",
+    "brands": [
+      "trebol"
+    ],
+    "page": 1,
+    "image": "catalog/products/sanitario/10591.jpeg"
+  },
+  {
+    "code": "10703",
+    "nombre": "LAVAM. REKTUM NEGRO A423-CBK-M 38.5X38.5X14CM + DESAGUE BN",
+    "description": "LAVAM. REKTUM NEGRO A423-CBK-M 38.5X38.5X14CM + DESAGUE BN",
+    "medida": "38.5X38.5X14CM",
+    "category": "Lavamanos",
+    "brands": [
+      "zafiro",
+      "trebol"
+    ],
+    "page": 2,
+    "image": "catalog/products/sanitario/10703.jpeg"
+  },
+  {
+    "code": "11177",
+    "nombre": "LAVAM. BASIN ROUND WHITE 46X46X16.5CM TO207",
+    "description": "LAVAM. BASIN ROUND WHITE 46X46X16.5CM TO207",
+    "medida": "46X46X16.5CM",
+    "category": "Lavamanos",
+    "brands": [
+      "zafiro",
+      "trebol"
+    ],
+    "page": 3,
+    "image": "catalog/products/sanitario/11177.jpeg"
+  },
+  {
+    "code": "11178",
+    "nombre": "LAVAM. BASIN ZOE WHITE 49X38X13CM TO233",
+    "description": "LAVAM. BASIN ZOE WHITE 49X38X13CM TO233",
+    "medida": "49X38X13CM",
+    "category": "Lavamanos",
+    "brands": [
+      "zafiro",
+      "trebol"
+    ],
+    "page": 4,
+    "image": "catalog/products/sanitario/11178.jpeg"
+  },
+  {
+    "code": "11533",
+    "nombre": "INODORO RAPID JET BLANCO PALANCA SANDWICH (TAZA + TANQUE + A",
+    "description": "INODORO TREBOL RAPID JET BLANCO PALANCA SANDWICH (TAZA + TANQUE + A",
+    "medida": "Consultar",
+    "category": "Inodoros",
+    "brands": [
+      "trebol"
+    ],
+    "page": 5,
+    "image": "catalog/products/sanitario/11533.jpeg"
+  },
+  {
+    "code": "12016",
+    "nombre": "INODORO MAGNET BY2435 ONE PIECE BLANCO 690 X 370 X 770 MM BR",
+    "description": "INODORO MAGNET BY2435 ONE PIECE BLANCO 690 X 370 X 770 MM BR",
+    "medida": "690 X 370 X 770 MM",
+    "category": "Inodoros",
+    "brands": [
+      "zafiro",
+      "trebol"
+    ],
+    "page": 6,
+    "image": "catalog/products/sanitario/12016.jpeg"
+  },
+  {
+    "code": "12173",
+    "nombre": "LAVAMANOS AGNES BY-8418 / 60X42X17CM (SOBRE PONER)",
+    "description": "LAVAMANOS AGNES BY-8418 / 60X42X17CM (SOBRE PONER)",
+    "medida": "60X42X17CM",
+    "category": "Lavamanos",
+    "brands": [
+      "zafiro",
+      "trebol"
+    ],
+    "page": 7,
+    "image": "catalog/products/sanitario/12173.jpeg"
+  },
+  {
+    "code": "12183L",
+    "nombre": "LAVAMANOS LUNA BLANCO SOBRE- PONER 39X39X15 CM",
+    "description": "LAVAMANOS LUNA BLANCO SOBRE- PONER 39X39X15 CM TREBOL",
+    "medida": "39X39X15 CM",
+    "category": "Lavamanos",
+    "brands": [
+      "trebol"
+    ],
+    "page": 8,
+    "image": "catalog/products/sanitario/12183l.jpeg"
+  },
+  {
+    "code": "12185L",
+    "nombre": "LAVAMANOS SAMOA BLANCO SOBRE- PONER 43.5X35.5X9 CM",
+    "description": "LAVAMANOS SAMOA BLANCO SOBRE- PONER 43.5X35.5X9 CM TREBOL",
+    "medida": "43.5X35.5X9 CM",
+    "category": "Lavamanos",
+    "brands": [
+      "trebol"
+    ],
+    "page": 9,
+    "image": "catalog/products/sanitario/12185l.jpeg"
+  },
+  {
+    "code": "12186L",
+    "nombre": "LAVAMANOS DIVANI BLANCO SOBRE- PONER 42.5X42.5X15 CM",
+    "description": "LAVAMANOS DIVANI BLANCO SOBRE- PONER 42.5X42.5X15 CM TREBOL",
+    "medida": "42.5X42.5X15 CM",
+    "category": "Lavamanos",
+    "brands": [
+      "trebol"
+    ],
+    "page": 10,
+    "image": "catalog/products/sanitario/12186l.jpeg"
+  },
+  {
+    "code": "12187L",
+    "nombre": "LAVAMANOS SONNET BLANCO SOBRE- ENCIMERA 47.5X 42 X1.70CM",
+    "description": "LAVAMANOS SONNET BLANCO SOBRE- ENCIMERA 47.5X 42 X1.70CM TREBOL",
+    "medida": "47.5X 42 X1.70CM",
+    "category": "Lavamanos",
+    "brands": [
+      "trebol"
+    ],
+    "page": 11,
+    "image": "catalog/products/sanitario/12187l.jpeg"
+  },
+  {
+    "code": "12188L",
+    "nombre": "LAVAMANOS CERALUX BLANCO SOBRE- ENCIMERA 58.5 X45.5X 1.70CM",
+    "description": "LAVAMANOS CERALUX BLANCO SOBRE- ENCIMERA 58.5 X45.5X 1.70CM TREBOL",
+    "medida": "58.5 X45.5X 1.70CM",
+    "category": "Lavamanos",
+    "brands": [
+      "trebol"
+    ],
+    "page": 12,
+    "image": "catalog/products/sanitario/12188l.jpeg"
+  },
+  {
+    "code": "12189L",
+    "nombre": "LAVAMANOS MINBELL BLANCO BAJO- ENCIMERA 47.5 X 40.5X 13.5 CM",
+    "description": "LAVAMANOS MINBELL BLANCO BAJO- ENCIMERA 47.5 X 40.5X 13.5 CM TREBOL",
+    "medida": "47.5 X 40.5X 13.5 CM",
+    "category": "Lavamanos",
+    "brands": [
+      "trebol"
+    ],
+    "page": 13,
+    "image": "catalog/products/sanitario/12189l.jpeg"
+  },
+  {
+    "code": "12195",
+    "nombre": "INODORO GEBBO 2540 ONE PIECE BLANCO 705X390X750MM BR",
+    "description": "INODORO GEBBO 2540 ONE PIECE BLANCO 705X390X750MM BR",
+    "medida": "705X390X750MM",
+    "category": "Inodoros",
+    "brands": [
+      "zafiro",
+      "trebol"
+    ],
+    "page": 14,
+    "image": "catalog/products/sanitario/12195.jpeg"
+  },
+  {
+    "code": "12197",
+    "nombre": "LAVAMANOS OVAL BLANCO 455X320X135MM BR 168B",
+    "description": "LAVAMANOS OVAL BLANCO 455X320X135MM BR 168B",
+    "medida": "455X320X135MM",
+    "category": "Lavamanos",
+    "brands": [
+      "zafiro",
+      "trebol"
+    ],
+    "page": 15,
+    "image": "catalog/products/sanitario/12197.jpeg"
+  },
+  {
+    "code": "12198",
+    "nombre": "LAVAMANOS BOWL BLANCO 420X420X160MM BR 107",
+    "description": "LAVAMANOS BOWL BLANCO 420X420X160MM BR 107",
+    "medida": "420X420X160MM",
+    "category": "Lavamanos",
+    "brands": [
+      "zafiro",
+      "trebol"
+    ],
+    "page": 16,
+    "image": "catalog/products/sanitario/12198.jpeg"
+  },
+  {
+    "code": "12199",
+    "nombre": "LAVAMANOS BOWL GREY (107-GRAY) 420X420X160MM BR 107",
+    "description": "LAVAMANOS BOWL GREY (107-GRAY) 420X420X160MM BR 107",
+    "medida": "420X420X160MM",
+    "category": "Lavamanos",
+    "brands": [
+      "zafiro",
+      "trebol"
+    ],
+    "page": 17,
+    "image": "catalog/products/sanitario/12199.jpeg"
+  },
+  {
+    "code": "12257",
+    "nombre": "INODORO AKIM BLACK BY-2378-2 ONE PIECE 720X380X760MM BR",
+    "description": "INODORO AKIM BLACK BY-2378-2 ONE PIECE 720X380X760MM BR",
+    "medida": "720X380X760MM",
+    "category": "Inodoros",
+    "brands": [
+      "zafiro",
+      "trebol"
+    ],
+    "page": 18,
+    "image": "catalog/products/sanitario/12257.jpeg"
+  },
+  {
+    "code": "7898L",
+    "nombre": "BONE LAVABO Y PEDESTAL PB- HE04",
+    "description": "BONE LAVABO Y PEDESTAL ZAFIRO PB- HE04",
+    "medida": "Consultar",
+    "category": "Lavamanos",
+    "brands": [
+      "zafiro"
+    ],
+    "page": 19,
+    "image": "catalog/products/sanitario/7898l.jpeg"
+  }
+]

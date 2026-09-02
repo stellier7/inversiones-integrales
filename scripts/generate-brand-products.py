@@ -720,7 +720,98 @@ def generate_zafiro():
             'groups': groups,
         })
 
-    return build_file('Zafiro', 'zafiro', catalog_sections, products_js, source='fotos de producto')
+    sanitaria_sections, sanitaria_products = build_sanitaria_catalog('Zafiro', 'zafiro')
+    catalog_sections.extend(sanitaria_sections)
+    products_js.extend(sanitaria_products)
+    source = 'cerámica y losa sanitaria' if sanitaria_sections else 'fotos de producto'
+    return build_file('Zafiro', 'zafiro', catalog_sections, products_js, source=source)
+
+
+def load_sanitaria_items(brand_id: str):
+    path = EXTRACTED / 'losa-sanitaria-products.json'
+    if not path.exists():
+        return []
+    items = json.loads(path.read_text(encoding='utf-8'))
+    return [p for p in items if brand_id in p.get('brands', [])]
+
+
+def build_sanitaria_catalog(brand_name: str, brand_id: str):
+    items = load_sanitaria_items(brand_id)
+    if not items:
+        return [], []
+
+    by_cat = OrderedDict()
+    for product in items:
+        by_cat.setdefault(product['category'], []).append(product)
+
+    groups = []
+    products_js = []
+    cover_image = items[0].get('image', '')
+    sec_id = 'losa-sanitaria'
+
+    for category, prods in by_cat.items():
+        gid = slugify(f'{sec_id}-{category}')
+        groups.append({
+            'id': gid,
+            'kicker': category,
+            'menuLabel': category,
+            'finderLabel': category,
+            'title': category,
+            'blurb': f'{len(prods)} referencias en {category.lower()}.',
+        })
+        for p in prods:
+            products_js.append({
+                'id': slugify(f'{brand_id}-san-{p["code"]}'),
+                'nombre': p['nombre'],
+                'group': gid,
+                'subcategoria': f"Ref. {p['code']}",
+                'linea': brand_name,
+                'chip1': p.get('medida', ''),
+                'chip2': p.get('category', ''),
+                'chip3': '',
+                'image': p.get('image', ''),
+                'modelo': p['code'],
+                'linea_cat': brand_name,
+            })
+
+    catalog_sections = [{
+        'id': sec_id,
+        'linea': 'Losa sanitaria',
+        'eyebrow': brand_name,
+        'title': 'Losa sanitaria',
+        'intro': 'Inodoros, lavamanos y urinarios del catálogo fotográfico.',
+        'image': cover_image,
+        'groups': groups,
+    }]
+    return catalog_sections, products_js
+
+
+def generate_trebol():
+    sanitaria_sections, sanitaria_products = build_sanitaria_catalog('Trébol', 'trebol')
+    if not sanitaria_sections:
+        return build_file(
+            'Trébol',
+            'trebol',
+            [{
+                'id': 'general',
+                'linea': 'Catálogo',
+                'eyebrow': 'Trébol',
+                'title': 'Productos Trébol',
+                'intro': 'Estamos preparando el catálogo completo de Trébol.',
+                'image': '',
+                'groups': [{
+                    'id': 'placeholder',
+                    'kicker': 'Próximamente',
+                    'menuLabel': 'Línea general',
+                    'finderLabel': 'Productos generales',
+                    'title': 'Catálogo en preparación',
+                    'blurb': 'Contáctanos por WhatsApp para cotizar.',
+                }],
+            }],
+            [],
+            source='catálogo',
+        )
+    return build_file('Trébol', 'trebol', sanitaria_sections, sanitaria_products, source='losa sanitaria')
 
 
 def build_file(brand_name, brand_id, catalog_sections, products_js, source='PDF'):
@@ -767,15 +858,18 @@ def main():
     lumiart_js = generate_lumiart()
     buffalo_js = generate_buffalo()
     zafiro_js = generate_zafiro()
+    trebol_js = generate_trebol()
     (ROOT / 'celima/assets/js/products.js').write_text(celima_js, encoding='utf-8')
     (ROOT / 'lumiart/assets/js/products.js').write_text(lumiart_js, encoding='utf-8')
     (ROOT / 'buffalo/assets/js/products.js').write_text(buffalo_js, encoding='utf-8')
     (ROOT / 'zafiro/assets/js/products.js').write_text(zafiro_js, encoding='utf-8')
-    print('Wrote celima, lumiart, buffalo and zafiro products.js')
+    (ROOT / 'trebol/assets/js/products.js').write_text(trebol_js, encoding='utf-8')
+    print('Wrote celima, lumiart, buffalo, zafiro and trebol products.js')
     print('Celima products:', celima_js.count('id: \'celima-'))
     print('Lumiart products:', lumiart_js.count('id: \'lumiart-'))
     print('Buffalo products:', buffalo_js.count('id: \'buffalo-'))
     print('Zafiro products:', zafiro_js.count('id: \'zafiro-'))
+    print('Trebol products:', trebol_js.count('id: \'trebol-'))
 
 
 if __name__ == '__main__':
