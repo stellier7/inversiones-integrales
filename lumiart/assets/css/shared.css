@@ -68,6 +68,14 @@ a { color: inherit; }
   opacity: 0.06;
 }
 
+.bolt-field .bolt-emoji {
+  position: absolute;
+  opacity: 0.08;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
 .hero-mark {
   position: relative;
   z-index: 2;
@@ -212,7 +220,20 @@ a { color: inherit; }
   transform: rotate(8deg);
 }
 
+.action-card .ghost-accent {
+  position: absolute;
+  right: -8px;
+  bottom: -20px;
+  font-size: 132px;
+  line-height: 1;
+  opacity: .12;
+  transform: rotate(8deg);
+  pointer-events: none;
+  user-select: none;
+}
+
 .action-card.card-reseller .ghost-bolt { opacity: .16; }
+.action-card.card-reseller .ghost-accent { opacity: .16; }
 
 /* ---------- section shell ---------- */
 .section {

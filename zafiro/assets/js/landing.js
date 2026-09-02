@@ -19,15 +19,17 @@ function initHeroParallax() {
 function initBoltField() {
   const boltField = document.getElementById('boltField');
   if (!boltField) return;
+  const accent = '💎';
   for (let i = 0; i < 7; i++) {
-    const s = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    s.setAttribute('viewBox', '0 0 24 24');
-    s.setAttribute('width', String(40 + Math.random() * 90));
-    s.style.left = Math.random() * 100 + '%';
-    s.style.top = Math.random() * 100 + '%';
-    s.style.transform = `rotate(${Math.random() * 40 - 20}deg)`;
-    s.innerHTML = '<path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" fill="#E8611F"/>';
-    boltField.appendChild(s);
+    const el = document.createElement('span');
+    el.className = 'bolt-emoji';
+    el.textContent = accent;
+    el.setAttribute('aria-hidden', 'true');
+    el.style.fontSize = `${40 + Math.random() * 90}px`;
+    el.style.left = Math.random() * 100 + '%';
+    el.style.top = Math.random() * 100 + '%';
+    el.style.transform = `rotate(${Math.random() * 40 - 20}deg)`;
+    boltField.appendChild(el);
   }
 }
 
