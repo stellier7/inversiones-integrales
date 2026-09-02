@@ -1,4 +1,4 @@
-.portal-back {
+.brand-volver {
   position: fixed;
   top: 16px;
   left: 16px;
@@ -6,7 +6,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 9px 14px 9px 11px;
+  padding: 9px 14px;
   border-radius: 999px;
   background: rgba(12, 10, 8, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -21,30 +21,9 @@
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
-.portal-back:hover {
+.brand-volver:hover {
   background: rgba(20, 16, 12, 0.88);
   border-color: rgba(232, 97, 31, 0.55);
   color: #fff;
   transform: translateY(-1px);
-}
-
-.portal-back svg {
-  width: 18px;
-  height: 18px;
-  flex: 0 0 auto;
-}
-
-.page-catalog .portal-back {
-  top: 14px;
-}
-
-@media (max-width: 520px) {
-  .portal-back span {
-    display: none;
-  }
-
-  .portal-back {
-    padding: 10px;
-    border-radius: 14px;
-  }
 }

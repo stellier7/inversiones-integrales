@@ -7,14 +7,6 @@ const PORTAL_BRANDS = [
   { id: 'trebol', label: 'Trébol', href: '/trebol/' },
 ];
 
-const PORTAL_BACK_ICON = `
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <circle cx="12" cy="12" r="2.2" fill="currentColor"></circle>
-    <ellipse cx="12" cy="12" rx="9" ry="3.6" stroke="currentColor" stroke-width="1.5"></ellipse>
-    <ellipse cx="12" cy="12" rx="3.6" ry="9" stroke="currentColor" stroke-width="1.5" transform="rotate(58 12 12)"></ellipse>
-  </svg>
-`;
-
 function detectCurrentBrand() {
   const match = window.location.pathname.match(/^\/(megawatt|buffalo|zafiro|celima|trebol|lumiart)(?:\/|$)/);
   return match ? match[1] : '';
@@ -32,14 +24,35 @@ function brandHref(brand, sellerSlug) {
   return brand.href + '?vendedor=' + encodeURIComponent(sellerSlug);
 }
 
-function ensurePortalBackButton() {
-  if (document.getElementById('portalBackBtn')) return document.getElementById('portalBackBtn');
-  const link = document.createElement('a');
-  link.id = 'portalBackBtn';
-  link.className = 'portal-back';
-  link.setAttribute('aria-label', 'Volver al portal de marcas');
-  link.innerHTML = PORTAL_BACK_ICON + '<span>Inicio</span>';
-  document.body.prepend(link);
+function removeLegacyPortalButton() {
+  document.getElementById('portalBackBtn')?.remove();
+}
+
+function ensureBackLink() {
+  removeLegacyPortalButton();
+
+  let link = document.getElementById('backLink');
+  const isCatalog = document.body.classList.contains('page-catalog');
+
+  if (!link) {
+    link = document.createElement('a');
+    link.id = 'backLink';
+    link.className = isCatalog ? 'back-link' : 'brand-volver';
+    link.textContent = '← Volver';
+    link.setAttribute('aria-label', 'Volver al portal de marcas');
+
+    if (isCatalog) {
+      const pageHead = document.querySelector('.page-head');
+      if (pageHead) pageHead.insertBefore(link, pageHead.firstChild);
+      else document.body.prepend(link);
+    } else {
+      document.body.prepend(link);
+    }
+  } else {
+    link.textContent = '← Volver';
+    link.setAttribute('aria-label', 'Volver al portal de marcas');
+  }
+
   return link;
 }
 
@@ -58,14 +71,13 @@ function renderBrandFooterLinks(sellerSlug = '') {
 }
 
 function updateBrandNavForSeller(sellerSlug = '') {
-  const back = ensurePortalBackButton();
+  const back = ensureBackLink();
   back.href = portalHref(sellerSlug);
   renderBrandFooterLinks(sellerSlug);
 }
 
 function initBrandNav() {
   if (!detectCurrentBrand()) return;
-  ensurePortalBackButton();
   const slug = typeof getSellerFromUrl === 'function' ? getSellerFromUrl() : '';
   updateBrandNavForSeller(slug);
 }
