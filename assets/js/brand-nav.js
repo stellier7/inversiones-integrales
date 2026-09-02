@@ -93,10 +93,12 @@ function updateBrandNavForSeller(sellerSlug = '') {
   const back = ensureBackLink();
   back.href = backLinkHref(sellerSlug);
   renderBrandFooterLinks(sellerSlug);
+  if (typeof updateShareLink === 'function') updateShareLink();
 }
 
 function initBrandNav() {
   if (!detectCurrentBrand()) return;
+  if (typeof initShareLink === 'function') initShareLink();
   const slug = typeof getSellerFromUrl === 'function' ? getSellerFromUrl() : '';
   updateBrandNavForSeller(slug);
 }
