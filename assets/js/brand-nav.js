@@ -18,6 +18,25 @@ function portalHref(sellerSlug) {
   return '/?vendedor=' + encodeURIComponent(sellerSlug);
 }
 
+function brandHomeHref(sellerSlug) {
+  const href = 'index.html';
+  if (!sellerSlug) return href;
+  if (typeof withSellerQuery === 'function') return withSellerQuery(href, sellerSlug);
+  return href + '?vendedor=' + encodeURIComponent(sellerSlug);
+}
+
+function isCatalogPage() {
+  return document.body.classList.contains('page-catalog');
+}
+
+function backLinkHref(sellerSlug) {
+  return isCatalogPage() ? brandHomeHref(sellerSlug) : portalHref(sellerSlug);
+}
+
+function backLinkLabel() {
+  return isCatalogPage() ? 'Volver a la página de la marca' : 'Volver al portal de marcas';
+}
+
 function brandHref(brand, sellerSlug) {
   if (!sellerSlug) return brand.href;
   if (typeof withSellerQuery === 'function') return withSellerQuery(brand.href, sellerSlug);
@@ -32,14 +51,14 @@ function ensureBackLink() {
   removeLegacyPortalButton();
 
   let link = document.getElementById('backLink');
-  const isCatalog = document.body.classList.contains('page-catalog');
+  const isCatalog = isCatalogPage();
 
   if (!link) {
     link = document.createElement('a');
     link.id = 'backLink';
     link.className = isCatalog ? 'back-link' : 'brand-volver';
     link.textContent = '← Volver';
-    link.setAttribute('aria-label', 'Volver al portal de marcas');
+    link.setAttribute('aria-label', backLinkLabel());
 
     if (isCatalog) {
       const pageHead = document.querySelector('.page-head');
@@ -50,7 +69,7 @@ function ensureBackLink() {
     }
   } else {
     link.textContent = '← Volver';
-    link.setAttribute('aria-label', 'Volver al portal de marcas');
+    link.setAttribute('aria-label', backLinkLabel());
   }
 
   return link;
@@ -72,7 +91,7 @@ function renderBrandFooterLinks(sellerSlug = '') {
 
 function updateBrandNavForSeller(sellerSlug = '') {
   const back = ensureBackLink();
-  back.href = portalHref(sellerSlug);
+  back.href = backLinkHref(sellerSlug);
   renderBrandFooterLinks(sellerSlug);
 }
 
