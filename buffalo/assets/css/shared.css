@@ -35,8 +35,16 @@ h1, h2, h3, .display {
 }
 
 .wordmark {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Anton', sans-serif;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+}
+
+.hero h1.wordmark {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 0.92;
 }
 
 a { color: inherit; }

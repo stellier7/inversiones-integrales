@@ -35,8 +35,17 @@ h1, h2, h3, .display {
 }
 
 .wordmark {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Bodoni Moda', serif;
   text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+}
+
+.hero h1.wordmark {
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  line-height: 1;
 }
 
 a { color: inherit; }

@@ -111,7 +111,7 @@ a { color: inherit; }
 }
 
 .hero h1 .bolt-char {
-  color: var(--orange);
+  color: var(--steel-light);
   font-family: 'Archivo Black', sans-serif;
 }
 

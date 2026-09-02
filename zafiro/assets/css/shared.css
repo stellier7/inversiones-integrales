@@ -35,8 +35,18 @@ h1, h2, h3, .display {
 }
 
 .wordmark {
-  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 0.34em;
+}
+
+.hero h1.wordmark {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.34em;
+  color: #8eb8e8;
+  line-height: 1.05;
 }
 
 a { color: inherit; }
