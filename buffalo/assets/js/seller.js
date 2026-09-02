@@ -62,6 +62,8 @@ function withSellerQuery(url, slug) {
 
 function setSeller(slug) {
   const catalogCard = document.getElementById('catalogCard');
+
+  if (catalogCard) {
     catalogCard.href = 'productos.html' + sellerQuery(slug);
   }
 
