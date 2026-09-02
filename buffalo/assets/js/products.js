@@ -73,7 +73,7 @@ function medidaPillsHtml(items) {
   return `
     <div class="watt-pills" role="listbox" aria-label="${label}">
       ${items.map((product) => `
-        <button type="button" class="watt-pill${catalogState.medida === product.medida ? ' is-selected' : ''}" data-medida="${product.medida}" aria-pressed="${catalogState.medida === product.medida}">${product.medida}</button>`).join('')}
+        <button type="button" class="watt-pill${catalogState.medida === product.medida ? ' is-selected' : ''}" data-product-id="${product.id}" aria-pressed="${catalogState.medida === product.medida}">${product.medida}</button>`).join('')}
     </div>
   `;
 }
@@ -181,7 +181,11 @@ function initCatalog() {
   if (!root) return;
   root.addEventListener('click', (e) => {
     const pill = e.target.closest('.watt-pill');
-    if (pill) { setMedida(pill.dataset.medida); return; }
+    if (pill) {
+      const product = products.find((p) => p.id === pill.dataset.productId);
+      if (product) setMedida(product.medida);
+      return;
+    }
     const series = e.target.closest('.series-card');
     if (series) { toggleSeries(series.dataset.series); return; }
     const category = e.target.closest('.cat-card-toggle');
