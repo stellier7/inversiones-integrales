@@ -16,7 +16,7 @@ function isVideoPath(path) {
 function productPhotoHtml(product) {
   if (!product.image) return '<span>Foto pendiente</span>';
   if (isVideoPath(product.image)) {
-    return `<video src="${product.image}" muted playsinline preload="metadata" aria-label="${product.nombre}"></video>`;
+    return `<video src="${product.image}" muted defaultMuted playsinline loop autoplay preload="metadata" aria-label="${product.nombre}"></video>`;
   }
   return `<img src="${product.image}" alt="${product.nombre}" loading="lazy">`;
 }

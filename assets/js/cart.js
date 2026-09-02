@@ -279,7 +279,7 @@ function cartThumbHtml(product) {
     return '<div class="cart-line-thumb is-placeholder" aria-hidden="true"></div>';
   }
   if (typeof isVideoPath === 'function' && isVideoPath(product.image)) {
-    return `<div class="cart-line-thumb"><video src="${product.image}" muted playsinline preload="metadata" aria-hidden="true"></video></div>`;
+    return `<div class="cart-line-thumb"><video src="${product.image}" muted playsinline loop autoplay preload="metadata" aria-hidden="true"></video></div>`;
   }
   return `<div class="cart-line-thumb"><img src="${product.image}" alt="" loading="lazy"></div>`;
 }

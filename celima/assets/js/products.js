@@ -21,7 +21,7 @@ function addToCartButtonHtml(p) {
 function productPhotoHtml(product) {
   if (!product.image) return '<span>Foto pendiente</span>';
   if (isVideoPath(product.image)) {
-    return `<video src="${product.image}" muted playsinline preload="metadata" aria-label="${product.nombre}"></video>`;
+    return `<video src="${product.image}" muted defaultMuted playsinline loop autoplay preload="metadata" aria-label="${product.nombre}"></video>`;
   }
   return `<img src="${product.image}" alt="${product.nombre}" loading="lazy">`;
 }
@@ -44,13 +44,9 @@ function categoryMeta(id) {
 }
 
 function productCardHtml(p) {
-  const hasZoomableImage = p.image && !isVideoPath(p.image);
-  const zoomBtn = hasZoomableImage
-    ? `<button type="button" class="product-photo-zoom" data-product-id="${p.id}" aria-label="Ampliar ${p.nombre}"><span aria-hidden="true">Ampliar</span></button>`
-    : '';
   return `
     <article class="product-card grid-product-card" data-product-id="${p.id}">
-      <div class="p-photo is-studio p-photo--zoomable">${productPhotoHtml(p)}${zoomBtn}</div>
+      <div class="p-photo is-studio">${productPhotoHtml(p)}</div>
       <div class="p-body">
         <div class="p-cat">${p.subcategoria || ''}</div>
         <h4>${p.nombre}</h4>

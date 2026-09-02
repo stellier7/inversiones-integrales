@@ -111,9 +111,13 @@ function initGalleryLightbox() {
 
     const video = stage.querySelector('video');
     if (video) {
-      video.muted = true;
-      video.defaultMuted = true;
-      video.play().catch(() => {});
+      if (typeof configureLoopingVideo === 'function') configureLoopingVideo(video);
+      else {
+        video.muted = true;
+        video.defaultMuted = true;
+        video.loop = true;
+        video.play().catch(() => {});
+      }
     }
 
     window.requestAnimationFrame(() => {
