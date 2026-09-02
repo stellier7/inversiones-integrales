@@ -61,12 +61,7 @@ function withSellerQuery(url, slug) {
 }
 
 function setSeller(slug) {
-  const backLink = document.getElementById('backLink');
   const catalogCard = document.getElementById('catalogCard');
-
-  if (backLink) {
-    backLink.href = 'index.html' + sellerQuery(slug);
-  }
 
   if (catalogCard) {
     catalogCard.href = 'productos.html' + sellerQuery(slug);
@@ -75,11 +70,6 @@ function setSeller(slug) {
   const featuredCatalogLink = document.getElementById('featuredCatalogLink');
   if (featuredCatalogLink) {
     featuredCatalogLink.href = 'productos.html' + sellerQuery(slug);
-  }
-
-  const footerHome = document.getElementById('footerHome');
-  if (footerHome) {
-    footerHome.href = 'index.html' + sellerQuery(slug);
   }
 
   if (typeof updateBrandNavForSeller === 'function') {
