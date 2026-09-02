@@ -162,7 +162,11 @@ function initFeatured() {
 '''
 
 BUFFALO_RUNTIME = r'''
-const img = (file) => (file ? `assets/images/${file}` : '');
+const img = (file) => {
+  if (!file) return '';
+  const base = `assets/images/${file}`;
+  return file.includes('crops/') ? `${base}?v=buffalo-crops-r2` : base;
+};
 
 function medidaSortValue(value) {
   const nums = String(value).match(/\d+/g);
