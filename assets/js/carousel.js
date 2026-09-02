@@ -50,8 +50,52 @@ function initAutoCarousel(track, carousel, options = {}) {
     applyTransform();
   };
 
+  const getUnitCount = () => {
+    const total = track.children.length;
+    if (total < 2) return 0;
+    if (track.dataset.loopClones === 'expanded') {
+      if (total % 3 !== 0) return 0;
+      return total / 3;
+    }
+    if (total % 2 !== 0) return 0;
+    return total / 2;
+  };
+
+  const ensureLoopClones = () => {
+    if (track.dataset.loopClones === 'expanded') return false;
+
+    const unitCount = getUnitCount();
+    if (unitCount < 1) return false;
+
+    const seam = track.children[unitCount].offsetLeft;
+    if (seam <= 0) return false;
+    if (track.scrollWidth >= seam * 2.5) return false;
+
+    const fragment = document.createDocumentFragment();
+    for (let i = 0; i < unitCount; i++) {
+      fragment.appendChild(track.children[i].cloneNode(true));
+    }
+    track.appendChild(fragment);
+    track.dataset.loopClones = 'expanded';
+    return true;
+  };
+
   const measure = () => {
-    loopWidth = track.scrollWidth / 2;
+    if (ensureLoopClones()) {
+      track.querySelectorAll('img, video').forEach((el) => {
+        el.addEventListener('load', measure, { once: true });
+        el.addEventListener('loadeddata', measure, { once: true });
+        el.addEventListener('error', measure, { once: true });
+      });
+    }
+
+    const unitCount = getUnitCount();
+    if (unitCount < 1) {
+      loopWidth = 0;
+      return;
+    }
+
+    loopWidth = track.children[unitCount].offsetLeft;
     if (loopWidth > 0) normalizeOffset();
   };
 
@@ -84,6 +128,12 @@ function initAutoCarousel(track, carousel, options = {}) {
 
     let lastFrame = performance.now();
     const step = (now) => {
+      if (loopWidth <= 0) {
+        momentumId = 0;
+        scheduleResume();
+        return;
+      }
+
       const dt = now - lastFrame;
       lastFrame = now;
       offset -= velocity * dt;
@@ -156,6 +206,8 @@ function initAutoCarousel(track, carousel, options = {}) {
     if (gestureMode === 'vertical' || !isDragging) return;
 
     e.preventDefault();
+    if (loopWidth <= 0) return;
+
     const now = performance.now();
     if (now - lastTime > 0) {
       velocity = (e.clientX - lastX) / (now - lastTime);
@@ -165,7 +217,7 @@ function initAutoCarousel(track, carousel, options = {}) {
 
     moved = Math.max(moved, absDx);
     offset = startOffset - dx;
-    applyTransform();
+    normalizeOffset();
   };
 
   const onPointerUp = (e) => {
