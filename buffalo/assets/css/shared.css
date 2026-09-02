@@ -459,8 +459,8 @@ a { color: inherit; }
   height: 88px;
   border-radius: 14px;
   overflow: hidden;
-  background: #141312;
-  border: 1px solid var(--line);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .cat-card-thumb img {
@@ -617,11 +617,12 @@ a { color: inherit; }
   height: 64px;
   border-radius: 12px;
   overflow: hidden;
-  background: #141312;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .series-card-thumb img {
@@ -702,13 +703,14 @@ a { color: inherit; }
 
 .finder-photo {
   aspect-ratio: 1 / 1;
-  background: #101010;
+  background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 18%;
+  padding: 12%;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .finder-photo img,
@@ -881,7 +883,8 @@ a { color: inherit; }
   width: 100%;
   height: auto;
   flex-shrink: 0;
-  background: linear-gradient(180deg, #1c1a18 0%, #121110 100%);
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .featured-track .featured-photo img,
@@ -1313,7 +1316,7 @@ body.gallery-lightbox-open {
 }
 
 .p-photo.is-studio {
-  background: #1a1816;
+  background: #ffffff;
 }
 
 .p-photo.is-studio img {
