@@ -82,13 +82,9 @@ function setSeller(slug) {
     footerHome.href = 'index.html' + sellerQuery(slug);
   }
 
-  document.querySelectorAll('.brand-links a[href]').forEach((link) => {
-    const href = link.getAttribute('href');
-    if (!href || href.startsWith('#') || href.startsWith('javascript')) return;
-    if (href.startsWith('/')) {
-      link.href = withSellerQuery(href, slug);
-    }
-  });
+  if (typeof updateBrandNavForSeller === 'function') {
+    updateBrandNavForSeller(slug);
+  }
 }
 
 function initSeller() {

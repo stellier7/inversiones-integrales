@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/brand-nav.css">
   <link rel="stylesheet" href="assets/css/shared.css?v=skbt-frame">
 </head>
 <body class="page-catalog">
@@ -39,15 +40,7 @@
           <img class="foot-logo" src="assets/images/logo.jpeg" alt="BUFFALO">
           <b>BUFFALO</b>
         </div>
-        <div class="brand-links">
-          <a href="index.html" id="footerHome">Inicio</a>
-          <a href="/">Portal</a>
-          <a href="/zafiro/">Zafiro</a>
-          <a href="/buffalo/">Búfalo</a>
-          <a href="/celima/">Celima</a>
-          <a href="/trebol/">Trébol</a>
-          <a href="/lumiart/">Lumiart</a>
-        </div>
+        <div class="brand-links" id="brandFooterLinks"></div>
       </div>
       <div class="foot-fine">Inversiones Integrales — Comayagua, Honduras</div>
       <div class="foot-credit">
@@ -57,6 +50,7 @@
   </footer>
 
   <script src="/assets/js/video-loop.js"></script>
+  <script src="/assets/js/brand-nav.js"></script>
   <script src="assets/js/sellers.js"></script>
   <script src="assets/js/seller.js"></script>
   <script src="assets/js/whatsapp.js"></script>
@@ -64,6 +58,7 @@
   <script src="/assets/js/cart.js"></script>
   <script>
     initSeller();
+    initBrandNav();
     initCatalog();
     initCart();
   </script>
