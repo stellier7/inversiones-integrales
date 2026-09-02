@@ -1,12 +1,12 @@
 :root {
-  --orange: #3D8B6E;
-  --orange-deep: #2A6B52;
+  --orange: #45B8D9;
+  --orange-deep: #2E9AB8;
   --charcoal: #141816;
   --charcoal-soft: #1E2420;
   --steel: #8B8D92;
   --steel-light: #C7C9CD;
   --paper: #F6F1EA;
-  --amber: #5CB88A;
+  --amber: #7DD3F0;
   --line: rgba(255, 255, 255, 0.10);
 }
 
@@ -38,19 +38,32 @@ h1, h2, h3, .display {
   font-family: 'Bodoni Moda', serif;
   text-transform: uppercase;
   font-weight: 400;
-  letter-spacing: 0.24em;
 }
 
 .hero h1.wordmark {
   font-family: 'Bodoni Moda', serif;
   font-weight: 400;
-  letter-spacing: 0.24em;
-  line-height: 1;
+  letter-spacing: 0;
+  line-height: 0.9;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+}
+
+.hero h1.wordmark .wordmark-cap {
+  font-size: 1.48em;
+  line-height: 0.78;
+  margin-right: -0.04em;
+}
+
+.hero h1.wordmark .wordmark-rest {
+  letter-spacing: 0.12em;
+  font-size: 0.9em;
 }
 
 @media (max-width: 640px) {
-  .hero h1.wordmark {
-    letter-spacing: 0.14em;
+  .hero h1.wordmark .wordmark-rest {
+    letter-spacing: 0.08em;
   }
 }
 
@@ -95,12 +108,12 @@ a { color: inherit; }
   z-index: 2;
   width: min(220px, 56vw);
   aspect-ratio: 4 / 3;
-  background: var(--orange);
+  background: #ffffff;
   border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 30px 60px -20px rgba(232, 97, 31, 0.55);
+  box-shadow: 0 30px 60px -20px rgba(69, 184, 217, 0.45);
   margin-bottom: 38px;
   transform: translateY(0);
   transition: transform .2s ease-out;
@@ -110,7 +123,8 @@ a { color: inherit; }
 .hero-mark img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 14%;
   display: block;
 }
 
@@ -1759,9 +1773,12 @@ footer {
 .foot-mark .foot-logo {
   width: 48px;
   height: 36px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 8px;
   display: block;
+  background: #fff;
+  padding: 2px;
+}
 }
 .foot-mark b {
   font-family: 'Archivo Black', sans-serif;

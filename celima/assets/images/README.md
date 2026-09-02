@@ -2,7 +2,7 @@
 
 ## Logo
 
-`logo.jpeg`
+`logo.png`
 
 ## Catalog PDF
 

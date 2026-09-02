@@ -19,7 +19,7 @@ function initHeroParallax() {
 function initBoltField() {
   const boltField = document.getElementById('boltField');
   if (!boltField) return;
-  const accent = '🏠';
+  const accent = '✦';
   for (let i = 0; i < 7; i++) {
     const el = document.createElement('span');
     el.className = 'bolt-emoji';
