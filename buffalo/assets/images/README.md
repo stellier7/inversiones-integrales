@@ -15,4 +15,6 @@ python3 scripts/crop-buffalo-catalog.py
 python3 scripts/generate-brand-products.py
 ```
 
-Las páginas PVC se recortan en 3 fotos de producto por hoja; las forjas se recortan fila por fila en `catalog/products/crops/`.
+Las páginas PVC se recortan en fotos de estudio centradas (800×800, fondo blanco) por línea de producto; las forjas se recortan fila por fila; tornillos y esponjas se normalizan al mismo formato en `catalog/products/crops/`.
+
+**Estilo de recorte:** producto centrado, fondo `#ffffff`, sin líneas de tabla del catálogo impreso.

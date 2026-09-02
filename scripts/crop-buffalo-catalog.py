@@ -97,10 +97,50 @@ def trim_table_lines(im: Image.Image) -> Image.Image:
     return im
 
 
+def edge_background_mask(arr: np.ndarray, tolerance: float = 42) -> np.ndarray:
+    h, w, _ = arr.shape
+    samples = []
+    step = max(1, min(w, h) // 36)
+    for x in range(0, w, step):
+        samples.append(arr[0, x])
+        samples.append(arr[h - 1, x])
+    for y in range(0, h, step):
+        samples.append(arr[y, 0])
+        samples.append(arr[y, w - 1])
+    bg = np.median(samples, axis=0)
+    dist = np.sqrt(((arr.astype(float) - bg) ** 2).sum(axis=2))
+    return dist < tolerance
+
+
+def trim_cell_left_border(cell: Image.Image) -> Image.Image:
+    arr = arr_rgb(cell)
+    h, w = arr.shape[:2]
+    gray = arr.mean(axis=2)
+    cut = 0
+    for x in range(0, min(int(w * 0.25), w - 1)):
+        col = gray[:, x]
+        if (col < 95).mean() > 0.35:
+            cut = x + 1
+    if cut > 0:
+        cell = cell.crop((cut, 0, w, h))
+    return cell
+
+
 def flatten_to_white(im: Image.Image) -> Image.Image:
-    """Composite product on pure white without flood-filling product pixels."""
+    """Composite product on pure white — catalog pages or standalone photos."""
     arr = arr_rgb(im)
-    mask = product_mask(arr, bg_thresh=247)
+    white_frac = (arr.mean(axis=2) > 247).mean()
+    blue_frac = (arr[:, :, 2] > arr[:, :, 0] + 15).mean()
+    if white_frac > 0.5 and blue_frac < 0.08:
+        mask = product_mask(arr, bg_thresh=247)
+    elif blue_frac > 0.08:
+        blue_bg = (arr[:, :, 2] > arr[:, :, 0] + 10) & (arr[:, :, 2] > 70)
+        bg = blue_bg | edge_background_mask(arr, 34)
+        mask = ~bg & (arr.mean(axis=2) < 250)
+        mask &= ~banner_mask(arr)
+    else:
+        mask = ~edge_background_mask(arr, 38) & (arr.mean(axis=2) < 252)
+        mask &= ~banner_mask(arr)
     white = np.full_like(arr, 255)
     out = np.where(mask[:, :, None], arr, white)
     return Image.fromarray(out.astype(np.uint8))
@@ -123,35 +163,52 @@ def center_on_studio_canvas(im: Image.Image, size: int = STUDIO_SIZE) -> Image.I
     return canvas.filter(ImageFilter.UnsharpMask(radius=0.8, percent=70, threshold=3))
 
 
+def trim_cell_right_border(cell: Image.Image) -> Image.Image:
+    """Remove catalog column divider bleeding into forja photo cells."""
+    arr = arr_rgb(cell)
+    h, w = arr.shape[:2]
+    gray = arr.mean(axis=2)
+    cut = w
+    for x in range(w - 1, max(int(w * 0.45), 1), -1):
+        col = gray[:, x]
+        if (col < 95).mean() > 0.35:
+            cut = x
+            break
+    if cut < w:
+        cell = cell.crop((0, 0, max(1, cut - 2), h))
+    return cell
+
+
 def detect_forja_rows(im: Image.Image, expected: int) -> list[tuple[int, int]]:
     arr = arr_rgb(im)
     h, w = arr.shape[:2]
     gray = arr.mean(axis=2)
-    header = int(h * 0.05)
+    header = int(h * 0.045)
     body_end = int(h * 0.985)
-    separators = []
-    for y in range(header + 4, body_end - 4):
+    separators: list[int] = []
+    for y in range(header + 2, body_end - 2):
         row = gray[y]
-        if (row < 110).mean() > 0.22:
+        if (row < 105).mean() > 0.28:
             separators.append(y)
-    bands: list[tuple[int, int]] = []
     if not separators:
         body_h = body_end - header
         row_h = body_h / expected
         return [(int(header + i * row_h), int(header + (i + 1) * row_h)) for i in range(expected)]
+
     groups: list[list[int]] = []
     current = [separators[0]]
     for y in separators[1:]:
-        if y - current[-1] <= 3:
+        if y - current[-1] <= 4:
             current.append(y)
         else:
             groups.append(current)
             current = [y]
     groups.append(current)
     bounds = [header] + [int(np.mean(g)) for g in groups] + [body_end]
+    bands: list[tuple[int, int]] = []
     for i in range(len(bounds) - 1):
         y0, y1 = bounds[i], bounds[i + 1]
-        if y1 - y0 > 40:
+        if y1 - y0 > 36:
             bands.append((y0, y1))
     if len(bands) > expected:
         bands = bands[:expected]
@@ -160,6 +217,39 @@ def detect_forja_rows(im: Image.Image, expected: int) -> list[tuple[int, int]]:
         row_h = body_h / expected
         bands = [(int(header + i * row_h), int(header + (i + 1) * row_h)) for i in range(expected)]
     return bands
+
+
+def crop_forja_row(im: Image.Image, row_box: tuple[int, int]) -> Image.Image:
+    w, _ = im.size
+    y0, y1 = row_box
+    row = im.crop((0, y0, w, y1))
+    img_w = int(w * 0.21)
+    cell = row.crop((0, 0, img_w, row.height))
+    cell = trim_table_lines(cell)
+    cell = trim_cell_left_border(cell)
+    cell = trim_cell_right_border(cell)
+    bbox = product_bbox(cell, bg_thresh=242)
+    crop = cell.crop(bbox) if bbox else cell
+    return center_on_studio_canvas(crop)
+
+
+def to_studio_shot(im: Image.Image) -> Image.Image:
+    return center_on_studio_canvas(im)
+
+
+def crop_standalone_photos() -> dict[str, str]:
+    """Normalize tornillo / esponja product photos onto white studio canvases."""
+    paths: dict[str, str] = {}
+    for subdir in ('tornillos', 'accesorios'):
+        folder = PRODUCTS_DIR / subdir
+        if not folder.exists():
+            continue
+        for photo in sorted(folder.glob('*.jpeg')):
+            crop = to_studio_shot(Image.open(photo))
+            rel = save_crop(crop, photo.stem)
+            paths[f'{subdir}/{photo.name}'] = rel
+            print(f'  Photo {subdir}/{photo.name}: {crop.size}')
+    return paths
 
 
 def is_header_row(row: np.ndarray) -> bool:
@@ -261,18 +351,6 @@ def crop_pvc_section(im: Image.Image, section_idx: int, section_count: int) -> I
     return crop_pvc_photo_zone(im, (y0, y0 + max(24, int((y1 - y0) * 0.2))))
 
 
-def crop_forja_row(im: Image.Image, row_box: tuple[int, int]) -> Image.Image:
-    w, h = im.size
-    y0, y1 = row_box
-    row = im.crop((0, y0, w, y1))
-    img_w = int(w * 0.24)
-    cell = row.crop((0, 0, img_w, row.height))
-    cell = trim_table_lines(cell)
-    bbox = product_bbox(cell, bg_thresh=244)
-    crop = cell.crop(bbox) if bbox else cell
-    return center_on_studio_canvas(crop)
-
-
 def save_crop(im: Image.Image, name: str) -> str:
     CROPS_DIR.mkdir(parents=True, exist_ok=True)
     rel = f'catalog/products/crops/{name}.jpeg'
@@ -328,6 +406,9 @@ def main():
     print('Cropping forja / herraje row shots...')
     code_studio = crop_forja_products(items)
 
+    print('Normalizing tornillo and accesorio photos...')
+    photo_studio = crop_standalone_photos()
+
     for p in items:
         gid = p['group_id']
         if gid in group_studio:
@@ -336,9 +417,19 @@ def main():
         elif p['code'] in code_studio:
             p['studio_image'] = code_studio[p['code']]
             p['image'] = code_studio[p['code']]
+        else:
+            page_img = p.get('image', '')
+            if page_img.startswith('catalog/products/'):
+                rel = page_img.replace('catalog/products/', '')
+                if rel in photo_studio:
+                    p['studio_image'] = photo_studio[rel]
+                    p['image'] = photo_studio[rel]
 
     JSON_PATH.write_text(json.dumps(items, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(f'Updated {JSON_PATH.name} with {len(group_studio)} PVC crops and {len(code_studio)} row crops')
+    print(
+        f'Updated {JSON_PATH.name} with {len(group_studio)} PVC, '
+        f'{len(code_studio)} forja and {len(photo_studio)} standalone crops'
+    )
 
 
 if __name__ == '__main__':

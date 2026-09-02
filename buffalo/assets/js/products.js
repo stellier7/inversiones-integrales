@@ -256,8 +256,8 @@ const GROUP_STUDIO = {
   "forja-lanzas": "catalog/products/crops/8020h.jpeg",
   "rodillos": "catalog/products/crops/1992h.jpeg",
   "rieles": "catalog/products/crops/1998h.jpeg",
-  "techo-punta-broca": "catalog/products/tornillos/techo-14x2-250.jpeg",
-  "esponjas": "catalog/products/accesorios/esponja-3w-160.jpeg",
+  "techo-punta-broca": "catalog/products/crops/techo-14x2-250.jpeg",
+  "esponjas": "catalog/products/crops/esponja-3w-160.jpeg",
 };
 
 const catalogSections = [
@@ -535,7 +535,7 @@ const catalogSections = [
     eyebrow: "Buffalo",
     title: "Tornillos",
     intro: "Tornillos para techo con punta broca — empaque Buffalo.",
-    image: img("catalog/products/tornillos/techo-14x2-250.jpeg"),
+    image: img("catalog/products/crops/techo-14x2-250.jpeg"),
     groups: [
       {
         id: "techo-punta-broca",
@@ -553,7 +553,7 @@ const catalogSections = [
     eyebrow: "Buffalo",
     title: "Accesorios",
     intro: "Esponjas multi-uso Buffalo Plus 3W.",
-    image: img("catalog/products/accesorios/esponja-3w-160.jpeg"),
+    image: img("catalog/products/crops/esponja-3w-160.jpeg"),
     groups: [
       {
         id: "esponjas",
@@ -2765,7 +2765,7 @@ const products = [
     subcategoria: "Ref. TBN-14X2",
     linea: "Buffalo",
     medida: "#14×2\"",
-    image: img("catalog/products/tornillos/techo-14x2-250.jpeg"),
+    image: img("catalog/products/crops/techo-14x2-250.jpeg"),
     modelo: "TBN-14X2",
   },
   {
@@ -2775,7 +2775,7 @@ const products = [
     subcategoria: "Ref. TBN-14X3",
     linea: "Buffalo",
     medida: "#14×3\"",
-    image: img("catalog/products/tornillos/techo-14x3-200.jpeg"),
+    image: img("catalog/products/crops/techo-14x3-200.jpeg"),
     modelo: "TBN-14X3",
   },
   {
@@ -2785,7 +2785,7 @@ const products = [
     subcategoria: "Ref. TBN-BOX",
     linea: "Buffalo",
     medida: "Hexagonal",
-    image: img("catalog/products/tornillos/techo-broca-open.jpeg"),
+    image: img("catalog/products/crops/techo-broca-open.jpeg"),
     modelo: "TBN-BOX",
   },
   {
@@ -2795,7 +2795,7 @@ const products = [
     subcategoria: "Ref. ESP-160",
     linea: "Buffalo",
     medida: "160×100×60 mm",
-    image: img("catalog/products/accesorios/esponja-3w-160.jpeg"),
+    image: img("catalog/products/crops/esponja-3w-160.jpeg"),
     modelo: "ESP-160",
   },
   {
@@ -2805,7 +2805,7 @@ const products = [
     subcategoria: "Ref. ESP-190",
     linea: "Buffalo",
     medida: "190×109×50 mm",
-    image: img("catalog/products/accesorios/esponja-3w-190.jpeg"),
+    image: img("catalog/products/crops/esponja-3w-190.jpeg"),
     modelo: "ESP-190",
   },
 ];

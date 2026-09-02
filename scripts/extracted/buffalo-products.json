@@ -2632,69 +2632,74 @@
     "nombre": "Tornillo para techo punta broca #14×2\"",
     "description": "Tornillo para techo punta broca #14×2\"",
     "medida": "#14×2\"",
-    "image": "catalog/products/tornillos/techo-14x2-250.jpeg",
+    "image": "catalog/products/crops/techo-14x2-250.jpeg",
     "page_image": "",
     "category_key": "tornillos",
     "group_id": "techo-punta-broca",
     "group_label": "Techo punta broca",
     "chip1": "#14×2\"",
     "chip2": "250 pzs",
-    "chip3": "Punta broca"
+    "chip3": "Punta broca",
+    "studio_image": "catalog/products/crops/techo-14x2-250.jpeg"
   },
   {
     "code": "TBN-14X3",
     "nombre": "Tornillo para techo punta broca #14×3\"",
     "description": "Tornillo para techo punta broca #14×3\"",
     "medida": "#14×3\"",
-    "image": "catalog/products/tornillos/techo-14x3-200.jpeg",
+    "image": "catalog/products/crops/techo-14x3-200.jpeg",
     "page_image": "",
     "category_key": "tornillos",
     "group_id": "techo-punta-broca",
     "group_label": "Techo punta broca",
     "chip1": "#14×3\"",
     "chip2": "200 pzs",
-    "chip3": "Punta broca"
+    "chip3": "Punta broca",
+    "studio_image": "catalog/products/crops/techo-14x3-200.jpeg"
   },
   {
     "code": "TBN-BOX",
     "nombre": "Tornillo para techo punta broca Buffalo",
     "description": "Tornillo para techo punta broca Buffalo",
     "medida": "Hexagonal",
-    "image": "catalog/products/tornillos/techo-broca-open.jpeg",
+    "image": "catalog/products/crops/techo-broca-open.jpeg",
     "page_image": "",
     "category_key": "tornillos",
     "group_id": "techo-punta-broca",
     "group_label": "Techo punta broca",
     "chip1": "Hexagonal",
     "chip2": "Con arandela",
-    "chip3": "Buffalo"
+    "chip3": "Buffalo",
+    "studio_image": "catalog/products/crops/techo-broca-open.jpeg"
   },
   {
     "code": "ESP-160",
     "nombre": "Esponja Multi-Uso 3W Plus",
     "description": "Esponja Multi-Uso 3W Plus",
     "medida": "160×100×60 mm",
-    "image": "catalog/products/accesorios/esponja-3w-160.jpeg",
+    "image": "catalog/products/crops/esponja-3w-160.jpeg",
     "page_image": "",
     "category_key": "accesorios",
     "group_id": "esponjas",
     "group_label": "Esponjas multi-uso",
     "chip1": "160×100×60 mm",
     "chip2": "Buffalo Plus 3W",
-    "chip3": "Pulido"
+    "chip3": "Pulido",
+    "studio_image": "catalog/products/crops/esponja-3w-160.jpeg"
   },
   {
     "code": "ESP-190",
     "nombre": "Esponja Multi-Uso 3W Plus",
     "description": "Esponja Multi-Uso 3W Plus",
     "medida": "190×109×50 mm",
-    "image": "catalog/products/accesorios/esponja-3w-190.jpeg",
+    "image": "catalog/products/crops/esponja-3w-190.jpeg",
     "page_image": "",
     "category_key": "accesorios",
     "group_id": "esponjas",
     "group_label": "Esponjas multi-uso",
     "chip1": "190×109×50 mm",
     "chip2": "Buffalo Plus 3W",
-    "chip3": "Pulido"
+    "chip3": "Pulido",
+    "studio_image": "catalog/products/crops/esponja-3w-190.jpeg"
   }
 ]
