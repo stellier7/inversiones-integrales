@@ -60,7 +60,8 @@ def banner_mask(arr: np.ndarray) -> np.ndarray:
 
 def product_mask(arr: np.ndarray, bg_thresh: int = 246) -> np.ndarray:
     gray = arr.mean(axis=2)
-    non_bg = gray < bg_thresh
+    spread = arr.max(axis=2).astype(int) - arr.min(axis=2).astype(int)
+    non_bg = (gray < bg_thresh) | (spread > 5)
     return non_bg & ~banner_mask(arr)
 
 
@@ -70,7 +71,7 @@ def product_bbox(im: Image.Image, bg_thresh: int = 246):
     ys, xs = np.where(mask)
     if len(xs) == 0:
         return None
-    pad = max(6, int(min(im.width, im.height) * 0.03))
+    pad = max(6, int(min(im.width, im.height) * 0.04))
     return (
         max(0, int(xs.min()) - pad),
         max(0, int(ys.min()) - pad),
@@ -161,21 +162,103 @@ def detect_forja_rows(im: Image.Image, expected: int) -> list[tuple[int, int]]:
     return bands
 
 
-def crop_pvc_section(im: Image.Image, section_idx: int, section_count: int) -> Image.Image:
-    w, h = im.size
-    if section_count == 1:
-        section = im.crop((int(w * 0.06), 0, int(w * 0.94), int(h * 0.24)))
-    else:
-        y0 = int(h * section_idx / section_count)
-        y1 = int(h * (section_idx + 1) / section_count)
-        section = im.crop((0, y0, w, y1))
-        photo_h = int(section.height * 0.42)
-        margin = int(w * 0.10)
-        section = section.crop((margin, 0, w - margin, photo_h))
-    section = trim_table_lines(section)
-    bbox = product_bbox(section)
-    crop = section.crop(bbox) if bbox else section
+def is_header_row(row: np.ndarray) -> bool:
+    headerish = (
+        (row[:, 0] > 120) & (row[:, 0] < 210) &
+        (row[:, 1] > 140) & (row[:, 1] < 220) &
+        (row[:, 2] > 160) & (row[:, 2] < 240)
+    )
+    return headerish.mean() > 0.35
+
+
+def major_table_starts(im: Image.Image, expected: int = 1) -> list[int]:
+    arr = arr_rgb(im)
+    h, _ = arr.shape[:2]
+    starts: list[int] = []
+    in_header = False
+    for y in range(h):
+        is_header = is_header_row(arr[y])
+        if is_header and not in_header:
+            starts.append(y)
+            in_header = True
+        elif not is_header:
+            in_header = False
+    min_gap = max(70, int(h / max(expected, 1) * 0.45))
+    filtered: list[int] = []
+    for y in starts:
+        if not filtered or y - filtered[-1] > min_gap:
+            filtered.append(y)
+    return filtered
+
+
+def table_bottom(im: Image.Image, header_y: int, max_scan: int = 120) -> int:
+    arr = arr_rgb(im)
+    h = arr.shape[0]
+    end_y = min(h, header_y + max_scan)
+    if end_y <= header_y:
+        return header_y + 10
+    gray = arr[header_y:end_y].mean(axis=(1, 2))
+    last_table_row = 0
+    white_streak = 0
+    for i, value in enumerate(gray):
+        if float(value) < 245:
+            last_table_row = i
+            white_streak = 0
+        else:
+            white_streak += 1
+            if white_streak >= 6 and last_table_row > 0:
+                break
+    return min(h, header_y + last_table_row + 8)
+
+
+def pvc_photo_zones(im: Image.Image, expected: int) -> list[tuple[int, int]]:
+    tables = major_table_starts(im, expected)
+    h = im.height
+    zones: list[tuple[int, int]] = []
+
+    if len(tables) >= expected:
+        for i in range(expected):
+            y1 = tables[i] - 8
+            if i == 0:
+                y0 = 0
+            else:
+                prev_end = table_bottom(im, tables[i - 1])
+                y0 = max(prev_end + 4, y1 - int(h * 0.14))
+            zones.append((y0, y1))
+        return zones
+
+    # Fallback for unusual layouts: equal page slices, photo strip above local header.
+    for idx in range(expected):
+        y0 = int(h * idx / expected)
+        y1 = int(h * (idx + 1) / expected)
+        section = im.crop((0, y0, im.width, y1))
+        local_tables = major_table_starts(section, 1)
+        if local_tables:
+            strip_h = max(24, local_tables[0] - 8)
+            zones.append((y0, y0 + strip_h))
+        else:
+            zones.append((y0, y0 + max(24, int((y1 - y0) * 0.2))))
+    return zones
+
+
+def crop_pvc_photo_zone(im: Image.Image, zone: tuple[int, int]) -> Image.Image:
+    w, _ = im.size
+    y0, y1 = zone
+    strip = im.crop((int(w * 0.08), y0, int(w * 0.92), y1))
+    strip = trim_table_lines(strip)
+    bbox = product_bbox(strip, bg_thresh=244)
+    crop = strip.crop(bbox) if bbox else strip
     return center_on_studio_canvas(crop)
+
+
+def crop_pvc_section(im: Image.Image, section_idx: int, section_count: int) -> Image.Image:
+    zones = pvc_photo_zones(im, section_count)
+    if section_idx < len(zones):
+        return crop_pvc_photo_zone(im, zones[section_idx])
+    w, h = im.size
+    y0 = int(h * section_idx / section_count)
+    y1 = int(h * (section_idx + 1) / section_count)
+    return crop_pvc_photo_zone(im, (y0, y0 + max(24, int((y1 - y0) * 0.2))))
 
 
 def crop_forja_row(im: Image.Image, row_box: tuple[int, int]) -> Image.Image:

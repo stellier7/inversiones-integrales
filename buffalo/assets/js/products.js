@@ -85,11 +85,14 @@ function seriesDetailHtml(group) {
     product = items[0];
     catalogState.medida = product.medida;
   }
-  const photo = product
+  const groupStudio = seriesImage(group.id);
+  const photo = product && product.image && product.image !== groupStudio
     ? productPhotoHtml(product)
-    : seriesImage(group.id)
-      ? `<img src="${seriesImage(group.id)}" alt="${group.title}">`
-      : '';
+    : groupStudio
+      ? `<img src="${groupStudio}" alt="${group.title}">`
+      : product
+        ? productPhotoHtml(product)
+        : '';
   const rows = product
     ? specRows(product).map(([label, value]) => `<tr><th>${label}</th><td>${value}</td></tr>`).join('')
     : '';
