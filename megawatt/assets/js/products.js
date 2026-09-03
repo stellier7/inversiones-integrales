@@ -11,7 +11,7 @@ const LINEA = {
 
 const GROUP_STUDIO = {
   skba: 'catalog/bombillo-smd.jpeg',
-  skbt: 'catalog/bombillo-led-alta-potencia.jpeg?v=5',
+  skbt: 'catalog/bombillo-led-alta-potencia.jpeg?v=6',
   skbta: 'catalog/bombillo-industrial.jpeg',
   sknm04: 'catalog/emergencia.jpeg',
   skpl2401: 'catalog/street-light.jpeg',
