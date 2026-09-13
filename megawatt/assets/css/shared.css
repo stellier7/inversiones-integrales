@@ -914,6 +914,8 @@ a { color: inherit; }
 }
 
 .featured-track .featured-photo.is-studio img {
+  object-fit: contain;
+  object-position: center;
   padding: 8%;
 }
 
