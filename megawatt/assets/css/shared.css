@@ -916,7 +916,7 @@ a { color: inherit; }
 .featured-track .featured-photo.is-studio img {
   object-fit: contain;
   object-position: center;
-  padding: 8%;
+  padding: 6%;
 }
 
 .featured-track .p-body {
