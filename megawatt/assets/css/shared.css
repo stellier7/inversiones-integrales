@@ -902,21 +902,23 @@ a { color: inherit; }
   width: 100%;
   height: auto;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(180deg, #1c1a18 0%, #121110 100%);
+  overflow: hidden;
 }
 
-.featured-track .featured-photo img,
-.featured-track .featured-photo video {
-  width: 100%;
-  height: 100%;
+.featured-track .featured-card .p-photo.featured-photo img,
+.featured-track .featured-card .p-photo.featured-photo video {
+  width: auto;
+  height: auto;
+  max-width: 94%;
+  max-height: 94%;
   object-fit: contain;
   object-position: center;
-}
-
-.featured-track .featured-photo.is-studio img {
-  object-fit: contain;
-  object-position: center;
-  padding: 6%;
+  padding: 0;
+  display: block;
 }
 
 .featured-track .p-body {
